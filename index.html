@@ -2,125 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WITH LOVE – A Collection of Poems by Hadiza Bagudu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASTRAL Series by Hadiza Bagudu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     * { box-sizing: border-box; }
 
     body {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Georgia', serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
-      color: #000;
+      background: url('https://cdn.pixabay.com/photo/2024/06/18/12/43/ai-generated-8837939_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
       position: relative;
-      min-height: 100vh;
+    }
+    
+    /* WhatsApp Button Styles */
+    .whatsapp-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin: 15px 0;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Watermark hearts – only on main page */
-    body.show-watermark::before {
-      content: "❤ ❤ ❤";
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-icon {
+      margin-right: 8px;
+    }
+
+    body::before {
+      content: '';
       position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 8rem;
-      color: rgba(255, 0, 0, 0.05);
-      pointer-events: none;
-      white-space: nowrap;
-      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 5, 30, 0.85);
+      z-index: -1;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #e0e0ff;
+      text-shadow: 0 0 10px rgba(150, 150, 255, 0.7);
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: bold;
-      text-align: center;
-      color: #b3003c;
-      margin: 0 0 0.5rem;
-      position: relative;
-      z-index: 1;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    h2 {
-      font-family: 'Lato', sans-serif;
-      font-size: 1.1rem;
-      font-weight: normal;
+    .copyright {
       text-align: center;
-      color: #444;
-      margin: 0 0 2rem;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 30px;
+      font-style: italic;
+      color: #aaa;
+      font-size: 0.9rem;
     }
 
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 80px; /* extra bottom padding so footer doesn't overlap */
+      margin: auto;
+      padding: 30px 20px;
       position: relative;
       z-index: 1;
     }
 
-    .poem-grid {
+    .chapter-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
-    .poem-card {
-      background: #fff;
+    .chapter-card {
+      background: rgba(30, 20, 60, 0.7);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(179, 0, 60, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(150, 150, 255, 0.2);
     }
 
-    .poem-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(179, 0, 60, 0.25);
+    .chapter-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(150, 150, 255, 0.4);
     }
 
-    .poem-card img {
+    .chapter-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
+      border-bottom: 1px solid rgba(150, 150, 255, 0.2);
     }
 
-    .poem-card-title {
-      padding: 15px;
-      font-size: 1.1rem;
+    .chapter-card-title {
+      padding: 18px;
+      font-size: 1.2rem;
       font-weight: bold;
       text-align: center;
-      color: #b3003c;
+      color: #e0e0ff;
     }
 
-    .poem-full {
+    .chapter-full {
       display: none;
-      background: #fff;
+      background: rgba(20, 15, 50, 0.9);
       padding: 30px;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(179, 0, 60, 0.2);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(150, 150, 255, 0.3);
     }
 
-    .poem-full.active {
+    .chapter-full.active {
       display: block;
+      animation: fadeIn 0.5s ease;
     }
 
-    .poem-full img {
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .chapter-full img {
       width: 100%;
       height: 250px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 20px;
+      border: 1px solid rgba(150, 150, 255, 0.3);
     }
 
-    .poem-text {
+    .chapter-text {
       line-height: 1.8;
       white-space: pre-wrap;
       margin: 20px 0;
-      font-size: 1.05rem;
-      color: #000;
+      font-size: 1.1rem;
+    }
+    
+    .chapter-text p {
+      margin-bottom: 1.5em;
     }
 
     .button-row {
@@ -128,33 +164,122 @@
       justify-content: space-between;
       margin-top: 30px;
     }
-
-    .btn {
-      background: #b3003c;
-      color: #fff;
-      padding: 10px 20px;
+    
+    .back-button {
+      background: rgba(150, 150, 255, 0.2);
+      color: #e0e0ff;
+      padding: 12px 25px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 0.95rem;
-      border: none;
+      font-size: 1rem;
+      border: 1px solid rgba(150, 150, 255, 0.4);
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    
+    .back-button:hover {
+      background: rgba(150, 150, 255, 0.4);
+      box-shadow: 0 0 10px rgba(150, 150, 255, 0.3);
+    }
+
+    .btn {
+      background: rgba(150, 150, 255, 0.2);
+      color: #e0e0ff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      border: 1px solid rgba(150, 150, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #800029;
+      background: rgba(150, 150, 255, 0.4);
+      box-shadow: 0 0 10px rgba(150, 150, 255, 0.3);
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.85rem;
-      background: #f9f9f9;
-      border-top: 1px solid #eee;
-      color: #444;
-      position: absolute;
-      bottom: 0;
+    .like-comment {
+      margin-top: 30px;
+      border-top: 1px solid rgba(150, 150, 255, 0.2);
+      padding-top: 20px;
+    }
+
+    .like-button {
+      background-color: rgba(233, 30, 99, 0.7);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .like-button:hover {
+      background-color: rgba(233, 30, 99, 0.9);
+    }
+
+    .comments {
+      margin-top: 10px;
+    }
+
+    .comments textarea {
       width: 100%;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      border: 1px solid rgba(150, 150, 255, 0.4);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: rgba(10, 5, 30, 0.7);
+      color: #f0f0f0;
+    }
+
+    .comments button {
+      background-color: rgba(46, 125, 50, 0.7);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .comments button:hover {
+      background-color: rgba(46, 125, 50, 0.9);
+    }
+
+    .comment-list {
+      margin-top: 10px;
+    }
+
+    .comment {
+      background-color: rgba(30, 20, 60, 0.7);
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(150, 150, 255, 0.2);
+    }
+    
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2rem;
+    }
+    
+    .chapter-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(150, 150, 255, 0.3);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
@@ -163,1408 +288,734 @@
         gap: 10px;
         align-items: center;
       }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .chapter-text {
+        font-size: 1rem;
+      }
+      
+      .btn, .back-button {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
-<body class="show-watermark">
+<body>
 
 <div class="container">
-  <div id="poemList">
-    <h1>WITH LOVE</h1>
-    <h2>A Collection of Poems by Hadiza Bagudu</h2>
-    <div class="poem-grid">
-      <div class="poem-card" onclick="showPoem(0)">
-        <img src="https://i.pinimg.com/736x/b6/93/98/b693989e67d1c45da48e94fc02a6056f.jpg">
-        <div class="poem-card-title">RUMOR HAS IT</div>
+  <div id="chapterList">
+    <h1>ASTRAL Series</h1>
+    <div class="copyright">© 2024 Hadiza Bagudu - ASTRAL Series. All rights reserved.</div>
+    
+    <!-- WhatsApp Button -->
+    <div style="text-align: center; margin: 20px 0;">
+      <a class="whatsapp-button" href="https://chat.whatsapp.com/Bed6ZwsoF6vLpQ2fqLlncE?mode=ac_t" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+        Join Our WhatsApp Group
+      </a>
+    </div>
+    
+    <div class="chapter-grid">
+      <div class="chapter-card" onclick="showChapter(0)">
+        <img src="https://cdn.pixabay.com/photo/2023/09/14/10/23/galaxy-8252744_1280.png">
+        <div class="chapter-card-title">THE AWAKENING</div>
       </div>
-
-      <div class="poem-card" onclick="showPoem(1)">
-        <img src="https://i.pinimg.com/736x/64/dc/1c/64dc1c09118142c4a6064f2ffc8fe6f9.jpg">
-        <div class="poem-card-title">SOMEBODY IS GONNA CRY</div>
+      <div class="chapter-card" onclick="showChapter(1)">
+        <img src="https://cdn.pixabay.com/photo/2023/01/16/03/27/fairy-7721517_1280.jpg">
+        <div class="chapter-card-title">OLD FRIENDS</div>
       </div>
-
-      <div class="poem-card" onclick="showPoem(2)">
-        <img src="https://cdn.pixabay.com/photo/2017/02/21/09/34/mirror-2085193_1280.jpg">
-        <div class="poem-card-title">THE ONE</div>
-      </div>
-
-      <div class="poem-card" onclick="showPoem(3)">
-        <img src="https://i.pinimg.com/736x/6e/69/54/6e695424cf36ec4a4c0384b0c2c3e9d2.jpg">
-        <div class="poem-card-title">LOVE IS</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(4)">
-        <img src="https://i.pinimg.com/736x/d4/22/ca/d422ca566a594fcbc3f31a66dcc7762e.jpg">
-        <div class="poem-card-title">THE CRY OF A BROKEN HEART</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(5)">
-        <img src="https://i.pinimg.com/1200x/bb/66/d9/bb66d9d229fb73741e589e8cad5e613c.jpg">
-        <div class="poem-card-title">HIGH ON LOVE</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(6)">
-        <img src="https://cdn.pixabay.com/photo/2018/09/09/12/50/heart-3664496_1280.jpg">
-        <div class="poem-card-title">MY DARLING</div>
-      </div>
-<div class="poem-card" onclick="showPoem(7)">
-        <img src="https://i.pinimg.com/736x/31/ab/7b/31ab7be16c7dc7b447ac48efd27564e0.jpg">
-        <div class="poem-card-title">ONCE UPON A DREAM</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(8)">
-        <img src="https://i.pinimg.com/736x/83/9f/e5/839fe5898a678f91d4b5d87ade192785.jpg">
-        <div class="poem-card-title">LOVE MAKES ME FEEL THAT WAY (A SONG)</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(9)">
-        <img src="https://cdn.pixabay.com/photo/2014/10/08/16/38/heart-480367_1280.jpg">
-        <div class="poem-card-title">COME HOME</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(10)">
-        <img src="https://i.pinimg.com/1200x/ab/66/24/ab66240a6eaec3dc321d092a9143fbdc.jpg">
-        <div class="poem-card-title">BEAUTIFUL</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(11)">
-        <img src="https://cdn.pixabay.com/photo/2014/07/08/09/57/candle-386607_1280.jpg">
-        <div class="poem-card-title">SEARCHING</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(12)">
-        <img src="https://i.pinimg.com/736x/57/b9/87/57b9875c1892460de878760526d7625b.jpg">
-        <div class="poem-card-title">TA SAD LOVE SONG (Song)</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(13)">
-        <img src="https://i.pinimg.com/736x/02/7f/11/027f11a91a8b3f8a48e56dbc28ea5af3.jpg">
-        <div class="poem-card-title">ONLY YOU</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(14)">
-        <img src="https://i.pinimg.com/1200x/5e/2e/01/5e2e0164cdbbd606eb5328a33b3cba49.jpg">
-        <div class="poem-card-title">SECRET ADMIRER</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(15)">
-        <img src="https://i.pinimg.com/736x/bc/35/d9/bc35d9195748de43311e933dabcc1765.jpg">
-        <div class="poem-card-title">U</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(16)">
-        <img src="https://i.pinimg.com/736x/a3/b0/67/a3b067e4975439035824c8bbbf35b6e3.jpg">
-        <div class="poem-card-title">REGRETS</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(17)">
-        <img src="https://i.pinimg.com/736x/6f/42/03/6f4203d68ec968c5d66940cb33cf502a.jpg">
-        <div class="poem-card-title">A LOVE STORY</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(18)">
-        <img src="https://i.pinimg.com/1200x/0c/b4/c9/0cb4c91c773a5fb30cf3464669cea248.jpg">
-        <div class="poem-card-title">IMAGINE</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(19)">
-        <img src="https://i.pinimg.com/1200x/eb/1a/87/eb1a876c5f34914e4c73ac2a50cd224d.jpg">
-        <div class="poem-card-title">IN THE MIND OF A POET</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(20)">
-        <img src="https://i.pinimg.com/1200x/a1/e8/94/a1e8946b523d42c9964247c89d0b1276.jpg">
-        <div class="poem-card-title">FINDING GOD</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(21)">
-        <img src="https://i.pinimg.com/1200x/c3/8b/14/c38b14a462bad8a69e15c022d4bb8457.jpg">
-        <div class="poem-card-title">A NIGHT’S PRAYER</div>
-      </div>
-
-
-<div class="poem-card" onclick="showPoem(22)">
-        <img src="https://i.pinimg.com/1200x/cd/1d/0b/cd1d0b5dc83158fac1a3916f3286a3f2.jpg">
-        <div class="poem-card-title">VIRTUES</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(23)">
-        <img src="https://i.pinimg.com/1200x/49/c4/72/49c4727e3f3c82e538ba2e1d6829b52e.jpg">
-        <div class="poem-card-title">TAKE IT EASY</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(24)">
-        <img src="https://i.pinimg.com/1200x/da/3a/c2/da3ac2d61ee122ae8e801b7a83a4f3f0.jpg">
-        <div class="poem-card-title">SICK (HIV)</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(25)">
-        <img src="https://i.pinimg.com/originals/f1/4b/ae/f14bae2acea5b2ea082d4001cd47d43b.gif">
-        <div class="poem-card-title">ONCE UPON A STAR</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(26)">
-        <img src="https://i.pinimg.com/736x/b7/f0/92/b7f09244298db32f4ca2971987e31d9c.jpg">
-        <div class="poem-card-title">BLANK</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(27)">
-        <img src="https://i.pinimg.com/736x/6b/22/43/6b22435c980151b5cce85d02407848a6.jpg">
-        <div class="poem-card-title">HAPPINESS</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(28)">
-        <img src="https://i.pinimg.com/736x/8d/eb/42/8deb42b50f4383ea05e085fdfd1edfe6.jpg">
-        <div class="poem-card-title">AIMING HIGH</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(29)">
-        <img src="https://i.pinimg.com/736x/a4/c4/95/a4c4957ee201e5ef265699e31328588c.jpg">
-        <div class="poem-card-title">INVESTMENT</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(30)">
-        <img src="https://i.pinimg.com/1200x/8a/fd/02/8afd02ced98a0d76b34d526f4b8240be.jpg">
-        <div class="poem-card-title">IF SADNESS HAD A FACE</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(31)">
-        <img src="https://i.pinimg.com/736x/38/c0/5e/38c05ea896ad26a693d2b86b0287c02e.jpg">
-        <div class="poem-card-title">MR. JOHNS</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(32)">
-        <img src="https://i.pinimg.com/736x/c7/21/18/c72118415e458d7694630f27b55e8322.jpg">
-        <div class="poem-card-title">THE CAT AND THE MOUSE GAME</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(33)">
-        <img src="https://i.pinimg.com/736x/99/29/ca/9929ca989aa2eae0208dfee2cf294163.jpg">
-        <div class="poem-card-title">FLU SEASON</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(34)">
-        <img src="https://i.pinimg.com/736x/ac/52/83/ac528347885407473313a1488610d900.jpg">
-        <div class="poem-card-title">WHY I CRY</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(35)">
-        <img src="https://i.pinimg.com/1200x/33/2d/21/332d21242bbca9c947252b7a576b94ea.jpg">
-        <div class="poem-card-title">ME</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(36)">
-        <img src="https://i.pinimg.com/736x/51/58/6e/51586e9e61917625fcfdb470b2eb30cb.jpg">
-        <div class="poem-card-title">FOOL</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(37)">
-        <img src="https://i.pinimg.com/1200x/9b/6e/67/9b6e671c89d83231f344d463b447ce65.jpg">
-        <div class="poem-card-title">DESPAIR</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(38)">
-        <img src="https://i.pinimg.com/1200x/28/81/9e/28819e6b10b333ecd70ffb42a1b4561e.jpg">
-        <div class="poem-card-title">DAYS GONE BYE</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(39)">
-        <img src="https://i.pinimg.com/736x/1c/89/41/1c894153def48e559686ddee417df6b4.jpg">
-        <div class="poem-card-title">BACKSTAB</div>
-      </div>
-     
-<div class="poem-card" onclick="showPoem(40)">
-        <img src="https://i.pinimg.com/736x/d8/a3/b0/d8a3b01d2a8f7e5e8b9b8c639e46a3f4.jpg">
-        <div class="poem-card-title">SHOWDOWN</div>
-      </div>
-
-<div class="poem-card" onclick="showPoem(41)">
-        <img src="https://i.pinimg.com/1200x/8b/d7/60/8bd760fc3b68f993c4d6451c984264b3.jpg">
-        <div class="poem-card-title">I WISH</div>
-      </div>
-<div class="poem-card" onclick="showPoem(42)">
-        <img src="https://i.pinimg.com/736x/0b/e4/53/0be453109160a79dab2f9f2977d80589.jpg">
-        <div class="poem-card-title">THE PAIN OF BETRAYAL</div>
+      <div class="chapter-card" onclick="showChapter(2)">
+        <img src="https://cdn.pixabay.com/photo/2023/04/27/13/10/ai-generated-7954598_1280.png">
+        <div class="chapter-card-title">ELECTRIC WHISPERS</div>
       </div>
     </div>
   </div>
 
-  <!-- Poem Pages -->
-  <div id="poemContainer"></div>
+  <!-- Loading Indicator -->
+  <div class="loading" id="loadingIndicator">
+    Loading chapter...
+  </div>
+
+  <!-- Chapter Pages -->
+  <div id="chapterContainer"></div>
 </div>
 
-<footer>
-  © 2008 Hadiza Bagudu
-</footer>
-
 <script>
-  const poems = [
+  const chapters = [
     {
-      title: "RUMOR HAS IT",
-      image: "https://i.pinimg.com/736x/b6/93/98/b693989e67d1c45da48e94fc02a6056f.jpg",
-      text: `Rumor has it,
-That you have got a thing for me.
-That you care.
-But we both know that,
-There is no smoke without fire.
+      title: "CHAPTER 1: THE AWAKENING",
+      image: "https://cdn.pixabay.com/photo/2023/09/14/10/23/galaxy-8252744_1280.png",
+      text: `Yusuf Ali was curled up in a fetal position at the foot of the bed, his hands pressed hard on his ears as if to block out noise, his eyes shut tightly, and he was chanting something furiously. His body shook vigorously as if in the throes of a mighty fever, and his clothes were drenched in sweat.
 
-I know you watch me,
-Every time I walk by.
-Without looking,
-I can feel the smile.
-I look your way,
-And you tried to hide.
+<p>He prayed for it to stop—everything. The hallucinations, the noise, the continual teleportation—it was all too much, and he was losing his mind. The drilling noise from the construction site sounded as if it were in his head, even though the site was over a mile away from him.</p>
 
-From your blushing eyes,
-I know you are mine.
-Your deep brown eyes,
-And your dazzling white teeth.
-From your beautiful smile,
-That is just for me.
+<p>He could even hear the laborers' footsteps and the metal scraping on metal as they went about their duties. But it wasn't just that he could hear it; it was more like he kept teleporting back and forth mentally, placing him right where the sound was. However, the teleportation didn't stop at the construction site; he also weaved in and out of reality, realms, dream states, and wake states.</p>
 
-I wonder if we can be,
-A perfect you and me.
-Let's write a love story,
-That will last for eternity.
+<p>Sometimes, he found himself underground in caves, where he got stuck and suffocated for a while before reverting to his original location. He was exhausted and suffering from motion sickness, surrounded by his own vomit. And as if that wasn't bad enough, the entities he encountered were all aware of his presence, and they did not like it. They kept attacking him. The only safe place was the room that he was in. Thankfully, they couldn't follow him.</p>
 
-Rumor has it,
-That you have got a thing for me,
-That you care.
-But we both know that,
-There is no smoke without fire.
+<p>Yusuf Ali had always been a spiritually gifted person. As a child, he used to have some of the most fantastic and vivid dreams, in which he would travel to different realms and worlds and meet all kinds of beings. The dreams were so real that he could swear that he was physically there. When he shared this experience with his parents, he could see the fear in their eyes. They worried about him and sought various kinds of help, but what he possessed was not a problem; it was a gift he was born with. Additionally, he had a knack for reading people's minds—or rather, he could enter their minds and explore. It was something inexplicable, yet he had successfully exposed thieves and liars on several occasions. His parents warned him to stop doing it because it could get him into trouble.</p>
 
-Copyright © 2008 HADIZA BAGUDU
-`
+<p>You see, Yusuf grew up in Bauchi State, Nigeria, where people held strong superstitions. It wouldn't take much for them to accuse him of witchcraft or something similar and potentially lynch him. Moreover, the fact that he kept revealing people's misdeeds would undoubtedly anger them and make them want to harm him.</p>
+
+<p>In his teenage years, there was a surge in his abilities, triggered by puberty, and he found himself both losing his mind and performing fantastical feats. To protect him, his parents told everyone that he was on drugs and then sent him to rehab multiple times until he improved and learned to keep quiet about his gifts. He denied his abilities for so long that they seemed to fade away.</p>
+
+<p>However, a week ago, while he was returning to the university hostel, he was struck by an out-of-control car. Although he was physically unharmed, he did hit his head hard on the ground. The doctors examined him for a concussion but found none. Strangely, the accident seems to intensify his abilities to an extraordinary degree—teleportation and visions now occur continuously during his waking state instead of only during sleep. The fabric of reality began to unravel for him, and distinguishing between what was real and what was not became increasingly difficult.</p>
+
+<p>Initially, he began to distract himself by reading, but he would find himself immersed in the book, becoming part of the story, or he would hear someone shouting the words in his ears. Consequently, he stopped reading altogether. The teleportation and hallucinations worsened progressively over time, and by the seventh day, he was unable to stand or open his eyes. Hunger consumed him; he was practically starving as he hadn't eaten anything in several days. His water intake was minimal, leading to severe dehydration, which ironically exacerbated his condition by weakening his body, making it susceptible to possession or other intrusive thoughts.</p>
+
+<p>"Yusuf...Yusuf... Wake up." A gentle tap on his shoulder roused him. Opening his eyes, he saw John Obinna, his friend. "Let me help you." John assisted him in sitting up. "Oh my! You look terrible." Yusuf managed to smile. It was true. He hadn't showered or brushed in over a week, and he had lost a significant amount of weight due to dehydration and starvation.</p>
+
+<p>"I brought pepper soup and maltina for you to eat." John opened the plate, and the smell of the soup went straight to Yusuf's head. He tried to turn away. "No!" John said it quietly but firmly. "You must eat today." With determination, he began spooning the soup into Yusuf's reluctant mouth.</p>
+
+<p>"Oh, John, my dear friend." He thought. John was the only friend who loved him like a brother, never judging or attempting to exploit him after discovering his gifts. They met on the first day of their first year at Base University, Abuja. They were both at the Department of Political Science, trying to register for their courses, and an instant connection formed between them. Yusuf Ali was a Fulani from Bauchi, and John Obinna was an Igbo from Port Harcout, Nigeria. Usually, these two tribes were not known for their close friendship, but Yusuf and John couldn't care less about the tribal divide. They shared a relationship built on love, respect, and a shared sense of silliness. Both were intelligent, and they supported each other in excelling academically.</p>
+
+<p>As time passed, they began visiting each other's homes. During breaks, Yusuf would take John to Bauchi with him, while on other occasions, he would join John and his family in Abuja, where they resided. There was even a Christmas when Yusuf spent the holidays with them, and his parents had no reason to worry because he had an amazing time. He was so nervous when he told John about his abilities. Nervously, Yusuf confided in John about his abilities, expecting him to be scared or mock him. To his surprise, John simply smiled and said, "Cool." As their bond grew stronger, Yusuf became more at ease and even began demonstrating some of his abilities to John. John always offered unwavering support during mini spikes or attacks triggered by Yusuf's gifts, and he kept Yusuf's secrets safe.</p>
+
+<p>When the accident occurred and things began spiraling out of control, John took Yusuf from campus to one of his parent's commercial estates, which had several empty houses. They chose a secluded house at the far end of the estate, amidst other vacant properties for sale, providing an incredibly quiet and suitable environment for Yusuf—or so they believed. It was an incredibly thoughtful gesture. John continued to check on Yusuf morning and night, bringing food and ensuring his well-being. He even obtained permission from the school and completed Yusuf's assignments on his behalf. Truly, John was a blessing in Yusuf's life.</p>
+
+<p>He managed to consume half of the soup and drink some of the Maltina, instantly feeling a significant improvement. However, he soon became aware of another presence in the room. Initially, he dismissed it as his imagination, but now he was certain that someone else was there. The realization made him flinch.</p>
+
+<p>"Oh, sorry. This is my sister, Florence; remember her?" John explained, noticing Yusuf's questioning expression. Yusuf had never met her before. Whenever he visited John's house, she was either abroad or at school. However, he had seen her in their family pictures.</p>
+
+<p>"She knows about everything. I told her... I am sorry. But you need help, and I believe she can assist you. Florence is a first-year student at Nile University, Abuja, and she believes that may be a psychological technique she can use to aid you with your condition." John explained, trying to persuade Yusuf. Nonetheless, Yusuf remained unimpressed, still unsure about this unfamiliar person offering assistance.</p>
+
+<p>"Hey, Yusuf, Nice to finally meet you." She greeted him with a smile, extending her hand to shake his. However, Yusuf did not reciprocate the gesture.</p>
+
+<p>"He doesn't shake women," John explained, laughing.</p>
+
+<p>"Oh, I am sorry," she said, retracting her hand. "Well, I thought we could try a little exercise together. It's something I read in one of my books, and it seems simple enough but promising."</p>
+
+<p>Initially, she felt nervous and slightly offended by Yusuf's silent stare. But then she realized that he had just teleported right before their eyes.</p>
+
+<p>John shook him, but there was no response. "Yep. He is out." He confirmed.</p>
+
+<p>"Oh, my God! Is this normal?" She exclaimed.</p>
+
+<p>"Yeah, that is why I brought him here. Imagine trying to explain this to people," John replied. Thirty minutes later, Yusuf returned with a deep breath, startling them both.</p>
+
+<p>"Where did you go?" She asked curiously, moving closer to him.</p>
+
+<p>Yusuf felt embarrassed and ashamed of his appearance, especially in front of her. He was also aware of his unpleasant odor. However, she seemed unfazed by it all. "I can't explain it, but it was difficult to come back. I am afraid that one of these days I might get stuck," he confessed, covering his ears and wincing in pain.</p>
+
+<p>"What we need to do is figure out how you can control it," she suggested.</p>
+
+<p>"I don't want to control it. I want to get rid of it." He sapped, but she didn't even flinch.</p>
+
+<p>"I don't think you can get rid of it. I believe it's a part of you. What you need to do is learn to adjust and even make it work for you."</p>
+
+<p>"I don't know if I can... He trailed off."</p>
+
+<p>"Trust me, you can." She reassured me with a smile. "It won't be easy, but the technique I am going to use will help."</p>
+
+<p>"Ok." He finally agreed, and John, who had been quietly observing, smiled as well.</p>
+
+<p>She explained to him the technique called "guided visualization." It involved using words to guide his focus solely on her, excluding all other distractions. The goal was to create mental imagery and concentrated attention that would foster a sensory experience in the mind, promoting relaxation. He needed to learn to tune out external noises and solely concentrate on her thoughts. Meanwhile, she would imagine an empty room painted in a calming cornflower white, devoid of windows or doors, neither too dark nor too bright. In this imaginary space, he could find solace, with external noises blocked out, providing a peaceful and quiet environment. The technique aimed to strengthen his brain's ability to focus on her thoughts, building resistance and defense against unwanted noise and intrusion. Guided visualization is widely used in therapeutic practices, including psychology and mind-body medicine, for stress reduction and anxiety relief.</p>
+
+<p>They attempted the technique throughout the day but had little success. He was too physically and mentally exhausted to fully grasp it. However, by evening, they had achieved some progress, allowing him to experience about 15 minutes of relative restfulness.</p>
+
+<p>Encouraged by this small success, both John and Florence decided to stay with him overnight, providing support and attempting the technique again the following day. John went to fetch their clothes and bought them food.</p>
+
+<p>"Thank you for doing this for him." John expressed gratitude to his sister as they sat outside the apartment, taking a few moments for themselves while Yusuf slept.</p>
+
+<p>"It's my pleasure," she replied.</p>
+
+<p>"How's school, by the way? Won't you miss your classes by being here?" John inquired.</p>
+
+<p>"We've finished all our tests, so I'll be fine. Exams are still two weeks away, and I have enough time to study," she assured him. "It seems the security guards called Dad and informed him about Yusuf's presence here. He mentioned that he had been trying to reach you, so he called me. I simply told him that you were spending time with friends here for a while. He asked why you didn't just move here, as he offered you an apartment at Cosgrove, but you refused and chose to stay in the hostel instead."</p>
+
+<p>John was fully aware of the lovely apartment that his father offered him on one of his luxury estates, Cosgrove. The estate was located in Wuye, a highbrow area in Abuja city, and it was one of those modern smart estates where everything was automated. However, he didn't accept because, for one thing, he wanted to experience hostel life and spend time hanging out with his friends. Relatives had already accused him of being a spoilt rich brat, and he knew that staying in a luxury apartment as an undergraduate student would only add fuel to the fire. Moreover, there would be too many eyes on him, reporting his every movement to his father, and he didn't care for that. He already felt like a fish in a bowl, as it were. Ironically, his sister, the only other child of Chief Obinna Okechukwu, was not given the same offer simply because she was a girl. She had the option to either stay in the hostel or at home, and she chose the hostel. It was as close to freedom as she could ever get before getting married. "I will call him back," he smiled. And at that moment, Florence's phone began to ring.</p>
+
+<p>"Oh, sorry," she whispered as she got up and walked far away from the apartment so as not to disturb Yusuf. She had forgotten to put her phone in silent mode. She considered herself lucky that it hadn't rung during the day. As she walked, she glanced at the number calling, and it was her fiancé, Mclean. "Hey, Babe," she answered.</p>
+
+<p>Yusuf lay still in his bed with his eyes closed. He wasn't sleeping, but rather resting. He couldn't afford to sleep for more than a few minutes at a time because he would involuntarily teleport. However, he was beginning to gain control over his waking state. The exercise they had done was wonderful. He even tried to picture the room in his head to achieve the same level of tranquility but with little success. Nevertheless, he could now sense when the involuntary teleportation was about to happen and could fight it, with some hits and misses. He had teleported twice to John and Florence, where he had overheard some of their conversations. He had also teleported to Florence while she was talking on the phone. She seemed so happy and was smiling a lot. It must be her boyfriend. He thought about it and felt a slight pang of jealousy. It was strange since he didn't even know her until today. He had heard of her from her brother and had seen her in their family pictures, but never in person. Yet, the hours they had spent together doing the mental exercise felt like a lifetime to him, and he began to feel something. He pushed the thoughts away, redirecting his focus. Then he began to reminisce about the past.</p>
+
+<p>He remembered some of the fantastic worlds he had visited. Yes, it was scary at times, but he couldn't deny how wonderful it was to explore those places. He had been to all kinds of strange worlds. Some of them floated in the clouds with a hazy ambiance. The houses were situated on floating lands, with entire cities protected by domes. The roads intertwined and looped without people falling off, as gravity seemed to work in a peculiar way there. Other worlds appeared metallic, with engines and beings resembling machines as well. There were towering lands where people, animals, and plants stood at 20 feet tall. He felt like an ant in comparison. Fortunately, they couldn't see him; he was uncertain of what they would do to him if they did. However, his favorite world was called the City of Jute, where he had met Janin. He was nine years old when he teleported to the City of Jute in one of his dreams, and it was the most beautiful place he had ever seen. Everything sparkled and exuded beauty. The structures seemed to be made of gold, silver, diamonds, or other similar materials. Even the people were a sight to behold, exceptionally beautiful and graceful in their movements. The animals were strange, yet captivating and friendly. They immediately sensed his presence upon his arrival but didn't attack him. A furry little creature that resembled a large cat approached him and rubbed against him as he stroked her while she purred.</p>
+
+<p>"What are you?" He was startled by a girl's voice and quickly turned around, inadvertently startling the cat-like creature that ran away. He felt bad. In front of him stood a girl about his age, who was the most beautiful girl he had ever seen. She wore clothes that resembled soft caramel-colored leather, strapped sandals, and a lace veil. Her hair was long, midnight black, and braided with flowers. Her skin was pale white, and her eyes captivated him the most. They were like glass, with the most beautiful shade of green he had ever seen. He couldn't help but stare.</p>
+
+<p>"How did you get here?" she asked again, moving closer to him.</p>
+
+<p>"I don't know," he stammered.</p>
+
+<p>"How could you not know? You must have gotten here somehow. I have never seen your kind here before."</p>
+
+<p>"I am sorry, I will leave," he replied, trying to force himself to wake up. "Please don't hurt me."</p>
+
+<p>"Why would I hurt you? Are you a bad person?"</p>
+
+<p>"No, I am just looking around and admiring your land. I don't even know how I got here. I went to sleep in my bed, and then I am here."</p>
+
+<p>"So, you are dreaming?" Her curiosity was piqued.</p>
+
+<p>"Yes."</p>
+
+<p>"Does this happen a lot?"</p>
+
+<p>"Yes, but I have no control over where I go. I just find myself anywhere."</p>
+
+<p>"Interesting," she smiled. "That must be a nice skill to have."</p>
+
+<p>"Not always, but I like it here," he said, beginning to relax. "What is this place anyway?"</p>
+
+<p>"It is called the Land of Jute. In my language, that means light."</p>
+
+<p>"Wait, how is it that I can understand you?" He realized that he was speaking her language.</p>
+
+<p>"I am wondering the same thing. Perhaps it's part of your abilities to speak the language of the place you find yourself in."</p>
+
+<p>"Perhaps," he agreed. He had never thought of it that way. They continued to talk for a while. She took him around the city, showing him extraordinary things. People stopped to look at them, but no one was upset or hostile. She brought him to her home and introduced him to her parents, who were equally intrigued. Her mother served dinner. It looked and smelled delicious, and even though he didn't know what it was, he wanted to eat it. Just as he was about to take a bite, he woke up.</p>
+
+<p>He tried his best to go back to sleep but couldn't. And for the first time, he felt upset about waking up. A few hours later, his father woke him up to go to the mosque together for prayer.</p>
+
+<p>"What is wrong?" his father asked, noticing the sullen look on his face.</p>
+
+<p>"Nothing, Baba. I just had a bad dream," he replied.</p>
+
+<p>"One of those again?" His father was concerned.</p>
+
+<p>"It's okay, Baba. I am fine." He didn't want to alarm his father by telling him what happened.</p>
+
+<p>"Okay, son. Let's hurry."</p>
+
+<p>He spent the next three days trying to return to the Land of Jute, but with very little success. Everywhere he went, he paled in comparison to the beautiful city made of lights and its gorgeous inhabitants, especially Janin with the glass eyes. He missed her so much and couldn't wait to be reunited with her. However, at this point, it seemed almost impossible. He had never visited the same place twice, as he had no control over where he went.</p>
+
+<p>That night, heartbroken, he thought about Janin for some time before falling asleep, only to wake up in the Land of Jute. The happiness he felt was indescribable. He found himself in the middle of a field of crops that resembled corn. Without knowing his bearings, he got up and ran towards the city. At the gate, he approached the guards and asked for directions to Janin's house. The guard spoke into what looked like a crystal mirror, and Janin appeared on the screen. As soon as she saw him, she smiled.</p>
+
+<p>"I am here, Janin!" he exclaimed with joy.</p>
+
+<p>"I can see that," she replied excitedly. "Please, let him come to me," she pleaded with the guards, and one of them escorted him to her house. They played together for what seemed like the entire day. She took him to the beach and showed him some of the flying sea animals that hovered above the sea, occasionally diving below. They were large and impressive, yet not intimidating. They rode on a wild unicorn and observed the city from below. It appeared like a giant diamond from that vantage point. He was so happy that he could cry, and that was when he woke up again. But this time, he wasn't sad, because he now knew that he could go back if he wanted it badly enough.</p>
+
+<p>He was brought out of his thoughts by John entering his room to wake him up for Fajr prayer.</p>
+
+<p>"Is it morning already?" he exclaimed in surprise. He wasn't sure if he had slept or had been lost in thoughts for so long that he hadn't realized the passage of time. Nevertheless, he was glad that he hadn't spent the night in agony like he had in the past week.</p>
+
+<p>"Yes, it is!" John said. "I guess Florence's method worked, huh?"</p>
+
+<p>"I think so too. Thank you so much. I will forever be grateful for what you did for me."</p>
+
+<p>"Haba, no problem. What are friends for?" John replied. "Now, get up, shower, and pray. After breakfast, we'll do another session, okay?"</p>
+
+<p>"Sure, Yusuf said, attempting to get up but suddenly being hit by a strong pang of hunger. He had to sit back down and cradle his stomach.</p>
+
+<p>"What is wrong?" John started to panic.</p>
+
+<p>"I am so hungry," Yusuf replied, and they both laughed. John microwaved the remaining pepper soup and fried rice he had bought earlier for Yusuf while he showered and prayed. Yusuf eagerly devoured the food. Florence, who joined them later, prepared some fried eggs and plantains, and Yusuf enjoyed those as well.</p>
+
+<p>Afterward, they had another session for about an hour, and then they took a break. Florence went for a walk to clear her mind because the mental exercise was taking a toll on her as well. Concentrating on the mental exercise became painful after a while, but she didn't mind. This was her brother's best friend, and he seemed nice. She was intrigued by the whole situation. As a first-year student of psychology, all she ever learned were boring theories that put her to sleep. She was starting to consider switching to a more exciting course, perhaps something in the arts. However, when John approached her with this problem, her curiosity was piqued, and she quickly delved into her books to find the best method to address the issue. She even consulted her lecturer and presented the problem to him as a hypothetical scenario that she hoped to use as the topic for her final year project when the time came. He was happy to help and suggested guided visualization. She immediately conducted extensive research on the topic, and she was pleased that it seemed to be working.</p>
+
+<p>John and Yusuf talked for a while on the apartment balcony, and everything seemed fine. "I got a call from Alhaji yesterday," John informed Yusuf about the call he had received from Yusuf's father, whom they referred to as Alhaji. He was worried about you and sensed that something was wrong.</p>
+
+<p>"What did you tell him?" Yusuf asked, feeling concerned because his phone had been with John since the incident and he wasn't ready to talk to his parents yet. Fortunately, he often went days, and sometimes even weeks, without talking to them or raising any suspicions. But this time, he was worried.</p>
+
+<p>"I told him that you were busy and that you would get back to him as soon as you could. Can you do that now?"</p>
+
+<p>"I am not ready. Please stall for me a little longer."</p>
+
+<p>"Okay, but it won't be easy. He already suspects something."</p>
+
+<p>"I am sure. Baba is very perceptive, and I know Umma will be worried too. But please buy me some more time." Yusuf pleaded.</p>
+
+<p>"No problem," John replied. They continued to talk. John showed him the assignments he had completed on his behalf and informed him about everything that happened in class and their preparations for exams. Hopefully, Yusuf would be able to return by then. John also shared the latest campus jist and everything in between before leaving for school, while Yusuf went in for a nap.</p>
+
+<p>About thirty minutes later, Florence walked in on Yusuf, who was experiencing a panic attack and drifting in and out of consciousness. She did her best to calm him down and then started the guided visualization again, even though she was extremely tired. It helped to calm him down. Her calm voice and kind demeanor were effective in gently guiding him to safety, and by this time, she had mastered the art of constructing that mental room. In the beginning, it was challenging to hold the image while also talking to him, but now it was a permanent structure in her mind that she could access whenever she wanted. It worked, and within an hour, Yusuf was stable again. She called her brother on her phone to come and help.</p>
+
+<p>That evening, Yusuf had to talk to his parents and assure them that he was fine. However, his mother wasn't convinced, and she insisted on visiting. That was when he decided to reveal the truth.</p>
+
+<p>"What? You had an accident, and you didn't let us know?" His mother exclaimed.</p>
+
+<p>"It's complicated, Umma. A lot happened."</p>
+
+<p>"What is complicated about telling your parents that you were involved in a life-threatening accident?"</p>
+
+<p>"It wasn't life-threatening."</p>
+
+<p>"And why didn't the school call us? What kind of institution is that?" His mother was furious. "I am going to call the Vice Chancellor and express my dissatisfaction."</p>
+
+<p>"No, Umma and Baba! Please don't. The accident wasn't life-threatening, and I was cleared of all injuries and concussions, except for minor bruises. However, it did trigger my abilities to an intense level, and John had to bring me to one of his father's estates to give me some privacy to adjust."</p>
+
+<p>"Oh no! Is she back?" His mother asked, referring to Janin.</p>
+
+<p>"No, Umma. She is not back. I haven't seen her in years, I swear. "Yusuf pleaded.</p>
+
+<p>"We have to come and take you home for treatment."</p>
+
+<p>"It is not necessary." Yusuf gave John a panicked look. He didn't want his parents to come at this time. He knew when they did, they would want to take him back home, and he couldn't handle the relatives and neighbors right now. There was just too much pressure on him. So, John took the phone from him and went outside to talk to Alhaji Ali. Yusuf could hear John frantically trying to explain. "I promise, Alhaji. We know what we are doing. Please don't come and take him home now. We are on a good trajectory, and he is making progress. There is very little distraction or pressure here. If you take him home, or worse, to rehab, as I am sure you are considering, he will be completely lost."</p>
+
+<p>"How can you expect us to do nothing, my son? What kind of parents do you think we are?"</p>
+
+<p>"The kind that loves him and wants him to be all right. Look, you know my parent's house, and if I ever did anything to harm Yusuf, you know how to reach me."</p>
+
+<p>"I am not even considering that." Alhaji Ali said:</p>
+
+<p>"Then please, Alhaji. I need you to trust me on this one. We are effectively using the science of psychology, and it is working. But he needs time."</p>
+
+<p>"How much time?"</p>
+
+<p>"I would say about two weeks to a month."</p>
+
+<p>Alhaji Ali remained silent on the other line, and John could hear Yusuf's mother talking and disagreeing. "Are you sure that you know what you are doing?"</p>
+
+<p>He could hear Yusuf's mother expressing disappointment and surprise at her husband for even considering it.</p>
+
+<p>"Yes, Alhaji, we have already seen a lot of progress. Two days ago, he couldn't even speak. But, like was said earlier, we need more time," John replied to Yusuf's father over the phone.</p>
+
+<p>"Okay," Alhaji Ali said, and John could hear Yusuf's mother starting to cry on the other end of the line.</p>
+
+<p>You need to call your mother and reassure her," John said to Yusuf as soon as he entered the room.</p>
+
+<p>"Perhaps later. I don't think this is the best time," Florence agreed. She needed time to absorb the information and consider options.</p>
+
+<p>You see, they had been dealing with Yusuf's condition his entire life, and Yusuf, being twenty-three years old now, meant they had been struggling with this issue for over two decades. They had been trying everything from spiritual to medical interventions to help him, but nothing had been effective. They had to move several times to protect him, especially when he caught the attention of a Jinn named Janin, who wanted to take him with her. They had to take drastic measures to get rid of her when Yusuf was around seventeen years old, and he had never seen her again. His condition improved after that, and he rarely experienced episodes until now. Throughout this time, they had been trying to eliminate his abilities, seeing them as an affiliation that needed to be cured. Perhaps they had failed to recognize that it was a gift meant to be nurtured, and they had prevented him from doing so. Now, it was driving him crazy.</p>
+
+<p>"Are we really going to let him stay there with his outbursts?" Yusuf's mother asked her husband once she had calmed down.</p>
+
+<p>"Yes, Nafisa," her husband answered, using her actual name. He usually called her Mami, but her real name came up when he was serious. "We have tried for a long time to get rid of it. Perhaps we should try this method now.</p>
+
+<p>"But they are just children. Shouldn't we at least bring him home and take care of him here?"</p>
+
+<p>"And give the neighbors something to gossip about? I don't think so," he replied, looking worried. "Don't worry, if it doesn't work, we will figure something out."</p>
+
+<p>"Okay."</p>
+
+<p>For the next week, Florence made significant progress in guiding Yusuf to control his abilities, and he was starting to understand. She even encouraged him to try and permanently transfer the mental room into his mind so that he could access it even when she wasn't there. Yusuf felt a sense of sadness at the thought of her not being there. He had grown fond of her and, perhaps, even fallen in love with her. He had never felt anything like that for any other girl, at least not a human girl. The only other time he had experienced something similar was with Janin, the beautiful Janin with glass eyes that he had met in the Land of Jute. When they were sixteen, they carved their names on a rock in the Land of Jute, using the laser-like light emanating from her eyes as a symbol of their everlasting love. They had planned to marry and have four children, and Yusuf would move to the Land of Jute to be with them since Janin couldn't follow him to his world. Her family loved and welcomed him, even throwing them an engagement ceremony. He started spending more and more time in the Land of Jute, causing him to appear comatose in the real world and causing panic in his family. It had taken a monumental effort from his parents and everyone involved to separate him from his Jinn lover, and they hoped they would never have to deal with that again. They had tried to connect him with human girls and even proposed arranging a marriage with one of his beautiful cousins, but he had rejected those ideas. Given his young age, they hadn't pushed too hard, but they still worried that Janin had a hold on him. Now that he was developing feelings for this new girl, he was sure he had nothing to worry about.</p>
+
+<p>After a few more days of therapy, Yusuf successfully transferred the mental room into his mind. Florence and John were both proud of him. She then had to leave to resume her studies. He felt sad but tried not to show it. They had spent a lot of time together, even outside therapy. She shared her likes and dislikes, such as her fondness for animals like cats (her pet cat's name was Cookie), her love for art, and her curiosity about why she had chosen psychology instead of pursuing creative arts. She even showed him some of her paintings and crafts on her phone.</p>
+
+<p>"It's not too late. You can still change your major," he encouraged her.</p>
+
+<p>"No, thanks to you, psychology is interesting now," she replied, and they both laughed.</p>
+
+<p>"I'm glad I could help," he said, and they laughed again. He told her about his struggles growing up and how they had to move multiple times to avoid being attacked or ostracized. But there were also good times, like when he excelled in sports at school and thought he would become an athlete. However, that wasn't meant to be.</p>
+
+<p>"I would say it's not too late for you either. Once you have mastered control over your abilities, you can join a team," he suggested.</p>
+
+<p>"Okay," he said, smiling. He loved her enthusiasm and how certain she was about everything. They talked for most of the morning before she had to leave with her brother. They exchanged numbers, and he promised to call her every day.</p>
+
+<p>That night, he lay in bed, feeling happy and relieved of most of his burdens. He thought a lot about Florence, and when he was asleep, he dreamt about her. This time, the dream didn't involve teleporting or visiting other worlds. It was just a good old dream where they talked, laughed, and hung out with their family. He was extremely happy about it. Around 3 a.m., he woke up sweating, paralyzed, and with a heavy weight on his chest. It was difficult for him to breathe, and it was an immense struggle when he tried to open his eyes. However, he managed to open his eyes. There, sitting on his chest, was a dark and blurry figure, making it hard for him to move or breathe. He struggled for what felt like an eternity before the figure slowly moved away from his chest and stood there, looking at him as his strength returned and his eyes adjusted to see the figure clearly.</p>
+
+<p>"Janin!" he exclaimed, looking at an older Janin than the one he remembered, standing there as a physical presence in his room.</p>
+
+<p>"Hello, dream husband. I have missed you so much!" she said, smiling.</p>
+
+<p>END OF CHAPTER ONE</p>`
     },
     {
-      title: "SOMEBODY IS GONNA CRY",
-      image: "https://i.pinimg.com/736x/64/dc/1c/64dc1c09118142c4a6064f2ffc8fe6f9.jpg",
-      text: `When the morning comes,
-And the love is gone.
-I see your face in the sky.
-I see the future of us,
-In the horizon.
-And I know somebody's gonna cry.
+      title: "CHAPTER 2: OLD FRIENDS",
+      image: "https://cdn.pixabay.com/photo/2023/01/16/03/27/fairy-7721517_1280.jpg",
+      text: `"Janin!" Yusuf said it again. "But...how? You cannot be here... It is not possible..." He tried to move, but his body was still heavy. He could only move his head and he followed her with his gaze as she moved.
 
-As the love slowly fades,
-And I don't want to wait,
-Wallowing in this pain.
-Though it may sound cruel,
-When lovers sing the blues.
-But I know, somebody's gonna cry.
+<p>"Yes. It's me. I am here, my love. And I have missed you so much." She walked over to sit at the edge of the bed. "Finally. You don't know how long I have been trying to reach you. But you couldn't hear me."</p>
 
-Copyright © 2008 HADIZA BAGUDU`
+<p>Yusuf still couldn't believe his eyes as he stared at her. His strength was slowly coming back, so he pushed himself to sit up, with some difficulty.</p>
+
+<p>"I have always been with you, but you couldn't see me. I kept screaming your name, but you didn't hear me." She was sad, and Yusuf felt a tinge of pity for her. The floodgates opened, and all the feelings he once had for her rushed back in. She told him how she kept trying to reach him, but there was a force field surrounding him that she couldn't penetrate. It was frustrating, but she never gave up. She also told him how everyone back in the Land of Jute missed him, and he believed it. For a while, they were like family to him. He had become so popular in the Land of Jute because of his friendship with Janin. And over time, he even started adopting their ways and customs. They had accepted him as one of their own, and he was happy to be one. But his parents saw what he did not, and they understood the reality of the situation and the danger that Janin posed to him and everyone around him, so they did everything to sever the bond between them, a bond that traversed across realities.</p>
+
+<p>"You cannot be here, Janin." He finally said, trying to assert himself. He could not wrap his head around how she got here. She shouldn't even exist in this reality. She was a Jin made of energy with no corporeal form. Yes, some jinn can appear to people and even harm them, but not all of them possess that ability, and Janin certainly doesn't. That is why she could never follow him back. But he could visit her in her reality any time he wanted as a teenager, and it was a huge problem as it made him catatonic in this reality while he is visiting theirs. And because he kept staying longer and longer in the Land of Jute, he was usually in a coma for several hours to even days, throwing his family into chaos. He understood where his parents were coming from, and they were right to get rid of her. She was a Jinn, and that is a relationship that should never happen. He was too young, naive, and in love to see it then. But there was something sinister about Janin and her family. It seemed they were trying to keep him in the Land of Jute and maybe use his abilities to cross over into this reality, and they almost succeeded until his parents intervened.</p>
+
+<p>The council of Ur also arrested Janin for interacting with Humans as that was forbidden. The last time he saw her, she was being hurled away to prison in the Land of Jute. So, how did she get here?</p>
+
+<p>"How are you here, Janin?" He was much stronger now.</p>
+
+<p>"I am not sure, myself. I have been following you around for years, trying to communicate with you, but you couldn't hear me. Yet, somehow, after your accident, you started to hear me, but not see me. Unfortunately, you were also struggling."</p>
+
+<p>Yusuf remembered hearing a voice calling out to him several times during his ordeal. But because there were so many things happening at the same time, he just dismissed it as one of the many ways he was losing his mind. "It was you?"</p>
+
+<p>"Yes, my love. You don't know how hard it was for me that you couldn't see me."</p>
+
+<p>"The last time I saw you, you were being taken to prison."</p>
+
+<p>She bowed her head in shame. "Yes. I finished serving my term, and I was released early for good behaviors. I know I should stay away, but I missed you so much."</p>
+
+<p>"Janin, you know we are not supposed to interact with each other. I don't know how you managed to cross over, but you need to go back, now!"</p>
+
+<p>"Why? Because your parents say so?" She snapped at him.</p>
+
+<p>"Yes, and because we cannot be with each other. It's unnatural." He was firm.</p>
+
+<p>"Says who? Why is it unnatural? We love each other. We should be together."</p>
+
+<p>"You lied to me about your age." She was a lot older than she told him. By at least a few centuries. You pretended to be my age just to deceive me."</p>
+
+<p>"I didn't want to scare you. In my place, age doesn't matter; we can be any age we want and appear however we want."</p>
+
+<p>"I still had a right to know." He protested.</p>
+
+<p>"I am sorry. I will not lie to you again."</p>
+
+<p>"You still need to leave."</p>
+
+<p>"I can't. I don't know how."</p>
+
+<p>"Come on, Janin"</p>
+
+<p>"Honestly, I didn't even know I could cross over. I just felt it got easier and easier until I did in the past week. I guess your mind had become a lot weaker. And the fact that I could cross over means you were thinking of me." Yusuf felt that one. It's true, he was thinking of her but not in that way. Although her being here now actually brought up old feelings. "We can still be together now. Your parents and my people don't have to know. You are not a child anymore." She pleaded.</p>
+
+<p>Yusuf thought he heard a noise at the door and suddenly, he was worried for Florence and John. What if they saw her? Could she harm them?" "I think your friend is back." She said with a smile.</p>
+
+<p>"You need to hide. He cannot see you."</p>
+
+<p>"I don't think he can." She said.</p>
+
+<p>"Hey, Yusuf. Are you OK?" John called out from outside the door before coming in.</p>
+
+<p>"Who were you talking to?" He asked, curious.</p>
+
+<p>"John. You are back. I didn't hear you come in." Yusuf pretended to not hear the question. He was glad John didn't see Janin as she was standing in the room.</p>
+
+<p>"Yes. I brought some of my stuff. I will get the rest tomorrow." John said, still suspicious. "I could have sworn I heard you conversing with someone. I even thought you were on the phone."</p>
+
+<p>"Oh, don't mind me. I talk to myself sometimes. But it's OK. I will try and keep it down."</p>
+
+<p>"OK then," John said and then went to put his stuff in his room. Yusuf gave Janin a stern look before following John.</p>
+
+<p>"What about Florence?" Yusuf asked. "She will get here a bit later. She needs to see someone." John replied while opening his box and taking out clothes to put in his wardrobe. Yusuf felt a tinge of jealousy again; Florence must be visiting her boyfriend. He doesn't even know the guy, but he already didn't like him. "How are you feeling this morning? Any headaches or episodes?" John asked. That was when Yusuf even realized that it was morning.</p>
+
+<p>"Oh, I am much better. I better go and pray Fajr. I will come and help you arrange later."</p>
+
+<p>"It's OK. I will soon be done. Then we will go and get breakfast. OK?"</p>
+
+<p>"OK." Yusuf walked to the door, then turned around and said, "Thank you, John, for everything. You are a true friend."</p>
+
+<p>"I am sure you would have done the same for me," John replied.</p>
+
+<p>"With all my heart."</p>
+
+<p>Yusuf went back to his room and thankfully, Janin was not there. He prayed, took a shower and cleaned, then went to the kitchen for breakfast. On his way, he observed the apartment for the first time and admired it. It was a four-bedroom apartment, with a large kitchen. Each bedroom was en suite with its toilet and had a balcony. Providing fantastic views. There was a small guest toilet for the living room, which was large and tastefully furnished, and had a small dining area attached to it. The kitchen was spacious and equipped with a storeroom and a pantry. Both the living room and the kitchen had balconies attached, and the living room balcony was a large wrap-around adorned with flowers, a mini garden and a sitting area. It was luxury at its finest. The design and furniture were very modern, and the apartments were designed for family living, preferably for a middle-class family with some money.</p>
+
+<p>They let Florence have the master bedroom which was the largest and the only one with a walk-in closet. Being a girl she naturally had more clothes. Additionally, since she loved to cook and all they could manage were instant noodles and tea, they hoped to bribe her into continuing to cook for them.</p>
+
+<p>He looked around to see if he could spot Janin, but she was nowhere to be seen. So, he proceeded to the kitchen. John had bought a lot of provisions which he hadn't put away. They were strewn on the counters. He wondered where John was able to get these items so early in the morning. Most supermarkets open by 9 a.m. It was 7:25 a.m. The sun wasn't even that bright and somehow, he found a place to purchase stuff. Perhaps it's H-Medix supermarkets and pharmacies. They are usually open 24/7. He started to put things away, where they belonged.</p>
+
+<p>Florence hadn't come moved in yet, so, he might just have to eat instant noodles. He opened the fridge to put the perishables away and he noticed some Tupperware containers containing some jollof rice and cow-tail pepper soup. He was so happy. Did John find a restaurant that was opened this early or was it Florence who cooked it the previous day and left it in the fridge for them to warm and eat? Whichever it was, he was happy. He warmed the food and served it just as John was coming into the kitchen to eat.</p>
+
+<p>Later that day, he talked at length with his worried mother and once again assured her that he was alright. As if his mother could sense Janin was back, she kept asking him, but he denied it. He didn't want her to come and take him away. However, Hajiya warned him about how Janin could attach herself to him and refused to let go. The Jinn were notorious for that. He also chatted a bit with his father before hanging up.</p>
+
+<p>After John left, he walked around the house, from room to room checking for and calling Janin but she was nowhere to be seen. He was nervous as he didn't know what she was up to. Perhaps she got tired and left. Perhaps he hallucinated the whole encounter. Whatever the case, he was happy that she was gone. He felt good enough to put in his sneakers and go for a walk. John had bought some of his clothes for him and he was able to change.</p>
+
+<p>On his walk, he also admired the beautiful luxury gated community with its matching designs. From the outside, all the buildings look alike, but inside there were differences in furniture, colour, and even design. Some of the apartments had 5 or 3 bedrooms, some had BQ (boys' quarters) attached, and some were full terrasses with multiple floors. There was something for everyone, as long as you could afford it. The ambience was peaceful and beautiful, with all the lawns well-manicured. There was a football field, a basketball court, a small children's play area or park, a mini-mart, a clinic, and a small security command centre. The gate is automated, and a scanner checks all cars coming in for weapons and bombs, especially with the rising security concerns in the country.</p>
+
+<p>The Middle Eastern vibe of her favorite restaurant combined with the delicious smells of Arabian/North African food, always put Florence at ease, and she relaxed a little bit.</p>
+
+<p>She was having lunch at Mandie's restaurant that afternoon with her boyfriend, Maclean, after classes. The restaurant is at the heart of Wuse 2 and is frequented by the rich, due to the exorbitant prices and unique dishes they serve. The walls were draped in a vibrant mixture of red, white and grey patterned curtains which complemented the deep red wall-to-wall carpet, which feels lush under her feet. They sat at one of the multiple round tables covered with clothes and the chairs were red and white. Ornate hanging fixtures added a touch of elegance to the space.</p>
+
+<p>They ate and talked for a while before he asked her why she was unreachable the previous night.</p>
+
+<p>"Oh, I was with my brother at his apartment last night.′ Florence explained. "He needed my help with something, so I went, and as it was late, I decided to spend the night there." She didn't want to tell him about Yusuf yet. She had a feeling that it would make him uneasy. She didn't know why.</p>
+
+<p>"OK. It's just that we were supposed to hang out, and I missed you." He whined.</p>
+
+<p>"I am sorry, sweety. I will make it up to you, I promise." She felt a pang of guilt for not telling him the whole story. They were supposed to hang out at the library and study together. They were both students of psychology, but Mclean was in his second year, so, he could help her with her studies. That was how they met, through their love for the library. He was happy to assist her with her assignment since she was new and was experiencing difficulties at that time.</p>
+
+<p>"We can study after lunch." She said., but then suddenly realized she forgot the textbooks they were going to use. Also, she needed to talk with her professor to get more useful information to help Yusuf. "I am sorry, I forgot the textbooks."</p>
+
+<p>"It's OK. We can get some from the library." He replied.</p>
+
+<p>"OK. But I cannot study for long. I need to see Prof. Hues for something."</p>
+
+<p>"Again? What is the subject you are trying to discuss? Can't you fill me in? I might help."</p>
+
+<p>"Oh no. It's just something silly, I have been working on. I will tell you when I am sure of it, I promise." She still didn't feel comfortable telling him about Yusuf.</p>
+
+<p>He looked at her without saying anything for several seconds before saying: "OK. Whenever you are ready, tell me. I am also a Psychology student, remember?"</p>
+
+<p>"Yes, babe. I promise."</p>
+
+<p>After a 30-minute library session with Mclean, Florence went to visit her professor at the Department of Psychology. At the door, she read his name:</p>
+
+<p>'Professor Charles Hues', and as always, found it fascinating. She gave the door a light tap and heard his sharp voice yell: "Come in!" She entered. As usual, he was sitting at his desk, surrounded by books. His office is always full of books from every field of psychology.</p>
+
+<p>He was a white American professor who initially arrived in Nigeria for a short lecturing stint but opted to stay because he loved the country and naturally, the favourable pay. Despite his perpetual dishevelled and fatigued appearance, he exuded quick wit and pep. In his early 40s and not unattractive with reddish-blond hair and light brown eyes. "If only he took better care of himself," She thought.</p>
+
+<p>"Hello, Florence," he said in his usual cheerful manner. "What supernatural mystery do you have for me today?" Florence laughed nervously.</p>
+
+<p>"Good evening, sir." She replied. Going over to his desk and sitting across from him. After a few pleasantries, she delved in:</p>
+
+<p>"Our subject can now teleport in and out of realities anytime he wants. How could you explain that?</p>
+
+<p>He thought about it for a few seconds before answering: "The ability to teleport in dreams and seemingly be present in the dream location while catatonic in reality could be indicative of a vivid form of lucid dreaming or a dissociative experience.</p>
+
+<p>"What is Lucid dreaming?" She asked.</p>
+
+<p>"Lucid dreaming is a state where the dreamer becomes aware that they are dreaming and may gain some control over their dream characters, narrative, or environment. It allows individuals to actively participate in and often manipulate their dreams. Imagine you find yourself flying over a beautiful field of lavender, admiring the scene and taking in the intoxicating aroma while feeling light-headed and euphoric, then you remember that you've never been to that environment before. It hits you: you just went to bed a short time earlier and oh, you cannot fly. Then you have become lucid in that dream- meaning, you are aware that you are dreaming. And even better, you can manipulate the dream to suit you. Like say, you can change the scenery, the atmosphere, or even your appearance. Anything. Dreams are meant to work out unresolved issues we had while awake, so you can manipulate a lucid dream to do anything to get the result you want. Lucid dreaming can be a skill developed through practice and various techniques."</p>
+
+<p>"But how do you explain the teleportation?" She asked, again.</p>
+
+<p>"Well, I am not sure what you mean by teleportation. Has he left the room at any moment?" She could hear the sarcasm in his voice.</p>
+
+<p>"No, but he zones out and appears to enter a trance for varying lengths of time, from one minute to several. And when he returns, he seems different."</p>
+
+<p>"Sounds like he has a wild imagination and the ability to act them out." He said but noticed the look of disappointment in her eyes. So, he became serious. "Lucid dreaming is exceptionally powerful, and when combined with mental health problems such as depression, anxiety and even just an overactive imagination, distinguishing the difference between what is real and what is not can be increasingly difficult. Exploring their dream patterns, overall mental health, and any recent life changes might help understand this phenomenon."</p>
+
+<p>"His heartbeat stops, no pulse." She continues, stubbornly. "Professor, how long can a person survive without a pulse?"</p>
+
+<p>"A few minutes at most, in rare cases longer. In 1999, Anna Bågenholm, a Swedish radiologist, fell into a frozen stream on a ski vacation and was trapped under a layer of ice in freezing water for over 80 minutes, leading to hypothermia.</p>
+
+<p>By the time the rescue team arrived, her body temperature had dropped to 13.7°C, one of the lowest body temperatures on record and she had no pulse. The rescue team administered CPR and flew her to a medical centre, where she was hooked to a cardiopulmonary bypass machine. This slowly warmed the blood outside her body before recirculating it back, gradually increasing her temperature. Her heart started beating again after several hours."</p>
+
+<p>"He looked so proud of himself as he droned away," Florence thought.</p>
+
+<p>"Anyway," he suddenly came back to reality. "Ideally, a person's pulse shouldn't be absent for more than a minute."</p>
+
+<p>"Well, the last time, he was out for over 12 minutes, and he came back like nothing happened. Sometimes, he comes back with bruises and scars that were never there before. How can you explain that."</p>
+
+<p>He stared at her with seriousness for a few seconds before saying, "Are you mocking me Florence?"</p>
+
+<p>"No sir, I am genuinely curious." He still wasn't amused. "I wasn't mocking you; I swear. But I wasn't 100% honest with you either. This is not a hypothetical scenario. It is based on a real person. My brother's friend had an accident and since then, he has been experiencing strange out-of-body phenomena. We didn't know how to help him, but the technique you suggested did help ease his pain."</p>
+
+<p>"It seems like you should take him to a hospital." He said, more quietly than usual.</p>
+
+<p>"Hospitals won't work. Believe me, sir. This is an unusual case, and they wouldn't know what to do with him. Worst-case scenario, they lock him up in a mental institution," She explained.</p>
+
+<p>"Can I talk to him?" Professor Hues asked, sounding intrigued now.</p>
+
+<p>"He is not fond of that. He wasn't happy about me knowing either. He was almost lynched as a kid, and his family had to move several times for that same problem."</p>
+
+<p>"So, it's a lifelong condition?"</p>
+
+<p>"Yes."</p>
+
+<p>"He believes he teleports huh."</p>
+
+<p>"Yes sir. I also do. I know it seems bizarre to say it aloud, but It's something you have to experience to understand. Not only does he do it in dream form, but he does it while awake, in front of us, and you can see and feel his life force exiting his body and then coming back. Sometimes, he comes back with physical evidence on his body to show for it," She argued.</p>
+
+<p>"Well, teleporting while awake could be a form of altered perception or dissociation, potentially related to psychological factors or neurological processes. Further assessment and exploration would be needed to provide a more comprehensive explanation.</p>
+
+<p>The resurgence of teleportation experiences, particularly after a recent accident, may suggest a psychological response triggered by trauma or heightened stress. The ability to enter and explore people's minds, if not metaphorical or symbolic, could be a manifestation of heightened empathy, sensitivity, or a coping mechanism developed in response to the accident. It's essential to consider psychological factors, such as trauma and coping mechanisms, and potentially seek professional help for a more in-depth understanding and support." He droned on again. "I would love to meet him, though and see for myself what you mean. I cannot reach any kind of conclusion from here. I am sorry."</p>
+
+<p>"Actually, Sir, you have helped me enough. I have an idea what to do now. Thank you." She got up to leave.</p>
+
+<p>"I am glad I helped." The sarcasm was back in his voice again. If you have any more wonderful discoveries, be sure to let me know."</p>
+
+<p>"Will do, sir." With that, she left.</p>
+
+<p>At around 5 pm, Florence arrived at the house, having done a lot of shopping. She bought items she thought they would need in the house, such as a vacuum cleaner, brooms, mops, buckets and other cleaning equipment, detergents, soaps, new pots and pans, dishes, cutlery, new bed sheets and several other necessities for a comfortable living. She even bought a ridiculous amount of foodstuff, including dairy, seasonings, beef, a 25 kg bag of rice, a 10-litre gallon of vegetable oil and cartons of bottled water. The security guards of the estate assisted in bringing the items into the apartment for her. Yusuf wondered if any items were remaining for others to buy at the supermarket. When her brother saw what she brought, he asked her, "Did you tell Dad you were moving into this apartment?"</p>
+
+<p>"No," She answered after a little pause. "Did you?" She also asked him.</p>
+
+<p>"No," He replied.</p>
+
+<p>"Well, OK then." She said, and they both burst out laughing. Then, both Obinna and Yusuf helped her arrange the things and put them away while she went to the kitchen to cook dinner. Later, they all sat in the living room to gist. She told them about her conversation with Professor Hues and some of the new exercises that she had planned for him. Even though they were all tired, she still decided to have a session with Yusuf. This time around, Yusuf had gained a lot more control of his mental abilities and at some point, he realized that he could pull Florence into the white room with him by simply visualizing her in it. She was caught off guard, and it was a rush.</p>
+
+<p>The whole time, Janin watched them through the wall of the empty guest room, with an amused look on her face.</p>`
     },
     {
-      title: "THE ONE",
-      image: "https://cdn.pixabay.com/photo/2017/02/21/09/34/mirror-2085193_1280.jpg",
-      text: `Are you the one?
-To whom I give my heart?
-
-You fit the perfect profile.
-That I cannot deny.
-
-Is it love at first sight?
-Oh, I hope I am right.
-
-Things have not been the same,
-Since the day we met.
-
-You have been the only thing on my mind,
-Morning, noon, and night.
-
-Do we have to play the game?
-Or will you just tell me your name?
-
-Would we be happy?
-Am I really that lucky?
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-    {
-      title: "LOVE IS…",
-      image: "https://i.pinimg.com/736x/6e/69/54/6e695424cf36ec4a4c0384b0c2c3e9d2.jpg",
-      text: `When you are still dancing, long,
-After the music stopped.
-
-When you speak with your eyes
-And understand with your heart.
-
-When in your mind, the world
-Is a perfect place and life is good.
-
-When you don't need to say
-Thank you or sorry.
-
-When you find sunshine in
-The clouds and comfort in the rain.
-
-When you hear each other's name in every
-Heartbeat, and say it with every breath.
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "THE CRY OF A BROKEN HEART",
-      image: "https://i.pinimg.com/736x/d4/22/ca/d422ca566a594fcbc3f31a66dcc7762e.jpg",
-      text: `I have waited for you all my life,
-Now that you have come, it just doesn't feel right.
-
-They said that love is the best,
-Why does it feel like anything but the best?
-
-I was bitten by the love's serpent.
-And its venom is slowly killing me.
-
-Burning through my veins cruel,
-Melting each bone as it moves.
-
-I have swallowed the bitter fruit of love,
-And its poison is cutting my intestines up.
-
-Why does love bring tears to my eyes?
-Why does it make me want to end my life?
-
-Oh, love, why love? Why me?
-Why are you so unkind to me?
-
-Haven't you punished me enough?
-Isn't it time you left me alone?
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "HIGH ON LOVE",
-      image: "https://i.pinimg.com/1200x/bb/66/d9/bb66d9d229fb73741e589e8cad5e613c.jpg",
-      text: `Your love is like a dove,
-Soaring high above,
-With such a powerful force,
-No one can alter its course.
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "MY DARLING",
-      image: "https://cdn.pixabay.com/photo/2018/09/09/12/50/heart-3664496_1280.jpg",
-      text: `Tell me, whose heart is beating?
-Yours or mine?
-Together they form a sweet melody,
-You and me.
-People get jealous of us, and bad-mouth us,
-Here and there.
-But we will be together for life, no matter what.
-
-I think about you my darling,
-Night and day.
-I love everything about you,
-Good or bad.
-You are the one I want to be with,
-Good times or bad ones.
-You are the one I want,
-Now and forever.
-
-And I will always love you, as long as I live,
-You are more beautiful than the night,
-Moon and stars.
-More precious than all the jewels in the world,
-Diamond and gold.
-And I never will stop wanting you,
-More and more.
-
-Loving you is what I will do,
-Forevermore.
-You are the only one in my heart, I owe you, my life.
-Loving you gives me joy.
-Makes me a better person,
-And gave me a reason to live.
-
-Don't ever leave me, baby,
-I will never leave you.
-Even if it cost me my life…….
-Baby, don't you see, there are only two answers to a question,
-Yes and no.
-But when it comes to our love, there is no
-Yes or no.
-
-I will love you with my body,
-Heart and soul.
-Because to me, there will never be another like you,
-No, no.
-I will forever be grateful to you and love you to the end of time.
-My darling………………………………………………………..
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "ONCE UPON A DREAM",
-      image: "https://i.pinimg.com/736x/31/ab/7b/31ab7be16c7dc7b447ac48efd27564e0.jpg",
-      text: `I dream of a life,
-Where you and I are in love.
-I was not perfect, just right.
-But so were you, my love.
-
-We got married and had two children.
-Oh, how I wish that was real.
-You may not be totally flawless,
-But you make my heart skip a bit.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "LOVE MAKES ME FEEL THAT WAY (A SONG)",
-      image: "https://i.pinimg.com/736x/83/9f/e5/839fe5898a678f91d4b5d87ade192785.jpg",
-      text: `I am a queen, A superstar, 
-And a president.
-Love makes me feel this way.
-I can touch the sky, 
-Wear the moon, And drink the sun.
-Love makes me feel this way.
-
-I am happy,
-I've stopped crying,
-And I smile all the time.
-Love makes me feel this way.
-I can soar like an eagle,
-Run faster than a car,
-Float like a boat.
-Love makes me feel this way.
-
-I can wrap the moon around me,
-Wear the sun like a crown,
-And count all the stars in the sky.
-Love makes me feel this way.
-I saw the sun chasing the moon,
-A mermaid dancing for joy,
-And drank from a fountain of youth.
-Love makes me feel this way.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "COME HOME",
-      image: "https://cdn.pixabay.com/photo/2014/10/08/16/38/heart-480367_1280.jpg",
-      text: `Do you think that I don’t know?
-What you do when you are out late?
-Do you think that I am dumb?
-And can’t see that you are cheating?
-
-I am just playing dumb,
-Because I don’t want to hurt you.
-I can’t believe you can do this to me.
-I know I can’t stop you.
-But I just want you to know.
-That I love you.
-
-What has she got that I don’t?
-I’d give you the world honey,
-If only you will let me,
-Because I love you.
-Can’t you see… she’s just using you?
-Don’t you even see she doesn’t appreciate you?
-
-All the things you do for her.
-She’s not grateful.
-If only you will give me a chance,
-I will show you, what love really means baby.
-But you will rather cheat on me oh honey.
-
-Be careful what u wish,
-You might get it.
-Honey, don’t you think that it’s time,
-You come home to me.
-Because home is where you are meant to be.
-What has she got that I don’t anyway?
- 
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-
-{
-      title: "BEAUTIFUL",
-      image: "https://i.pinimg.com/1200x/ab/66/24/ab66240a6eaec3dc321d092a9143fbdc.jpg",
-      text: `There is nothing more beautiful than:
-
-The warmth in the eyes of a mother,
-Or the feel of a baby’s heartbeat on the shoulder.
-
-The color of the sky on a clear day,
-Or the tingle of your favorite ice cream on your tongue.
-
-The innocence of a first kiss,
-Or being in love for the first time.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "SEARCHING",
-      image: "https://cdn.pixabay.com/photo/2014/07/08/09/57/candle-386607_1280.jpg",
-      text: `Where are you my Mr. Right?
-Why can’t you come and make things right?
-Please come and give me peace of mind.
-And become the love of my life.
-And be the reason I smile.
-Don’t let this loneliness be my plight.
-
-I have this heartache that I can’t ignore.
-Please come and be my cure.
-With a love so tender and pure.
-You will make things right, I am sure.
-And we will be theperfect duo.
-Together, forever, our love will endure.
-
-I am about to make a mistake.
-I don’t want to do something I will regret.
-Something of which I will be ashamed.
-If you promise to come, I will wait.
-No matter how long it takes.
-I will not let my heart be filled with hate.
-
-I don’t know who you are or what you look like.
-But I am sure you will be just fine.
-And I know that with you by my side.
-Our love will surely stand the test of time.
-I see in your eyes the sun sets and rise.
-The moon and the stars shine.
-
-Darkness has befallen my heart.
-Pain for what we might have had.
-Something that I really want.
-What did I do wrong?
-To make you not want to come?
-Please come, for in love I wish to be clad.
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "A SAD LOVE SONG (Song)",
-      image: "https://i.pinimg.com/736x/57/b9/87/57b9875c1892460de878760526d7625b.jpg",
-      text: `Do you remember when we first met last year?
-How we didn’t start on a good note.
-I hated you then because I didn’t know how amazing you were.
-But those are just memories now.
-
-This morning, I woke up and you weren’t by my side.
-Not there to kiss my lips and tickle my toes.
-Now you are gone, and I don’t know what to do.
-You took my entire happiness with you.
-
-Sadness is my daily companion.
-Now I know why they say, love is pain.
-I never thought I’d miss you this much……
-Even though I know you are the best thing that ever happened to me,
-Because I took you for granted,
-
-Never knew you’d leave someday.
-Wherever you are whatever you do.
-I hope I am still on your mind. Because you know,
-I’ll never forget you. Not in my whole lifetime.
-
-
-Chorus:
-Gone are the days when the sun used to shine on my face.
-Now all is cold because you are gone from my life.
-Oh, how I miss you………..
-Oh, I miss the feeling of you
-being close to me.
-
-They say, you never know
-what you’ve got until it’s
-gone.
-Oh, how true that is, because
-now I see,
-That life without you is
-torture.
-Wishing I’d bring back those
-days gone.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "ONLY YOU",
-      image: "https://i.pinimg.com/736x/02/7f/11/027f11a91a8b3f8a48e56dbc28ea5af3.jpg",
-      text: `Honey, don’t you see that I love you?
-How do I shiver when I see you?
-
-All the sleepless nights I have had because of you.
-All day I think of you.
-
-At night I dream about you.
-I’ll never want anyone but you.
-
-I don’t know what to do.
-Because I can't get enough of you.
-
-To me, there is no one but you.
-In my future there is you.
-
-Baby I want to be with only you.
-Honey, don’t you see what you do?
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "SECRET ADMIRER",
-      image: "https://i.pinimg.com/1200x/5e/2e/01/5e2e0164cdbbd606eb5328a33b3cba49.jpg",
-      text: `All my life I have been searching for my soul mate.
-Now that I’ve found you, I am not going to let you go.
-No matter how much you try,
-You cannot run away from my love.
-
-The first time I saw you walking down the street.
-My heart missed a beat, and then I know,
-That you are the one for me.
-Now, every night I pray before I go to sleep,
-That you will love me as much as l love you.
-
-I never thought that someone would mean so much to me.
-You are my love, my life, and the air that I breathe.
-Living without you is a punishment, I’d rather die
-But oh, if only you knew.
-So many times, I love you, but you don’t know.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "U",
-      image: "https://i.pinimg.com/736x/bc/35/d9/bc35d9195748de43311e933dabcc1765.jpg",
-      text: `When I wake up in the morning feeling happy
-It’s you.
-
-When I don’t see a reason for crying
-It’s you.
-
-When I have love that is not for buying
-It’s you.
-
-When I just can’t help laughing
-Darling, it’s you.
-
-Copyright © 2008 HADIZA BAGUDU
-`
-    },
-{
-      title: "REGRETS",
-      image: "https://i.pinimg.com/736x/a3/b0/67/a3b067e4975439035824c8bbbf35b6e3.jpg",
-      text: `I am sitting here thinking about you, love.
-Still can’t believe that you are gone.
-Oh, what must I have done wrong?
-Now I am singing this sad song.
-
-Oh, darling, I am so sorry.
-Tonight, I am going to be so lonely.
-My day is no longer sunny.
-Without you here, by my side honey.
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "A LOVE STORY",
-      image: "https://i.pinimg.com/736x/6f/42/03/6f4203d68ec968c5d66940cb33cf502a.jpg",
-      text: `Man: Wipe your tears, I am here my love.
-You don’t need to cry, no more.
-I can solve all your problems.
-I have crossed the deserts and the seas just to be with you.
-Do you think that I’ll let anything come between me and you?
-Your heart is safe with me, of that, you can be sure.
-
-Woman: You have the power to make my heart race.
-And also make it stop dead in its tracks.
-I am a slave to your charms.
-Your love transformed me, my heart’s new dance.
-In you embrace, I find solace and grace.
-I cherish the connection between us, a love so advanced.
-
-Man: I thought I was the greatest thief in the world until I met you.
-Because you stole what was most guarded… my heart, it’s true.
-Your presence illuminated my life, a love so pure and new.
-I am captivated by your essence, your soul I pursue.
-With you, my love, every day feels fresh and dewy.
-In this tender embrace, our hearts become one, not two.
-
-Woman: But darling, I am surprised at what you are saying.
-How can you claim that I stole your heart when you have my own in
-your hands?
-Come and get yours in exchange for mine if you dare.
-The way you look at me sends shivers up and down my spine.
-Yesterday I was only a girl, so unsure of the world.
-Today, you made me a woman full of radiance beauty, and grace.
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-{
-      title: "IMAGINE",
-      image: "https://i.pinimg.com/1200x/0c/b4/c9/0cb4c91c773a5fb30cf3464669cea248.jpg",
-      text: `Imagine:
-Boy: You and me, we were walking through the jungle,
-And a vicious lion appears, with hunger in its eyes.
-I’ll lay my life to protect you, my love.
-I’ll look into its eyes and declare my love for you.
-
-Girl: Do you think that I will stand there and watch you die?
-Then, my love, you must be insane.
-I will kneel in front of the beast and beg it to kill me first.
-Because even death cannot take you away from me, my love.
-
-Imagine:
-
-Boy: You and me, we were trying to climb a mountain,
-So high, its head is in the clouds,
-It’s not easy, but was love ever?
-For your love baby, no obstacle is too great.
-
-Girl: Don’t worry baby, I am right here, by your side
-I feel your pain. And I’ll be with you all the way,
-Guiding you and supporting your weight.
-For your love baby, I’ll climb the highest mountain.
-
-Imagine
-
-Boy: A love so great, that no force on earth can break it,
-Waking up in the arms of the one you love,
-
-Looking into their eyes and thinking, 
-How lucky you are, and theworld seems right, in every way.
-
-Girl: A love that can stand the test of time.
-Forever, in the arms of your lover.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-    },
-
-
-
-
-
-
-
-{ 
-                title: "Chapter 20: IN THE MIND OF A POET", 
-                image: "https://i.pinimg.com/1200x/eb/1a/87/eb1a876c5f34914e4c73ac2a50cd224d.jpg", 
-                text: `In the mind of a poet -
-Horses have wings.
-Birds sing with melodies that rhyme.
-Dreams dance above the clouds.
-
-In the mind of a poet -
-
-The eyes speak a thousand words.
-Every heartbeat is a note.
-Love is a source of life.
-
-In the mind of a poet -
-
-There is no good or bad,
-Just happy faces floating about.
-Lovers speak with their hearts and kiss with their mouths.
-
-In the mind of a poet -
-
-The moon and the stars whisper to each other.
-Every sunrise is a verse.
-And every sunset is a song.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-{ 
-                title: "Chapter 21: FINDING GOD", 
-                image: "https://i.pinimg.com/1200x/a1/e8/94/a1e8946b523d42c9964247c89d0b1276.jpg", 
-                text: `Tell the person who is looking for God -
-That beggar on the street.
-That leper with no feet.
-That widow with many kids.
-That madman that stinks.
-
-That God is not hiding in the heavens -
-That orphan with no keeps.
-That sick person you are afraid to visit.
-That poor relative you don’t want to associate with.
-That neighbor you keep ignoring.
-God is closer than you think.  
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-{ 
-                title: "Chapter 22: A NIGHT’S PRAYER", 
-                image: "https://i.pinimg.com/1200x/c3/8b/14/c38b14a462bad8a69e15c022d4bb8457.jpg", 
-                text: `In the dead of the night.
-Not a soul in sight,
-
-And the heart is filled with fright.
-The Jinn come out to play,
-
-And the witches go after their prey,
-All I can do is pray.
-
-Oh God of creation,
-I ask for your protection,
-
-Against every bad intention.
-Be with me throughout the night,
-
-Until the morning light,
-And in Your glory, I shall arise.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-{ 
-                title: "Chapter 23: VIRTUES", 
-                image: "https://i.pinimg.com/1200x/cd/1d/0b/cd1d0b5dc83158fac1a3916f3286a3f2.jpg", 
-                text: `My friend, what did you do today?
-                
-Did you visit the sick, or help the needy?
-Did you pray for the dead, or laugh with the living?
-
-Did you make new friends or strengthen family ties?
-Did you comfort a dying person or save a life?
-
-Did you forgive an enemy or make a new friend?
-Did you wipe someone’s tears or put a smile on their face?
-
-Did you learn something new or pass on knowledge?
-My friend, what did you do today?
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 24: TAKE IT EASY", 
-                image: "https://i.pinimg.com/1200x/49/c4/72/49c4727e3f3c82e538ba2e1d6829b52e.jpg", 
-                text: `Take Life easy,
-Even when things are crazy,
-And your heart is heavy,
-For it too will pass surely.
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-           { 
-                title: "Chapter 25: SICK (HIV)", 
-                image: "https://i.pinimg.com/1200x/da/3a/c2/da3ac2d61ee122ae8e801b7a83a4f3f0.jpg", 
-                text: `Stop, smile at me, hold my hands & then walk away.
-That’s all I am asking you to do.
-
-Show some love and nothing
-more.
-I didn’t wish this on myself.
-And I don’t wish it on you.
-
-Don’t run away from me,
-you don’t have to.
-I am not a monster.
-Be a little nice to me.
-Stop, smile at me, hold my hands, and then walk away.
-That’s all I am asking you to do.
-
-I am a human like you.
-I have feelings and I don’t want to be lonely.
-Show some love, please.
-It doesn’t matter who you are or what you are.
-Just be kind, that’s all I am asking.
-Don’t be scared, I don’t bite.
-
-Stop, smile at me, hold my hands, and then walk away.
-That’s all I am asking you to do.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 26: ONCE UPON A STAR", 
-                image:"https://i.pinimg.com/originals/f1/4b/ae/f14bae2acea5b2ea082d4001cd47d43b.gif", 
-                text: `I had a dream about the sky and the heavens above,
-Sprinkled with stars and the moon like diamonds,
-I looked up and behold,
-I was the brightest star of them all!
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 27: BLANK", 
-                image:"https://i.pinimg.com/736x/b7/f0/92/b7f09244298db32f4ca2971987e31d9c.jpg", 
-                text: `My life is blank.
-My heart is heavy.
-I feel pain in my chest.
-Hurtful things run through my mind.
-
-Why? I asked myself.
-But the answer is clear.
-I have no one to blame but me.
-Brought this on myself.
-Now, I am paying the price.
-
-Will there ever be light at the end?
-They say the darkest hour is just before dawn.
-I hope this is the darkest.
-‘Because I can’t take any more.
-I hope I will use the lessons I have learned.
-And pray God be beside me
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 28: HAPPINESS", 
-                image:"https://i.pinimg.com/736x/6b/22/43/6b22435c980151b5cce85d02407848a6.jpg", 
-                text: `My life is blank.
-This is it.
-This is the life she will live.
-And it’s all she has got to give.
-She will never leave.
-
-But she is contented.
-Just what she recommended.
-A happiness she created.
-For her heart will never be tormented.
-
-The glitz and razzmatazz of the outside.
-Would mean nothing to her otherwise.
-Because to her, this is just good and nice.
-And she will not have it otherwise.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 29: AIMING HIGH", 
-                image:"https://i.pinimg.com/736x/8d/eb/42/8deb42b50f4383ea05e085fdfd1edfe6.jpg", 
-                text: `Flying so high,
-I believe I can touch the sky.
-Don’t ask me why.
-I have made up my mind.
-
-That before I die,
-I am going to touch the sky.
-This is no lie.
-I am going to give it a try.
-
-Like a beautiful kite,
-Flying out of sight.
-With God by my side,
-And my heart, as a guide,
-I believe I can touch the sky.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-{ 
-                title: "Chapter 30: INVESTMENT", 
-                image:"https://i.pinimg.com/736x/a4/c4/95/a4c4957ee201e5ef265699e31328588c.jpg", 
-                text: `A seed sown today is a tree tomorrow.
-A kobo invested today is millions of Naira tomorrow.
-
-Little drops of water make a river.
-The little money you save will eventually get bigger.
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-{ 
-                title: "Chapter 31: IF SADNESS HAD A FACE", 
-                image:"https://i.pinimg.com/1200x/8a/fd/02/8afd02ced98a0d76b34d526f4b8240be.jpg", 
-                text: `If Sadness had a face, it would have -
-                
-Eyes so dark and big,
-You could drown in it.
-
-Jaws so defined and hard,
-And a smile that could break a thousand hearts.
-
-A nose so high up,
-It’s in the clouds.
-
-Features so beautiful,
-It pierces your soul.
-
-And an expression so elusive,
-It is pure darkness.
-
-If only sadness had a face.
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 32: MR. JOHNS", 
-                image:"https://i.pinimg.com/736x/38/c0/5e/38c05ea896ad26a693d2b86b0287c02e.jpg", 
-                text: `I have a little friend called Mr. Johns.
-At the site of him, people shake to the bones.
-
-His skin is metal, his heart is fire.
-His temper is short, his voice is thunder.
-
-Like Siamese twins, we have each other’s back.
-Always by my side, the best friend I have ever had.
-
-He has sixteen friends of his own.
-That means all my enemies be gone.
-
-The first and last thing you see.
-Like my shadow, always with me.
-
-He listens to no one but me.
-When he talks, everyone listens.
-
-When he comes out, everyone runs.
-Cross his path and he will make you famous.
-
-Every message he sends hits home.
-I give it up for Mr. Johns.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 33: THE CAT AND THE MOUSE GAME", 
-                image:"https://i.pinimg.com/736x/c7/21/18/c72118415e458d7694630f27b55e8322.jpg", 
-                text: `A fat cat sat on a mat.
-Along came a smart rat.
-It saw the cat and ran.
-
-Then suddenly screeched to a halt.
-Came back and said what a stupid cat.
-Look at him, so fat.
-
-He danced around him like mad.
-The cat opened its eyes wide.
-And pounced on him with all he’s got.
-
-Chewed the rat and swallowed fast.
-Flashed a smile like 350 watts.
-And said, hmmm, tastes like ham.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 34: FLU SEASON", 
-                image:"https://i.pinimg.com/736x/99/29/ca/9929ca989aa2eae0208dfee2cf294163.jpg", 
-                text: `Oh, I’ve got the flu,
-I don’t feel so good.
-
-Walk around the room with no shoes,
-Feeling kind of blue.
-
-Locked up in my room,
-It’s like being caught between Abuja City and the moon.
-
-My head feels heavy too.
-Food tastes like goo.
-
-Slime dripping down my nose is not so cool.
-I need a glass of juice.
-
-Mummy makes me chicken stew,
-Rice and hot pepper soup.
-
-Let me touch you, hold you,
-Rub my nose all over you.
-So you catch the bug too.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 35: WHY I CRY", 
-                image:"https://i.pinimg.com/736x/ac/52/83/ac528347885407473313a1488610d900.jpg", 
-                text: `Ain’t no shame in crying -
-                
-I will never drown in my own tears,
-But I will conquer my fears.
-
-I cry when I am happy.
-I cry when I am lonely.
-
-I cry to make a point.
-I cry when I have no choice.
-
-I cry to get some attention.
-I cry to release tension.
-
-I cry to express joy.
-I cry to tell a story.
-
-I cry when I am sad.
-I cry because that’s that.
-
-I cry when I am in pain.
-I cry for the sake of crying.
-
-I will never drown in my own tears.
-I will conquer my fears.
-
-Therefore, I feel no shame in crying.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 36: ME", 
-                image:"https://i.pinimg.com/1200x/33/2d/21/332d21242bbca9c947252b7a576b94ea.jpg", 
-                text: `This is me.
-A little selfish,
-A little stupid,
-A little too thin.
-
-Very simple but hard to understand.
-Maybe I talk a little too much.
-And I am a little immature.
-If you look beyond all that, you will see,
-What a heart of gold I have.
-
-But I love being me, 
-Me, myself and I.
-That is what makes me unique.
-If I had the opportunity,
-I will not change anything,
-
-Because I love being me.
-God made me the way I am,
-Me, Myself and I.
-
-I don’t care what you think of me.
-You are entitled to your own opinion.
-There can never be another me.
-There is only one me in this world.
-
-Any other me is a counterfeit.
-If they imitate me, I wouldn’t mind,
-Because imitation is a form of flattery.
-You can say whatever you want about me.
-
-If I don’t fit your ideal profile, it’s OK.
-My shortcomings are what make me unique.
-This is the best me you can get.
-Any other version is fake.
-
-And if I die, I will miss me.
-And I most certainly will like to be remembered as me.
-Me, myself and I!
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 37: FOOL", 
-                image:"https://i.pinimg.com/736x/51/58/6e/51586e9e61917625fcfdb470b2eb30cb.jpg", 
-                text: `How do you recognize a fool?
-He behaves like a bull,
-Never taking things cool,
-Ever so mean and cruel.
-
-Always shouting like an idiot.
-Never letting bygones be bygone.
-And looking for someone to hit on.
-Never having a good backbone.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 38: DESPAIR", 
-                image:"https://i.pinimg.com/1200x/9b/6e/67/9b6e671c89d83231f344d463b447ce65.jpg", 
-                text: `As I sank into the black hole,
-I can feel it pulling my soul,
-Consuming my whole world.
-
-Never have I felt this numb,
-Can’t recover from this shock,
-A rude and painful awakening call.
-
-Gone too young.
-All hopes and dreams foregone,
-A consummation of my woes.
-
-Trying to get out of this limbo,
-Though the alternative is worst,
-I longed to get back home.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 39: DAYS GONE BYE", 
-                image:"https://i.pinimg.com/1200x/28/81/9e/28819e6b10b333ecd70ffb42a1b4561e.jpg", 
-                text: `What happened to the good old days?
-The days of kings and subjects.
-The days of festivals and talking drums.
-The days of virgins and princes.
-The days of dancers and warriors.
-
-Bring back to the good old days.
-Those days we use to sit around the fireplace and listen to tales
-By the moonlight.
-Those days we use to eat roasted yam with palm oil.
-Those days we chase rabbits and cook good meat.
-Those days we bathe in the stream without a care for the world.
-
-Oh, the good old days -
-When we plait each other’s hair for the Sallah festivals.
-When a woman’s beauty is measured by the sway of her hips.
-When there were market days and yam festivals.
-Where have the good old days gone?
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-         { 
-                title: "Chapter 40: BACKSTAB", 
-                image:"https://i.pinimg.com/736x/1c/89/41/1c894153def48e559686ddee417df6b4.jpg", 
-                text: `Is my back hurting your knife?
-Yes, that’s right.
-Don’t look so surprised!
-
-Thought you were wise,
-Trusted you with my life,
-Never thought otherwise.
-
-You knew he was mine,
-Knew I was his wife.
-But you went behind and backbite.
-
-Now this is my plight -
-This betrayal I must fight.
-So, just get out of my sight.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 41: SHOWDOWN", 
-                image:"https://i.pinimg.com/736x/d8/a3/b0/d8a3b01d2a8f7e5e8b9b8c639e46a3f4.jpg", 
-                text: `Hate in their hearts,
-Fire in their eyes.
-
-As they fought,
-Their enemies one by one die.
-
-Bloodthirsty revenge,
-Their belly cries!
-
-Their enemy’s blood,
-Sweeter than wine.
-
-Hurt in their soul, They must abide.
-For their survival, they must fight !
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 42: I WISH", 
-                image:"https://i.pinimg.com/1200x/8b/d7/60/8bd760fc3b68f993c4d6451c984264b3.jpg", 
-                text: `I wish I could fly away,
-To a better place,
-
-Where everybody is happy,
-And no one knows my name,
-
-Where I don’t have to be shy,
-Or try to hide my face,
-
-Where the sun shines bright,
-And never have to set again,
-
-Where I can be myself,
-And never have to pretend.
-
-
-Copyright © 2008 HADIZA BAGUDU`
-            },
-          { 
-                title: "Chapter 43: THE PAIN OF BETRAYAL", 
-                image:"https://i.pinimg.com/736x/0b/e4/53/0be453109160a79dab2f9f2977d80589.jpg", 
-                text: `The fire of rage burned through my heart,
-Black hatred stabbing every part.
-
-My body shaking with anger,
-And my blood is about to boil over.
-
-My eyes are blind with fury,
-As my head throbs painfully.
-
-There is no pain greater,
-Than the pain of betrayal.WITH LOVE - 
-
-Copyright © 2008 HADIZA BAGUDU`
-            }
+      title: "CHAPTER 3: ELECTRIC WHISPERS",
+      image: "https://cdn.pixabay.com/photo/2023/04/27/13/10/ai-generated-7954598_1280.png",
+      text: `Janin paced back and forth around the empty house, growing angrier by the minute. Time was slipping away. It had been two weeks since she revealed herself to Yusuf, watching him grow stronger and more alive with the help of that witch, Florence. Something about Florence irked her deeply. Ever since Janin found a way to attach herself to Yusuf, tethering herself to this world, she couldn't move more than a few feet away from him, like an invisible leash binding her. She had followed him everywhere, trying to call out to him before he finally saw her. But as she observed Yusuf's sessions with Florence, something both annoying and astonishing happened. Florence's exercises—the "invisible white room" they practiced—made him stronger each time.
+
+<p>Initially, Janin wanted to sabotage the exercises, infiltrate the room, even seduce Yusuf. Every attempt, though, failed. But as time went on, she realized that with Yusuf's strength, hers grew too. Now, she didn't need to follow him as closely. If she separated from him for too long, she'd fade, losing all memory of where she'd been, only to find him back home. Still, she was staying visible for longer periods, and this isolation gave her time to strategize her next move. Her plan was simple but ambitious: remain in this world and bring her friends over, with Yusuf as the key. But Florence had become an obstacle. Despite Florence's role in strengthening Yusuf—and, by extension, Janin herself—Florence was also helping him learn to control his powers, which could mean he'd banish, or worse, kill her.</p>
+
+<p>"Oh, I hate her!" she screamed, fury sparking the house lights into a frenzy. She recoiled at the power surge, but a smirk crept across her face. "Interesting."</p>
+
+<p>Yusuf's hands were numb from all the notes he'd been copying. Being away from school left him far behind. Thank God for John, who covered for him, though John could only do so much.</p>
+
+<p>"When you're done with that, there are still notes from Political Economy and Strategic Studies," John said, making Yusuf sigh. John laughed. "You don't have to copy them all now. Let's go to the sculpture garden and eat."</p>
+
+<p>"Yes, finally. I'm starving!" Yusuf said, too glad, and John laughed.</p>
+
+<p>At the garden, Yusuf was reminded of how different everything felt. He noticed classmates stealing glances, whispering as he passed. A rumor was circulating that he'd had a breakdown, some even believing he was possessed. The strange behaviors he'd shown before John took him in likely fueled it. Even in class, he couldn't escape this isolation. When he tried sitting near old friends, they subtly shifted away.</p>
+
+<p>"Marcus, hi," Yusuf said quietly to a classmate who hadn't yet moved.</p>
+
+<p>"Hey, Yusuf. You're back? How are you?" Marcus replied, his tone cautious.</p>
+
+<p>"I'm fine." But Yusuf saw doubt in Marcus's eyes.</p>
+
+<p>"I heard you were sick. Is everything okay?" Marcus pressed.</p>
+
+<p>"Yeah, I'm better now. It wasn't serious," Yusuf downplayed, focusing on his notebook to avoid further questions.</p>
+
+<p>Marcus wasn't satisfied. "Is it true you had a breakdown and ended up in the psych ward? People are talking..."</p>
+
+<p>John cut in, "He's fine, Marcus!"</p>
+
+<p>Marcus backed down, but just then, Yusuf saw a shadow flicker in the corner of his eye. Janin? He scanned the room, feeling unsettled.</p>
+
+<p>"Are you okay?" Marcus asked, startled.</p>
+
+<p>"Yes, I'm... just tired." He rubbed his eyes.</p>
+
+<p>"You sure you don't want to head back home?" John offered, concerned.</p>
+
+<p>Yusuf shook his head. "I can't miss more school."</p>
+
+<p>"I am glad you are back, Yusuf. And I hope you get better, truly." Marcus said." Thank you."</p>
+
+<p>At that moment, the lecturer entered the hall, and the insistent low chatter stopped as the lecture began. Yusuf, still unsettled by what he'd seen earlier, kept looking around the hall for Janin. He was sure it was her, but he couldn't understand why—or even how—she would follow him. He'd always assumed she couldn't leave the house and was relieved to finally get a break from her, even if only for a few hours a day. Now, he was beginning to worry there might be no escaping her.</p>
+
+<p>He struggled to concentrate in that class and the ones that followed throughout the day. His mind kept drifting away. He wasn't exactly astral projecting, but after everything he'd experienced over the past few months, his lectures seemed boring by comparison, and his thoughts kept wandering through different scenarios. The brief vision of Janin he'd had earlier didn't help either. He wondered if she had anything to do with his distracted state.</p>
+
+<p>The sighting unsettled him, adding to his guilt. He hadn't told John about Janin. John and Florence accepted his astral projections, but an actual entity haunting their house? That might be too much, even for them.</p>
+
+<p>Already on edge, Yusuf nervously approached his Strategic Studies lecturer, Mrs. Agnes, to ask for permission to retake a missed test. So far, he had missed about five tests; four of his lecturers were kind enough to reschedule them, allowing him to retake them in a few days. However, Mrs. Agnes was known for being strict and no-nonsense, and convincing her would be a challenge.</p>
+
+<p>Her office smelled strongly of pine air freshener and was stylishly neat despite the piles of books and projects stacked in the corner. Her bookshelves were full and neatly arranged, with some books scattered on her desk, the side table, and any other available surface. Yet, there was a certain order to the clutter. She took her time writing in a file while Yusuf and his friend John waited nervously. Finally, she looked up.</p>
+
+<p>"So, young man, how can I help you?" she asked, with thinly veiled disdain.</p>
+
+<p>"I wanted to talk to you about retaking the test I missed," Yusuf managed to blurt out.</p>
+
+<p>"The midterm, you mean?"</p>
+
+<p>"Yes, ma'am. I was hoping to retake it."</p>
+
+<p>"And why did you miss it in the first place?" she asked, her tone lacking sympathy, making Yusuf's anxiety spike.</p>
+
+<p>"I was sick and couldn't attend classes," he replied.</p>
+
+<p>"And now you want special privilege?"</p>
+
+<p>"No, ma'am!" Yusuf almost snapped. "I'm not asking for any special treatment. I didn't miss school deliberately—I was very sick and had no choice."</p>
+
+<p>"Where is the doctor's report?" Mrs. Agnes asked. "Submit it with your request, and then I might consider giving you a chance."</p>
+
+<p>Yusuf looked to John for help, and John stepped in.</p>
+
+<p>"Ma'am, the situation is a bit complicated. He had to be treated at home, and we couldn't get a doctor's report..."</p>
+
+<p>"I'm sorry, but I can't do anything for you without that doctor's report," she interrupted. "I have to protect myself, too. You understand?"</p>
+
+<p>"Yes, ma'am," they both replied.</p>
+
+<p>"Very well, then. Either bring me the report or prepare to perform exceptionally in your final exam. Good day, gentlemen."</p>
+
+<p>"Good day, ma'am," they both said, slowly rising and leaving her office.</p>
+
+<p>Yusuf felt a wave of panic. The midterm was worth 30% of the overall grade. If he couldn't retake it, he'd need at least 50 marks on the final to avoid failing the course. It was devastating, but John reassured him that if it came to it, he knew a doctor who could draft a report for them. Yusuf thanked him, but he felt uncomfortable with the idea.</p>
+
+<p>Janin waited alone and spent the whole day testing her powers by manipulating the house's electricity. She enjoyed each flickering light and made the refrigerator shake from the repeated surges. Her heightened senses were sharper than ever, letting her listen through walls and doors. A knock on the door broke her focus—it was a caretaker checking the property. He peered through the door's viewing window, but seeing nothing unusual, he walked away.</p>
+
+<p>She was intoxicated by her power, though with reason. She had to be strong to survive. She feared being recaptured by the Council of Ur, an ancient and mysterious body of jinn that governs all jinn affairs and forbids interactions between jinn and humans—a rule Janin and her friends had repeatedly broken through their dealings with Yusuf. As powerful as the jinn were, they were forbidden from crossing over to the human realm. Some had tried, succeeding by interacting with humans, possessing them, and hitching a ride to the human world, where they wreaked havoc.</p>
+
+<p>Some jinn envied humans—their knowledge and their form. While humans possessed physical bodies and could enjoy a variety of experiences, from food to other sensations, the jinn were made from fire and were formless. Although they could shapeshift and get close to humans to take advantage of them, they wanted to live as humans did, which often caused chaos. To prevent this, the Council of Ur put a rule in place to keep the two worlds from bleeding into each other and risking collapse. For over two hundred years, Janin had heard stories about the diabolical ways some jinn reached humans, though not all had such powers. Most were ordinary and would go their entire, lengthy lives without meeting a human. However, some knew tricks, including magic, to connect with humans—especially when humans sought jinn protection or magical assistance, usually to harm others. This gave the jinn power to influence the human, as it was the human who broke the rule first. It granted such jinn total control over the human; they would initially help but then use the human to spread chaos in the human world. Such actions were considered treasonous by the Council of Ur, with perpetrators imprisoned or, depending on the severity of their actions, even executed.</p>
+
+<p>When Janin met Yusuf in their land, she didn't know humans could cross over. She'd heard of other jinn kidnapping humans and enslaving them but had never witnessed it. Meeting Yusuf confirmed it was possible, and she confided in her friends Zara and Rafiq. Together, they devised a plan to deceive Yusuf. It was easy, as he was just a boy, and they appeared to him as Janin's parents. They coaxed him into forming an unbreakable bond with her and nearly completed the ritual to possess him when they were apprehended by the J-force and brought to trial before the council.</p>
+
+<p>Janin remembered standing defiantly before the elders, chained and humiliated. The council sat in a semi-circle on high chairs, looking ethereal in their green robes, radiating ancient authority and power. The vast dome surrounding them shimmered with a bright material that reflected the council members' faces. Floating above their thrones, their eyes glowed with disapproval as Janin refused to show any remorse or humility.</p>
+
+<p>"You have broken the laws of our kind!" boomed the high councilor, his voice reverberating through the room. "You forged a bond with a human, Yusuf Ali, which is forbidden. The consequences of such a bond are dangerous."</p>
+
+<p>Janin's lips curled into a smirk. "You speak of danger, yet I only sought love," she retorted, her voice steady despite the overwhelming power in the room. "Why should it matter that he is human? We have existed in separate realms for millennia. Perhaps it's time to break those barriers."</p>
+
+<p>Murmurs rippled through the council. Elder Nara, an ancient jinn with gleaming eyes and over a thousand years of experience, leaned forward. "The rules exist for a reason, child. Bonds with humans corrupt our essence. They drag us into their reality and trap us in their world."</p>
+
+<p>"Or perhaps it is the other way around?" Janin shot back, crossing her arms. "Perhaps we are the ones too afraid to explore beyond what we know."</p>
+
+<p>"You are reckless!" said High Councilor Urk, his tone icy. "And your recklessness has endangered not just yourself but others. For this, you will be imprisoned."</p>
+
+<p>Janin's jaw tightened, but she held her ground. "I don't care what you think of me. I would do it again."</p>
+
+<p>"Then may your arrogance keep you company in the 'Realm of the Forgotten'!" High Councilor Urk declared, his eyes narrowing. "Take her away."</p>
+
+<p>Janin, her friends Zara and Rafiq, and their supporters—all 50 of them—were locked up in the maximum-security jinn prison called the Realm of the Forgotten. As the name implies, most who go there never leave. But she found a way to escape and move to this realm through Yusuf's sudden surge in abilities, and she would do everything in her power never to return to the land of Jute.</p>
+
+<p>At 7 p.m., Florence returned, her arms full of shopping bags, accompanied by the same caretaker. She greeted him and let him take a look around, but everything appeared normal.</p>
+
+<p>"Sorry, madam. Thought I saw something odd earlier," he said, scratching his head.</p>
+
+<p>"Oh, don't worry! I'm glad someone's looking out for us. Thank you," Florence replied warmly. "I'll speak to my brother about leaving a spare key at the gate." She closed the door behind her, then headed into the kitchen to unload her groceries, her phone rang. Janin drifted closer, her enhanced hearing letting her eavesdrop with ease.</p>
+
+<p>"Hey, babe, just got home," Florence answered cheerfully. Janin's eyes narrowed as she heard McLean's voice from the phone.</p>
+
+<p>"I miss you already. Wish you didn't have to leave," he cooed, sickening her.</p>
+
+<p>"Well, I'm living with my brother now," Florence teased. "I can't stay with you every night, or he'd worry."</p>
+
+<p>"I can't wait till school's done and we're married. Then no one can keep us apart," McLean replied.</p>
+
+<p>Florence's laugh grated on Janin's nerves. How dare she play Yusuf for a fool, laughing with another man? Despite herself, Janin despised the thought of Florence with Yusuf but was furious at her supposed betrayal. Her rage sent a wave of energy through the house, making the lights flicker. Florence stopped laughing, glancing around, wary.</p>
+
+<p>"You okay?" McLean asked.</p>
+
+<p>"I'm fine, but these lights... they're acting weird." Florence reassured him. "I'll call you later." She hung up and tapped the light switch until the flickering stopped, sighing with relief. But a shiver ran down her spine. Goosebumps covered her arms as Janin's presence crept closer, her chilling breath brushing against Florence's neck.</p>
+
+<p>Florence hurried to plug in a room heater, standing close for warmth, her hands trembling. But as she felt the icy breath on her neck again, she jumped, accidentally knocking the heater over. She froze, realizing she wasn't imagining things—Janin was right behind her, relishing her fear.</p>
+
+<p>With a burst of determination, Florence grabbed her phone to call Yusuf, but Janin's anger surged. She began shouting, "Get out! Get out! I hate you! I hate you!" Though Florence couldn't hear the words, she felt their hateful force reverberate through the room.</p>
+
+<p>The lights flashed wildly, the refrigerator shook, and Florence screamed, dropping her phone. She bolted to the door, and as she reached for the handle, it swung open. She screamed once more, fainting into her brother's waiting arms.</p>`
+    }
   ];
 
-  const container = document.getElementById('poemContainer');
-  const body = document.body;
+  const container = document.getElementById('chapterContainer');
+  const loadingIndicator = document.getElementById('loadingIndicator');
 
-  function showPoem(index) {
-    document.getElementById('poemList').style.display = 'none';
-    body.classList.remove("show-watermark"); // remove watermark when reading
-    renderPoem(index);
+  function showChapter(index) {
+    document.getElementById('chapterList').style.display = 'none';
+    loadingIndicator.style.display = 'block';
+    container.innerHTML = '';
+    
+    // Simulate loading delay
+    setTimeout(() => {
+      loadingIndicator.style.display = 'none';
+      renderChapter(index);
+    }, 500);
   }
 
   function goBack() {
     container.innerHTML = '';
-    document.getElementById('poemList').style.display = 'block';
-    body.classList.add("show-watermark"); // show watermark only on main page
+    document.getElementById('chapterList').style.display = 'block';
   }
 
-  function renderPoem(index) {
-    const poem = poems[index];
+  function renderChapter(index) {
+    const chapter = chapters[index];
+    const likeKey = `likes_${index}`;
+    const commentKey = `comments_${index}`;
+    const likes = parseInt(localStorage.getItem(likeKey)) || 0;
+    const comments = JSON.parse(localStorage.getItem(commentKey)) || [];
+
     container.innerHTML = `
-      <div class="poem-full active">
-        <h2 style="color:#b3003c;">${poem.title}</h2>
-        <img src="${poem.image}" alt="${poem.title}">
-        <div class="poem-text">${poem.text}</div>
+      <div class="chapter-full active">
+        <div class="chapter-number">${chapter.title.split(':')[0]}</div>
+        <h2>${chapter.title}</h2>
+        <img src="${chapter.image}" alt="${chapter.title}">
+        <div class="chapter-text">${chapter.text}</div>
+
+        <div class="like-comment">
+          <button class="like-button" onclick="likeChapter(${index})">❤️ Like (<span id="likeCount${index}">${likes}</span>)</button>
+
+          <div class="comments">
+            <textarea id="commentInput${index}" placeholder="Share your thoughts about this chapter..."></textarea>
+            <button onclick="addComment(${index})">Post Comment</button>
+            <div class="comment-list" id="commentList${index}">
+              ${comments.map(c => `<div class="comment">${c}</div>`).join('')}
+            </div>
+          </div>
+        </div>
 
         <div class="button-row">
-          <button class="btn" onclick="goBack()">← Back to List</button>
-          <button class="btn" onclick="showPoem(${(index + 1) % poems.length})">Next →</button>
+          <button class="back-button" onclick="goBack()">← Back to Series</button>
+          <button class="btn" onclick="showChapter(${(index + 1) % chapters.length})">Next Chapter →</button>
         </div>
       </div>
     `;
   }
-// Disable right-click
-document.addEventListener('contextmenu', function (e) {
-  e.preventDefault();
-  alert('Right click is disabled on this site.');
-});
- // Disable Ctrl+S, Ctrl+U, F12 to prevent viewing source and saving the page
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && (e.key === 's' || e.key === 'u') || e.key === 'F12') {
-                e.preventDefault();
-                alert("This action is disabled.");
-            }
-        });
 
-        // Disable drag and drop
-        document.addEventListener('dragstart', function(e) {
-            e.preventDefault();
-        });
+  function likeChapter(index) {
+    const key = `likes_${index}`;
+    let count = parseInt(localStorage.getItem(key)) || 0;
+    count++;
+    localStorage.setItem(key, count);
+    document.getElementById(`likeCount${index}`).innerText = count;
+  }
 
-        // Disable copying and cutting content
-        document.addEventListener('copy', function(e) {
-            e.preventDefault();
-            alert('Copying is disabled on this website.');
-        });
-        document.addEventListener('cut', function(e) {
-            e.preventDefault();
-            alert('Cutting is disabled on this website.');
-        });
+  function addComment(index) {
+    const input = document.getElementById(`commentInput${index}`);
+    const list = document.getElementById(`commentList${index}`);
+    const key = `comments_${index}`;
+    const comments = JSON.parse(localStorage.getItem(key)) || [];
 
-        // Disable image saving (for browsers like Chrome)
-        document.addEventListener('mousedown', function(e) {
-            if (e.target.tagName === 'IMG' && e.button === 2) {
-                e.preventDefault();
-            }
-        });
-// ===== Disable Print Screen (Screenshots) =====
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'PrintScreen') {
-        e.preventDefault();
-        alert('Screenshots are disabled on this website.');
+    if (input.value.trim() !== "") {
+      comments.push(input.value.trim());
+      localStorage.setItem(key, JSON.stringify(comments));
+      list.innerHTML += `<div class="comment">${input.value.trim()}</div>`;
+      input.value = "";
     }
-});
-
+  }
 </script>
 
 </body>
