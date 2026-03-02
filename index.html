@@ -21,43 +21,19 @@
                     },
                     colors: {
                         'void': {
-                            50: '#f5f3ff',
-                            100: '#ede9fe',
-                            200: '#ddd6fe',
-                            300: '#c4b5fd',
-                            400: '#a78bfa',
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                            700: '#6d28d9',
-                            800: '#5b21b6',
-                            900: '#4c1d95',
-                            950: '#0f0518',
+                            50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
+                            400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
+                            800: '#5b21b6', 900: '#4c1d95', 950: '#0f0518',
                         },
                         'nebula': {
-                            50: '#fdf4ff',
-                            100: '#fae8ff',
-                            200: '#f5d0fe',
-                            300: '#f0abfc',
-                            400: '#e879f9',
-                            500: '#d946ef',
-                            600: '#c026d3',
-                            700: '#a21caf',
-                            800: '#86198f',
-                            900: '#701a75',
-                            950: '#4a044e',
+                            50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
+                            400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+                            800: '#86198f', 900: '#701a75', 950: '#4a044e',
                         },
                         'cosmic': {
-                            50: '#ecfeff',
-                            100: '#cffafe',
-                            200: '#a5f3fc',
-                            300: '#67e8f9',
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                            700: '#0e7490',
-                            800: '#155e75',
-                            900: '#164e63',
-                            950: '#083344',
+                            50: '#ecfeff', 100: '#cffafe', 200: '#a5f3fc', 300: '#67e8f9',
+                            400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2', 700: '#0e7490',
+                            800: '#155e75', 900: '#164e63', 950: '#083344',
                         },
                         'starlight': '#e0f2fe',
                         'astral': '#c084fc',
@@ -160,7 +136,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(192, 132, 252, 0.2);
         }
         
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -238,6 +213,7 @@
             clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
             background: linear-gradient(135deg, rgba(192, 132, 252, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
         }
+        
         .buy-coffee {
             display: flex;
             align-items: center;
@@ -348,10 +324,8 @@
         
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            <!-- Animated Star Field Background -->
             <div class="absolute inset-0 z-0 star-field opacity-60"></div>
             
-            <!-- Floating Celestial Bodies -->
             <div class="absolute top-20 left-10 text-astral/30 text-6xl animate-float">
                 <svg viewBox="0 0 24 24" fill="currentColor" class="w-16 h-16"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
             </div>
@@ -365,16 +339,12 @@
                 <svg viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
             </div>
 
-            <!-- Astral Rings -->
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 astral-ring opacity-30"></div>
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] astral-ring opacity-20" style="animation-delay: 1s"></div>
-            
-            <!-- Dimension Portal Background -->
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] dimension-portal rounded-full blur-3xl opacity-20"></div>
 
             <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
                 <div class="animate-fade-in">
-                    <!-- Celestial Decoration -->
                     <div class="flex items-center justify-center gap-6 mb-8">
                         <div class="h-px w-24 bg-gradient-to-r from-transparent to-astral"></div>
                         <div class="w-8 h-8 text-astral animate-twinkle">
@@ -419,10 +389,8 @@
                         </button>
                     </div>
                     
-                    <!-- Author Name -->
                     <p class="mt-16 font-serif-display text-2xl text-astral tracking-widest">HADIZA BAGUDU</p>
                     
-                    <!-- Book Cover -->
                     <div class="mt-12 flex justify-center">
                         <div class="relative w-64 h-96 bg-gradient-to-br from-void-800 to-void-950 rounded-lg shadow-2xl shadow-black/50 border border-astral/30 overflow-hidden group hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&q=80')] bg-cover bg-center opacity-40"></div>
@@ -443,7 +411,6 @@
                 </div>
             </div>
 
-            <!-- Bottom Gradient -->
             <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-void-950 to-transparent"></div>
         </section>
 
@@ -507,7 +474,6 @@
 
         <!-- Author Section -->
         <section id="author" class="py-24 bg-ivory-100 parchment-texture relative overflow-hidden">
-            <!-- Background Pattern -->
             <div class="absolute inset-0 opacity-5">
                 <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -519,27 +485,22 @@
 
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="vintage-panel p-8 md:p-16 hover-lift relative overflow-hidden">
-                    <!-- Decorative corners -->
                     <div class="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-terracotta-400"></div>
                     <div class="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-terracotta-400"></div>
                     <div class="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-terracotta-400"></div>
                     <div class="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-terracotta-400"></div>
                     
                     <div class="grid md:grid-cols-5 gap-12 items-center relative z-10">
-                        <!-- Author Image -->
                         <div class="md:col-span-2">
                             <div class="aspect-[3/4] rounded-sm relative overflow-hidden shadow-xl bg-gradient-to-br from-sepia-200 to-terracotta-100 group">
                                 <img src="https://assets.lulu.com/cover_thumbs/8/2/82711233-image-shortedge-384.jpg" 
                                      alt="Hadiza Bagudu - Author" 
                                      class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                                <!-- Decorative frame -->
                                 <div class="absolute inset-4 border-2 border-ivory-50/70 rounded-sm pointer-events-none"></div>
-                                <!-- Vintage overlay -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-sepia-900/20 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                         </div>
                      
-                        <!-- Author Bio -->
                         <div class="md:col-span-3">
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="h-px w-12 bg-terracotta-400"></div>
@@ -559,7 +520,6 @@
                                 </p>
                             </div>
 
-                            <!-- Social Links -->
                             <div class="mt-10 pt-8 border-t border-sepia-200">
                                 <div class="flex flex-wrap gap-6">
                                     <a href="https://www.hadizab.com" target="_blank" rel="noopener noreferrer" 
@@ -604,7 +564,7 @@
                 </div>
             </div>
         </section>
-        
+                                
         <!-- Other Books -->
         <div class="mt-20">
             <div class="text-center mb-12">
@@ -620,7 +580,7 @@
                 <!-- Astral - Currently Reading -->
                 <div class="group cursor-pointer hover-lift relative">
                     <div class="aspect-[2/3] rounded-sm mb-4 relative overflow-hidden shadow-md ring-2 ring-terracotta-500 ring-offset-2 bg-gradient-to-br from-sepia-200 to-terracotta-100">
-                        <img src="https://i.pinimg.com/736x/bb/63/22/bb63223a398f10f4d11699fd44d9fc23.jpg " alt="Astral: A Supernatural/Fantasy Series" class="w-full h-full object-cover">
+                        <img src="https://i.pinimg.com/736x/bb/63/22/bb63223a398f10f4d11699fd44d9fc23.jpg" alt="Astral: A Supernatural/Fantasy Series" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-terracotta-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute top-3 right-3 bg-terracotta-600 text-ivory-50 text-xs font-accent tracking-wider px-3 py-1 rounded-sm shadow-lg">
                             Currently Reading
@@ -634,7 +594,7 @@
                 <!-- The Thin Line -->
                 <div class="group cursor-pointer hover-lift">
                     <div class="aspect-[2/3] rounded-sm mb-4 relative overflow-hidden shadow-md bg-gradient-to-br from-sepia-200 to-ochre-100">
-                        <img src="https://assets.lulu.com/cover_thumbs/e/7/e7d88w5-ebook-shortedge-384.jpg " alt="The Thin Line book cover" class="w-full h-full object-cover">
+                        <img src="https://assets.lulu.com/cover_thumbs/e/7/e7d88w5-ebook-shortedge-384.jpg" alt="The Thin Line book cover" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-terracotta-900/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-ivory-50/30 to-transparent"></div>
                     </div>
@@ -645,7 +605,7 @@
                 <!-- Melody -->
                 <div class="group cursor-pointer hover-lift">
                     <div class="aspect-[2/3] rounded-sm mb-4 relative overflow-hidden shadow-md bg-gradient-to-br from-sepia-200 to-burgundy-100">
-                        <img src="https://assets.lulu.com/cover_thumbs/5/7/578gg69-ebook-shortedge-384.jpg " alt="Melody: A Music Superstar's Journey" class="w-full h-full object-cover">
+                        <img src="https://assets.lulu.com/cover_thumbs/5/7/578gg69-ebook-shortedge-384.jpg" alt="Melody: A Music Superstar's Journey" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-terracotta-900/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-ivory-50/30 to-transparent"></div>
                     </div>
@@ -656,7 +616,7 @@
                 <!-- With Love -->
                 <div class="group cursor-pointer hover-lift">
                     <div class="aspect-[2/3] rounded-sm mb-4 relative overflow-hidden shadow-md bg-gradient-to-br from-sepia-200 to-terracotta-100">
-                        <img src="https://assets.lulu.com/cover_thumbs/j/e/jednnjg-ebook-shortedge-384.jpg " alt="With Love: Poetic Collection" class="w-full h-full object-cover">
+                        <img src="https://assets.lulu.com/cover_thumbs/j/e/jednnjg-ebook-shortedge-384.jpg" alt="With Love: Poetic Collection" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-terracotta-900/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div class="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-ivory-50/30 to-transparent"></div>
                     </div>
@@ -665,7 +625,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Buy Me Coffee Section -->
         <section class="buy-coffee">
             <img src="https://cdn.pixabay.com/photo/2022/03/09/05/05/coffee-7057030_1280.png" 
@@ -678,7 +638,7 @@
                 ☕ Buy me a coffee
             </a>
         </section>
-        
+
         <!-- Footer -->
         <footer class="bg-void-950 border-t border-astral/20 py-16 relative overflow-hidden">
             <div class="absolute inset-0 star-field opacity-10"></div>
@@ -731,7 +691,6 @@
 
                 <!-- Chapter Content -->
                 <article class="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-24">
-                    <!-- Chapter Hero -->
                     <div class="mb-16 text-center">
                         <div class="flex items-center justify-center gap-4 mb-6">
                             <div class="h-px w-16 bg-astral"></div>
@@ -813,269 +772,269 @@
     </div>
 
     <script>
-        // Chapter Data
+        // Chapter Data - Your 3 Chapters
         const chapters = [
             {
                 id: 1,
-                number: "Dimension I",
-                title: "Chapter One: The Awakening",
+                number: "Chapter One",
+                title: "The Awakening",
                 subtitle: "Between existence and oblivion",
-                preview: "Yusuf rediscovers his extraordinary abilities.",
-                content: `<img src="https://cdn.pixabay.com/photo/2023/09/14/10/23/galaxy-8252744_1280.png"><hr><br><br>
+                preview: "Yusuf rediscovers his extraordinary abilities after a traumatic accident.",
+                content: `<img src="https://cdn.pixabay.com/photo/2023/09/14/10/23/galaxy-8252744_1280.png" class="w-full mb-8 rounded-lg"><hr><br><br>
 
-        Yusuf Ali was curled up in a fetal position at the foot of the bed, his hands pressed hard on his ears as if to block out noise, his eyes shut tightly, and he was chanting something furiously. His body shook vigorously as if in the throes of a mighty fever, and his clothes were drenched in sweat.
+<p>Yusuf Ali was curled up in a fetal position at the foot of the bed, his hands pressed hard on his ears as if to block out noise, his eyes shut tightly, and he was chanting something furiously. His body shook vigorously as if in the throes of a mighty fever, and his clothes were drenched in sweat.</p>
 
-        <p>He prayed for it to stop—everything. The hallucinations, the noise, the continual teleportation—it was all too much, and he was losing his mind. The drilling noise from the construction site sounded as if it were in his head, even though the site was over a mile away from him.</p>
+<p>He prayed for it to stop—everything. The hallucinations, the noise, the continual teleportation—it was all too much, and he was losing his mind. The drilling noise from the construction site sounded as if it were in his head, even though the site was over a mile away from him.</p>
 
-        <p>He could even hear the laborers' footsteps and the metal scraping on metal as they went about their duties. But it wasn't just that he could hear it; it was more like he kept teleporting back and forth mentally, placing him right where the sound was. However, the teleportation didn't stop at the construction site; he also weaved in and out of reality, realms, dream states, and wake states.</p>
+<p>He could even hear the laborers' footsteps and the metal scraping on metal as they went about their duties. But it wasn't just that he could hear it; it was more like he kept teleporting back and forth mentally, placing him right where the sound was. However, the teleportation didn't stop at the construction site; he also weaved in and out of reality, realms, dream states, and wake states.</p>
 
-        <p>Sometimes, he found himself underground in caves, where he got stuck and suffocated for a while before reverting to his original location. He was exhausted and suffering from motion sickness, surrounded by his own vomit. And as if that wasn't bad enough, the entities he encountered were all aware of his presence, and they did not like it. They kept attacking him. The only safe place was the room that he was in. Thankfully, they couldn't follow him.</p>
+<p>Sometimes, he found himself underground in caves, where he got stuck and suffocated for a while before reverting to his original location. He was exhausted and suffering from motion sickness, surrounded by his own vomit. And as if that wasn't bad enough, the entities he encountered were all aware of his presence, and they did not like it. They kept attacking him. The only safe place was the room that he was in. Thankfully, they couldn't follow him.</p>
 
-        <p>Yusuf Ali had always been a spiritually gifted person. As a child, he used to have some of the most fantastic and vivid dreams, in which he would travel to different realms and worlds and meet all kinds of beings. The dreams were so real that he could swear that he was physically there. When he shared this experience with his parents, he could see the fear in their eyes. They worried about him and sought various kinds of help, but what he possessed was not a problem; it was a gift he was born with. Additionally, he had a knack for reading people's minds—or rather, he could enter their minds and explore. It was something inexplicable, yet he had successfully exposed thieves and liars on several occasions. His parents warned him to stop doing it because it could get him into trouble.</p>
+<p>Yusuf Ali had always been a spiritually gifted person. As a child, he used to have some of the most fantastic and vivid dreams, in which he would travel to different realms and worlds and meet all kinds of beings. The dreams were so real that he could swear that he was physically there. When he shared this experience with his parents, he could see the fear in their eyes. They worried about him and sought various kinds of help, but what he possessed was not a problem; it was a gift he was born with. Additionally, he had a knack for reading people's minds—or rather, he could enter their minds and explore. It was something inexplicable, yet he had successfully exposed thieves and liars on several occasions. His parents warned him to stop doing it because it could get him into trouble.</p>
 
-        <p>You see, Yusuf grew up in Bauchi State, Nigeria, where people held strong superstitions. It wouldn't take much for them to accuse him of witchcraft or something similar and potentially lynch him. Moreover, the fact that he kept revealing people's misdeeds would undoubtedly anger them and make them want to harm him.</p>
+<p>You see, Yusuf grew up in Bauchi State, Nigeria, where people held strong superstitions. It wouldn't take much for them to accuse him of witchcraft or something similar and potentially lynch him. Moreover, the fact that he kept revealing people's misdeeds would undoubtedly anger them and make them want to harm him.</p>
 
-        <p>In his teenage years, there was a surge in his abilities, triggered by puberty, and he found himself both losing his mind and performing fantastical feats. To protect him, his parents told everyone that he was on drugs and then sent him to rehab multiple times until he improved and learned to keep quiet about his gifts. He denied his abilities for so long that they seemed to fade away.</p>
+<p>In his teenage years, there was a surge in his abilities, triggered by puberty, and he found himself both losing his mind and performing fantastical feats. To protect him, his parents told everyone that he was on drugs and then sent him to rehab multiple times until he improved and learned to keep quiet about his gifts. He denied his abilities for so long that they seemed to fade away.</p>
 
-        <p>However, a week ago, while he was returning to the university hostel, he was struck by an out-of-control car. Although he was physically unharmed, he did hit his head hard on the ground. The doctors examined him for a concussion but found none. Strangely, the accident seems to intensify his abilities to an extraordinary degree—teleportation and visions now occur continuously during his waking state instead of only during sleep. The fabric of reality began to unravel for him, and distinguishing between what was real and what was not became increasingly difficult.</p>
+<p>However, a week ago, while he was returning to the university hostel, he was struck by an out-of-control car. Although he was physically unharmed, he did hit his head hard on the ground. The doctors examined him for a concussion but found none. Strangely, the accident seems to intensify his abilities to an extraordinary degree—teleportation and visions now occur continuously during his waking state instead of only during sleep. The fabric of reality began to unravel for him, and distinguishing between what was real and what was not became increasingly difficult.</p>
 
-        <p>Initially, he began to distract himself by reading, but he would find himself immersed in the book, becoming part of the story, or he would hear someone shouting the words in his ears. Consequently, he stopped reading altogether. The teleportation and hallucinations worsened progressively over time, and by the seventh day, he was unable to stand or open his eyes. Hunger consumed him; he was practically starving as he hadn't eaten anything in several days. His water intake was minimal, leading to severe dehydration, which ironically exacerbated his condition by weakening his body, making it susceptible to possession or other intrusive thoughts.</p>
+<p>Initially, he began to distract himself by reading, but he would find himself immersed in the book, becoming part of the story, or he would hear someone shouting the words in his ears. Consequently, he stopped reading altogether. The teleportation and hallucinations worsened progressively over time, and by the seventh day, he was unable to stand or open his eyes. Hunger consumed him; he was practically starving as he hadn't eaten anything in several days. His water intake was minimal, leading to severe dehydration, which ironically exacerbated his condition by weakening his body, making it susceptible to possession or other intrusive thoughts.</p>
 
-        <p>"Yusuf...Yusuf... Wake up." A gentle tap on his shoulder roused him. Opening his eyes, he saw John Obinna, his friend. "Let me help you." John assisted him in sitting up. "Oh my! You look terrible." Yusuf managed to smile. It was true. He hadn't showered or brushed in over a week, and he had lost a significant amount of weight due to dehydration and starvation.</p>
+<p>"Yusuf...Yusuf... Wake up." A gentle tap on his shoulder roused him. Opening his eyes, he saw John Obinna, his friend. "Let me help you." John assisted him in sitting up. "Oh my! You look terrible." Yusuf managed to smile. It was true. He hadn't showered or brushed in over a week, and he had lost a significant amount of weight due to dehydration and starvation.</p>
 
-        <p>"I brought pepper soup and maltina for you to eat." John opened the plate, and the smell of the soup went straight to Yusuf's head. He tried to turn away. "No!" John said it quietly but firmly. "You must eat today." With determination, he began spooning the soup into Yusuf's reluctant mouth.</p>
+<p>"I brought pepper soup and maltina for you to eat." John opened the plate, and the smell of the soup went straight to Yusuf's head. He tried to turn away. "No!" John said it quietly but firmly. "You must eat today." With determination, he began spooning the soup into Yusuf's reluctant mouth.</p>
 
-        <p>"Oh, John, my dear friend." He thought. John was the only friend who loved him like a brother, never judging or attempting to exploit him after discovering his gifts. They met on the first day of their first year at Base University, Abuja. They were both at the Department of Political Science, trying to register for their courses, and an instant connection formed between them. Yusuf Ali was a Fulani from Bauchi, and John Obinna was an Igbo from Port Harcout, Nigeria. Usually, these two tribes were not known for their close friendship, but Yusuf and John couldn't care less about the tribal divide. They shared a relationship built on love, respect, and a shared sense of silliness. Both were intelligent, and they supported each other in excelling academically.</p>
+<p>"Oh, John, my dear friend." He thought. John was the only friend who loved him like a brother, never judging or attempting to exploit him after discovering his gifts. They met on the first day of their first year at Base University, Abuja. They were both at the Department of Political Science, trying to register for their courses, and an instant connection formed between them. Yusuf Ali was a Fulani from Bauchi, and John Obinna was an Igbo from Port Harcourt, Nigeria. Usually, these two tribes were not known for their close friendship, but Yusuf and John couldn't care less about the tribal divide. They shared a relationship built on love, respect, and a shared sense of silliness. Both were intelligent, and they supported each other in excelling academically.</p>
 
-        <p>As time passed, they began visiting each other's homes. During breaks, Yusuf would take John to Bauchi with him, while on other occasions, he would join John and his family in Abuja, where they resided. There was even a Christmas when Yusuf spent the holidays with them, and his parents had no reason to worry because he had an amazing time. He was so nervous when he told John about his abilities. Nervously, Yusuf confided in John about his abilities, expecting him to be scared or mock him. To his surprise, John simply smiled and said, "Cool." As their bond grew stronger, Yusuf became more at ease and even began demonstrating some of his abilities to John. John always offered unwavering support during mini spikes or attacks triggered by Yusuf's gifts, and he kept Yusuf's secrets safe.</p>
+<p>As time passed, they began visiting each other's homes. During breaks, Yusuf would take John to Bauchi with him, while on other occasions, he would join John and his family in Abuja, where they resided. There was even a Christmas when Yusuf spent the holidays with them, and his parents had no reason to worry because he had an amazing time. He was so nervous when he told John about his abilities. Nervously, Yusuf confided in John about his abilities, expecting him to be scared or mock him. To his surprise, John simply smiled and said, "Cool." As their bond grew stronger, Yusuf became more at ease and even began demonstrating some of his abilities to John. John always offered unwavering support during mini spikes or attacks triggered by Yusuf's gifts, and he kept Yusuf's secrets safe.</p>
 
-        <p>When the accident occurred and things began spiraling out of control, John took Yusuf from campus to one of his parent's commercial estates, which had several empty houses. They chose a secluded house at the far end of the estate, amidst other vacant properties for sale, providing an incredibly quiet and suitable environment for Yusuf—or so they believed. It was an incredibly thoughtful gesture. John continued to check on Yusuf morning and night, bringing food and ensuring his well-being. He even obtained permission from the school and completed Yusuf's assignments on his behalf. Truly, John was a blessing in Yusuf's life.</p>
+<p>When the accident occurred and things began spiraling out of control, John took Yusuf from campus to one of his parent's commercial estates, which had several empty houses. They chose a secluded house at the far end of the estate, amidst other vacant properties for sale, providing an incredibly quiet and suitable environment for Yusuf—or so they believed. It was an incredibly thoughtful gesture. John continued to check on Yusuf morning and night, bringing food and ensuring his well-being. He even obtained permission from the school and completed Yusuf's assignments on his behalf. Truly, John was a blessing in Yusuf's life.</p>
 
-        <p>He managed to consume half of the soup and drink some of the Maltina, instantly feeling a significant improvement. However, he soon became aware of another presence in the room. Initially, he dismissed it as his imagination, but now he was certain that someone else was there. The realization made him flinch.</p>
+<p>He managed to consume half of the soup and drink some of the Maltina, instantly feeling a significant improvement. However, he soon became aware of another presence in the room. Initially, he dismissed it as his imagination, but now he was certain that someone else was there. The realization made him flinch.</p>
 
-        <p>"Oh, sorry. This is my sister, Florence; remember her?" John explained, noticing Yusuf's questioning expression. Yusuf had never met her before. Whenever he visited John's house, she was either abroad or at school. However, he had seen her in their family pictures.</p>
+<p>"Oh, sorry. This is my sister, Florence; remember her?" John explained, noticing Yusuf's questioning expression. Yusuf had never met her before. Whenever he visited John's house, she was either abroad or at school. However, he had seen her in their family pictures.</p>
 
-        <p>"She knows about everything. I told her... I am sorry. But you need help, and I believe she can assist you. Florence is a first-year student at Nile University, Abuja, and she believes that may be a psychological technique she can use to aid you with your condition." John explained, trying to persuade Yusuf. Nonetheless, Yusuf remained unimpressed, still unsure about this unfamiliar person offering assistance.</p>
+<p>"She knows about everything. I told her... I am sorry. But you need help, and I believe she can assist you. Florence is a first-year student at Nile University, Abuja, and she believes that may be a psychological technique she can use to aid you with your condition." John explained, trying to persuade Yusuf. Nonetheless, Yusuf remained unimpressed, still unsure about this unfamiliar person offering assistance.</p>
 
-        <p>"Hey, Yusuf, Nice to finally meet you." She greeted him with a smile, extending her hand to shake his. However, Yusuf did not reciprocate the gesture.</p>
+<p>"Hey, Yusuf, Nice to finally meet you." She greeted him with a smile, extending her hand to shake his. However, Yusuf did not reciprocate the gesture.</p>
 
-        <p>"He doesn't shake women," John explained, laughing.</p>
+<p>"He doesn't shake women," John explained, laughing.</p>
 
-        <p>"Oh, I am sorry," she said, retracting her hand. "Well, I thought we could try a little exercise together. It's something I read in one of my books, and it seems simple enough but promising."</p>
+<p>"Oh, I am sorry," she said, retracting her hand. "Well, I thought we could try a little exercise together. It's something I read in one of my books, and it seems simple enough but promising."</p>
 
-        <p>Initially, she felt nervous and slightly offended by Yusuf's silent stare. But then she realized that he had just teleported right before their eyes.</p>
+<p>Initially, she felt nervous and slightly offended by Yusuf's silent stare. But then she realized that he had just teleported right before their eyes.</p>
 
-        <p>John shook him, but there was no response. "Yep. He is out." He confirmed.</p>
+<p>John shook him, but there was no response. "Yep. He is out." He confirmed.</p>
 
-        <p>"Oh, my God! Is this normal?" She exclaimed.</p>
+<p>"Oh, my God! Is this normal?" She exclaimed.</p>
 
-        <p>"Yeah, that is why I brought him here. Imagine trying to explain this to people," John replied. Thirty minutes later, Yusuf returned with a deep breath, startling them both.</p>
+<p>"Yeah, that is why I brought him here. Imagine trying to explain this to people," John replied. Thirty minutes later, Yusuf returned with a deep breath, startling them both.</p>
 
-        <p>"Where did you go?" She asked curiously, moving closer to him.</p>
+<p>"Where did you go?" She asked curiously, moving closer to him.</p>
 
-        <p>Yusuf felt embarrassed and ashamed of his appearance, especially in front of her. He was also aware of his unpleasant odor. However, she seemed unfazed by it all. "I can't explain it, but it was difficult to come back. I am afraid that one of these days I might get stuck," he confessed, covering his ears and wincing in pain.</p>
+<p>Yusuf felt embarrassed and ashamed of his appearance, especially in front of her. He was also aware of his unpleasant odor. However, she seemed unfazed by it all. "I can't explain it, but it was difficult to come back. I am afraid that one of these days I might get stuck," he confessed, covering his ears and wincing in pain.</p>
 
-        <p>"What we need to do is figure out how you can control it," she suggested.</p>
+<p>"What we need to do is figure out how you can control it," she suggested.</p>
 
-        <p>"I don't want to control it. I want to get rid of it." He sapped, but she didn't even flinch.</p>
+<p>"I don't want to control it. I want to get rid of it." He snapped, but she didn't even flinch.</p>
 
-        <p>"I don't think you can get rid of it. I believe it's a part of you. What you need to do is learn to adjust and even make it work for you."</p>
+<p>"I don't think you can get rid of it. I believe it's a part of you. What you need to do is learn to adjust and even make it work for you."</p>
 
-        <p>"I don't know if I can... He trailed off."</p>
+<p>"I don't know if I can..." He trailed off.</p>
 
-        <p>"Trust me, you can." She reassured me with a smile. "It won't be easy, but the technique I am going to use will help."</p>
+<p>"Trust me, you can." She reassured him with a smile. "It won't be easy, but the technique I am going to use will help."</p>
 
-        <p>"Ok." He finally agreed, and John, who had been quietly observing, smiled as well.</p>
+<p>"Ok." He finally agreed, and John, who had been quietly observing, smiled as well.</p>
 
-        <p>She explained to him the technique called "guided visualization." It involved using words to guide his focus solely on her, excluding all other distractions. The goal was to create mental imagery and concentrated attention that would foster a sensory experience in the mind, promoting relaxation. He needed to learn to tune out external noises and solely concentrate on her thoughts. Meanwhile, she would imagine an empty room painted in a calming cornflower white, devoid of windows or doors, neither too dark nor too bright. In this imaginary space, he could find solace, with external noises blocked out, providing a peaceful and quiet environment. The technique aimed to strengthen his brain's ability to focus on her thoughts, building resistance and defense against unwanted noise and intrusion. Guided visualization is widely used in therapeutic practices, including psychology and mind-body medicine, for stress reduction and anxiety relief.</p>
+<p>She explained to him the technique called "guided visualization." It involved using words to guide his focus solely on her, excluding all other distractions. The goal was to create mental imagery and concentrated attention that would foster a sensory experience in the mind, promoting relaxation. He needed to learn to tune out external noises and solely concentrate on her thoughts. Meanwhile, she would imagine an empty room painted in a calming cornflower white, devoid of windows or doors, neither too dark nor too bright. In this imaginary space, he could find solace, with external noises blocked out, providing a peaceful and quiet environment. The technique aimed to strengthen his brain's ability to focus on her thoughts, building resistance and defense against unwanted noise and intrusion. Guided visualization is widely used in therapeutic practices, including psychology and mind-body medicine, for stress reduction and anxiety relief.</p>
 
-        <p>They attempted the technique throughout the day but had little success. He was too physically and mentally exhausted to fully grasp it. However, by evening, they had achieved some progress, allowing him to experience about 15 minutes of relative restfulness.</p>
+<p>They attempted the technique throughout the day but had little success. He was too physically and mentally exhausted to fully grasp it. However, by evening, they had achieved some progress, allowing him to experience about 15 minutes of relative restfulness.</p>
 
-        <p>Encouraged by this small success, both John and Florence decided to stay with him overnight, providing support and attempting the technique again the following day. John went to fetch their clothes and bought them food.</p>
+<p>Encouraged by this small success, both John and Florence decided to stay with him overnight, providing support and attempting the technique again the following day. John went to fetch their clothes and bought them food.</p>
 
-        <p>"Thank you for doing this for him." John expressed gratitude to his sister as they sat outside the apartment, taking a few moments for themselves while Yusuf slept.</p>
+<p>"Thank you for doing this for him." John expressed gratitude to his sister as they sat outside the apartment, taking a few moments for themselves while Yusuf slept.</p>
 
-        <p>"It's my pleasure," she replied.</p>
+<p>"It's my pleasure," she replied.</p>
 
-        <p>"How's school, by the way? Won't you miss your classes by being here?" John inquired.</p>
+<p>"How's school, by the way? Won't you miss your classes by being here?" John inquired.</p>
 
-        <p>"We've finished all our tests, so I'll be fine. Exams are still two weeks away, and I have enough time to study," she assured him. "It seems the security guards called Dad and informed him about Yusuf's presence here. He mentioned that he had been trying to reach you, so he called me. I simply told him that you were spending time with friends here for a while. He asked why you didn't just move here, as he offered you an apartment at Cosgrove, but you refused and chose to stay in the hostel instead."</p>
+<p>"We've finished all our tests, so I'll be fine. Exams are still two weeks away, and I have enough time to study," she assured him. "It seems the security guards called Dad and informed him about Yusuf's presence here. He mentioned that he had been trying to reach you, so he called me. I simply told him that you were spending time with friends here for a while. He asked why you didn't just move here, as he offered you an apartment at Cosgrove, but you refused and chose to stay in the hostel instead."</p>
 
-        <p>John was fully aware of the lovely apartment that his father offered him on one of his luxury estates, Cosgrove. The estate was located in Wuye, a highbrow area in Abuja city, and it was one of those modern smart estates where everything was automated. However, he didn't accept because, for one thing, he wanted to experience hostel life and spend time hanging out with his friends. Relatives had already accused him of being a spoilt rich brat, and he knew that staying in a luxury apartment as an undergraduate student would only add fuel to the fire. Moreover, there would be too many eyes on him, reporting his every movement to his father, and he didn't care for that. He already felt like a fish in a bowl, as it were. Ironically, his sister, the only other child of Chief Obinna Okechukwu, was not given the same offer simply because she was a girl. She had the option to either stay in the hostel or at home, and she chose the hostel. It was as close to freedom as she could ever get before getting married. "I will call him back," he smiled. And at that moment, Florence's phone began to ring.</p>
+<p>John was fully aware of the lovely apartment that his father offered him on one of his luxury estates, Cosgrove. The estate was located in Wuye, a highbrow area in Abuja city, and it was one of those modern smart estates where everything was automated. However, he didn't accept because, for one thing, he wanted to experience hostel life and spend time hanging out with his friends. Relatives had already accused him of being a spoilt rich brat, and he knew that staying in a luxury apartment as an undergraduate student would only add fuel to the fire. Moreover, there would be too many eyes on him, reporting his every movement to his father, and he didn't care for that. He already felt like a fish in a bowl, as it were. Ironically, his sister, the only other child of Chief Obinna Okechukwu, was not given the same offer simply because she was a girl. She had the option to either stay in the hostel or at home, and she chose the hostel. It was as close to freedom as she could ever get before getting married. "I will call him back," he smiled. And at that moment, Florence's phone began to ring.</p>
 
-        <p>"Oh, sorry," she whispered as she got up and walked far away from the apartment so as not to disturb Yusuf. She had forgotten to put her phone in silent mode. She considered herself lucky that it hadn't rung during the day. As she walked, she glanced at the number calling, and it was her fiancé, Mclean. "Hey, Babe," she answered.</p>
+<p>"Oh, sorry," she whispered as she got up and walked far away from the apartment so as not to disturb Yusuf. She had forgotten to put her phone in silent mode. She considered herself lucky that it hadn't rung during the day. As she walked, she glanced at the number calling, and it was her fiancé, Mclean. "Hey, Babe," she answered.</p>
 
-        <p>Yusuf lay still in his bed with his eyes closed. He wasn't sleeping, but rather resting. He couldn't afford to sleep for more than a few minutes at a time because he would involuntarily teleport. However, he was beginning to gain control over his waking state. The exercise they had done was wonderful. He even tried to picture the room in his head to achieve the same level of tranquility but with little success. Nevertheless, he could now sense when the involuntary teleportation was about to happen and could fight it, with some hits and misses. He had teleported twice to John and Florence, where he had overheard some of their conversations. He had also teleported to Florence while she was talking on the phone. She seemed so happy and was smiling a lot. It must be her boyfriend. He thought about it and felt a slight pang of jealousy. It was strange since he didn't even know her until today. He had heard of her from her brother and had seen her in their family pictures, but never in person. Yet, the hours they had spent together doing the mental exercise felt like a lifetime to him, and he began to feel something. He pushed the thoughts away, redirecting his focus. Then he began to reminisce about the past.</p>
+<p>Yusuf lay still in his bed with his eyes closed. He wasn't sleeping, but rather resting. He couldn't afford to sleep for more than a few minutes at a time because he would involuntarily teleport. However, he was beginning to gain control over his waking state. The exercise they had done was wonderful. He even tried to picture the room in his head to achieve the same level of tranquility but with little success. Nevertheless, he could now sense when the involuntary teleportation was about to happen and could fight it, with some hits and misses. He had teleported twice to John and Florence, where he had overheard some of their conversations. He had also teleported to Florence while she was talking on the phone. She seemed so happy and was smiling a lot. It must be her boyfriend. He thought about it and felt a slight pang of jealousy. It was strange since he didn't even know her until today. He had heard of her from her brother and had seen her in their family pictures, but never in person. Yet, the hours they had spent together doing the mental exercise felt like a lifetime to him, and he began to feel something. He pushed the thoughts away, redirecting his focus. Then he began to reminisce about the past.</p>
 
-        <p>He remembered some of the fantastic worlds he had visited. Yes, it was scary at times, but he couldn't deny how wonderful it was to explore those places. He had been to all kinds of strange worlds. Some of them floated in the clouds with a hazy ambiance. The houses were situated on floating lands, with entire cities protected by domes. The roads intertwined and looped without people falling off, as gravity seemed to work in a peculiar way there. Other worlds appeared metallic, with engines and beings resembling machines as well. There were towering lands where people, animals, and plants stood at 20 feet tall. He felt like an ant in comparison. Fortunately, they couldn't see him; he was uncertain of what they would do to him if they did. However, his favorite world was called the City of Jute, where he had met Janin. He was nine years old when he teleported to the City of Jute in one of his dreams, and it was the most beautiful place he had ever seen. Everything sparkled and exuded beauty. The structures seemed to be made of gold, silver, diamonds, or other similar materials. Even the people were a sight to behold, exceptionally beautiful and graceful in their movements. The animals were strange, yet captivating and friendly. They immediately sensed his presence upon his arrival but didn't attack him. A furry little creature that resembled a large cat approached him and rubbed against him as he stroked her while she purred.</p>
+<p>He remembered some of the fantastic worlds he had visited. Yes, it was scary at times, but he couldn't deny how wonderful it was to explore those places. He had been to all kinds of strange worlds. Some of them floated in the clouds with a hazy ambiance. The houses were situated on floating lands, with entire cities protected by domes. The roads intertwined and looped without people falling off, as gravity seemed to work in a peculiar way there. Other worlds appeared metallic, with engines and beings resembling machines as well. There were towering lands where people, animals, and plants stood at 20 feet tall. He felt like an ant in comparison. Fortunately, they couldn't see him; he was uncertain of what they would do to him if they did. However, his favorite world was called the City of Jute, where he had met Janin. He was nine years old when he teleported to the City of Jute in one of his dreams, and it was the most beautiful place he had ever seen. Everything sparkled and exuded beauty. The structures seemed to be made of gold, silver, diamonds, or other similar materials. Even the people were a sight to behold, exceptionally beautiful and graceful in their movements. The animals were strange, yet captivating and friendly. They immediately sensed his presence upon his arrival but didn't attack him. A furry little creature that resembled a large cat approached him and rubbed against him as he stroked her while she purred.</p>
 
-        <p>"What are you?" He was startled by a girl's voice and quickly turned around, inadvertently startling the cat-like creature that ran away. He felt bad. In front of him stood a girl about his age, who was the most beautiful girl he had ever seen. She wore clothes that resembled soft caramel-colored leather, strapped sandals, and a lace veil. Her hair was long, midnight black, and braided with flowers. Her skin was pale white, and her eyes captivated him the most. They were like glass, with the most beautiful shade of green he had ever seen. He couldn't help but stare.</p>
+<p>"What are you?" He was startled by a girl's voice and quickly turned around, inadvertently startling the cat-like creature that ran away. He felt bad. In front of him stood a girl about his age, who was the most beautiful girl he had ever seen. She wore clothes that resembled soft caramel-colored leather, strapped sandals, and a lace veil. Her hair was long, midnight black, and braided with flowers. Her skin was pale white, and her eyes captivated him the most. They were like glass, with the most beautiful shade of green he had ever seen. He couldn't help but stare.</p>
 
-        <p>"How did you get here?" she asked again, moving closer to him.</p>
+<p>"How did you get here?" she asked again, moving closer to him.</p>
 
-        <p>"I don't know," he stammered.</p>
+<p>"I don't know," he stammered.</p>
 
-        <p>"How could you not know? You must have gotten here somehow. I have never seen your kind here before."</p>
+<p>"How could you not know? You must have gotten here somehow. I have never seen your kind here before."</p>
 
-        <p>"I am sorry, I will leave," he replied, trying to force himself to wake up. "Please don't hurt me."</p>
+<p>"I am sorry, I will leave," he replied, trying to force himself to wake up. "Please don't hurt me."</p>
 
-        <p>"Why would I hurt you? Are you a bad person?"</p>
+<p>"Why would I hurt you? Are you a bad person?"</p>
 
-        <p>"No, I am just looking around and admiring your land. I don't even know how I got here. I went to sleep in my bed, and then I am here."</p>
+<p>"No, I am just looking around and admiring your land. I don't even know how I got here. I went to sleep in my bed, and then I am here."</p>
 
-        <p>"So, you are dreaming?" Her curiosity was piqued.</p>
+<p>"So, you are dreaming?" Her curiosity was piqued.</p>
 
-        <p>"Yes."</p>
+<p>"Yes."</p>
 
-        <p>"Does this happen a lot?"</p>
+<p>"Does this happen a lot?"</p>
 
-        <p>"Yes, but I have no control over where I go. I just find myself anywhere."</p>
+<p>"Yes, but I have no control over where I go. I just find myself anywhere."</p>
 
-        <p>"Interesting," she smiled. "That must be a nice skill to have."</p>
+<p>"Interesting," she smiled. "That must be a nice skill to have."</p>
 
-        <p>"Not always, but I like it here," he said, beginning to relax. "What is this place anyway?"</p>
+<p>"Not always, but I like it here," he said, beginning to relax. "What is this place anyway?"</p>
 
-        <p>"It is called the Land of Jute. In my language, that means light."</p>
+<p>"It is called the Land of Jute. In my language, that means light."</p>
 
-        <p>"Wait, how is it that I can understand you?" He realized that he was speaking her language.</p>
+<p>"Wait, how is it that I can understand you?" He realized that he was speaking her language.</p>
 
-        <p>"I am wondering the same thing. Perhaps it's part of your abilities to speak the language of the place you find yourself in."</p>
+<p>"I am wondering the same thing. Perhaps it's part of your abilities to speak the language of the place you find yourself in."</p>
 
-        <p>"Perhaps," he agreed. He had never thought of it that way. They continued to talk for a while. She took him around the city, showing him extraordinary things. People stopped to look at them, but no one was upset or hostile. She brought him to her home and introduced him to her parents, who were equally intrigued. Her mother served dinner. It looked and smelled delicious, and even though he didn't know what it was, he wanted to eat it. Just as he was about to take a bite, he woke up.</p>
+<p>"Perhaps," he agreed. He had never thought of it that way. They continued to talk for a while. She took him around the city, showing him extraordinary things. People stopped to look at them, but no one was upset or hostile. She brought him to her home and introduced him to her parents, who were equally intrigued. Her mother served dinner. It looked and smelled delicious, and even though he didn't know what it was, he wanted to eat it. Just as he was about to take a bite, he woke up.</p>
 
-        <p>He tried his best to go back to sleep but couldn't. And for the first time, he felt upset about waking up. A few hours later, his father woke him up to go to the mosque together for prayer.</p>
+<p>He tried his best to go back to sleep but couldn't. And for the first time, he felt upset about waking up. A few hours later, his father woke him up to go to the mosque together for prayer.</p>
 
-        <p>"What is wrong?" his father asked, noticing the sullen look on his face.</p>
+<p>"What is wrong?" his father asked, noticing the sullen look on his face.</p>
 
-        <p>"Nothing, Baba. I just had a bad dream," he replied.</p>
+<p>"Nothing, Baba. I just had a bad dream," he replied.</p>
 
-        <p>"One of those again?" His father was concerned.</p>
+<p>"One of those again?" His father was concerned.</p>
 
-        <p>"It's okay, Baba. I am fine." He didn't want to alarm his father by telling him what happened.</p>
+<p>"It's okay, Baba. I am fine." He didn't want to alarm his father by telling him what happened.</p>
 
-        <p>"Okay, son. Let's hurry."</p>
+<p>"Okay, son. Let's hurry."</p>
 
-        <p>He spent the next three days trying to return to the Land of Jute, but with very little success. Everywhere he went, he paled in comparison to the beautiful city made of lights and its gorgeous inhabitants, especially Janin with the glass eyes. He missed her so much and couldn't wait to be reunited with her. However, at this point, it seemed almost impossible. He had never visited the same place twice, as he had no control over where he went.</p>
+<p>He spent the next three days trying to return to the Land of Jute, but with very little success. Everywhere he went, he paled in comparison to the beautiful city made of lights and its gorgeous inhabitants, especially Janin with the glass eyes. He missed her so much and couldn't wait to be reunited with her. However, at this point, it seemed almost impossible. He had never visited the same place twice, as he had no control over where he went.</p>
 
-        <p>That night, heartbroken, he thought about Janin for some time before falling asleep, only to wake up in the Land of Jute. The happiness he felt was indescribable. He found himself in the middle of a field of crops that resembled corn. Without knowing his bearings, he got up and ran towards the city. At the gate, he approached the guards and asked for directions to Janin's house. The guard spoke into what looked like a crystal mirror, and Janin appeared on the screen. As soon as she saw him, she smiled.</p>
+<p>That night, heartbroken, he thought about Janin for some time before falling asleep, only to wake up in the Land of Jute. The happiness he felt was indescribable. He found himself in the middle of a field of crops that resembled corn. Without knowing his bearings, he got up and ran towards the city. At the gate, he approached the guards and asked for directions to Janin's house. The guard spoke into what looked like a crystal mirror, and Janin appeared on the screen. As soon as she saw him, she smiled.</p>
 
-        <p>"I am here, Janin!" he exclaimed with joy.</p>
+<p>"I am here, Janin!" he exclaimed with joy.</p>
 
-        <p>"I can see that," she replied excitedly. "Please, let him come to me," she pleaded with the guards, and one of them escorted him to her house. They played together for what seemed like the entire day. She took him to the beach and showed him some of the flying sea animals that hovered above the sea, occasionally diving below. They were large and impressive, yet not intimidating. They rode on a wild unicorn and observed the city from below. It appeared like a giant diamond from that vantage point. He was so happy that he could cry, and that was when he woke up again. But this time, he wasn't sad, because he now knew that he could go back if he wanted it badly enough.</p>
+<p>"I can see that," she replied excitedly. "Please, let him come to me," she pleaded with the guards, and one of them escorted him to her house. They played together for what seemed like the entire day. She took him to the beach and showed him some of the flying sea animals that hovered above the sea, occasionally diving below. They were large and impressive, yet not intimidating. They rode on a wild unicorn and observed the city from below. It appeared like a giant diamond from that vantage point. He was so happy that he could cry, and that was when he woke up again. But this time, he wasn't sad, because he now knew that he could go back if he wanted it badly enough.</p>
 
-        <p>He was brought out of his thoughts by John entering his room to wake him up for Fajr prayer.</p>
+<p>He was brought out of his thoughts by John entering his room to wake him up for Fajr prayer.</p>
 
-        <p>"Is it morning already?" he exclaimed in surprise. He wasn't sure if he had slept or had been lost in thoughts for so long that he hadn't realized the passage of time. Nevertheless, he was glad that he hadn't spent the night in agony like he had in the past week.</p>
+<p>"Is it morning already?" he exclaimed in surprise. He wasn't sure if he had slept or had been lost in thoughts for so long that he hadn't realized the passage of time. Nevertheless, he was glad that he hadn't spent the night in agony like he had in the past week.</p>
 
-        <p>"Yes, it is!" John said. "I guess Florence's method worked, huh?"</p>
+<p>"Yes, it is!" John said. "I guess Florence's method worked, huh?"</p>
 
-        <p>"I think so too. Thank you so much. I will forever be grateful for what you did for me."</p>
+<p>"I think so too. Thank you so much. I will forever be grateful for what you did for me."</p>
 
-        <p>"Haba, no problem. What are friends for?" John replied. "Now, get up, shower, and pray. After breakfast, we'll do another session, okay?"</p>
+<p>"Haba, no problem. What are friends for?" John replied. "Now, get up, shower, and pray. After breakfast, we'll do another session, okay?"</p>
 
-        <p>"Sure, Yusuf said, attempting to get up but suddenly being hit by a strong pang of hunger. He had to sit back down and cradle his stomach.</p>
+<p>"Sure," Yusuf said, attempting to get up but suddenly being hit by a strong pang of hunger. He had to sit back down and cradle his stomach.</p>
 
-        <p>"What is wrong?" John started to panic.</p>
+<p>"What is wrong?" John started to panic.</p>
 
-        <p>"I am so hungry," Yusuf replied, and they both laughed. John microwaved the remaining pepper soup and fried rice he had bought earlier for Yusuf while he showered and prayed. Yusuf eagerly devoured the food. Florence, who joined them later, prepared some fried eggs and plantains, and Yusuf enjoyed those as well.</p>
+<p>"I am so hungry," Yusuf replied, and they both laughed. John microwaved the remaining pepper soup and fried rice he had bought earlier for Yusuf while he showered and prayed. Yusuf eagerly devoured the food. Florence, who joined them later, prepared some fried eggs and plantains, and Yusuf enjoyed those as well.</p>
 
-        <p>Afterward, they had another session for about an hour, and then they took a break. Florence went for a walk to clear her mind because the mental exercise was taking a toll on her as well. Concentrating on the mental exercise became painful after a while, but she didn't mind. This was her brother's best friend, and he seemed nice. She was intrigued by the whole situation. As a first-year student of psychology, all she ever learned were boring theories that put her to sleep. She was starting to consider switching to a more exciting course, perhaps something in the arts. However, when John approached her with this problem, her curiosity was piqued, and she quickly delved into her books to find the best method to address the issue. She even consulted her lecturer and presented the problem to him as a hypothetical scenario that she hoped to use as the topic for her final year project when the time came. He was happy to help and suggested guided visualization. She immediately conducted extensive research on the topic, and she was pleased that it seemed to be working.</p>
+<p>Afterward, they had another session for about an hour, and then they took a break. Florence went for a walk to clear her mind because the mental exercise was taking a toll on her as well. Concentrating on the mental exercise became painful after a while, but she didn't mind. This was her brother's best friend, and he seemed nice. She was intrigued by the whole situation. As a first-year student of psychology, all she ever learned were boring theories that put her to sleep. She was starting to consider switching to a more exciting course, perhaps something in the arts. However, when John approached her with this problem, her curiosity was piqued, and she quickly delved into her books to find the best method to address the issue. She even consulted her lecturer and presented the problem to him as a hypothetical scenario that she hoped to use as the topic for her final year project when the time came. He was happy to help and suggested guided visualization. She immediately conducted extensive research on the topic, and she was pleased that it seemed to be working.</p>
 
-        <p>John and Yusuf talked for a while on the apartment balcony, and everything seemed fine. "I got a call from Alhaji yesterday," John informed Yusuf about the call he had received from Yusuf's father, whom they referred to as Alhaji. He was worried about you and sensed that something was wrong.</p>
+<p>John and Yusuf talked for a while on the apartment balcony, and everything seemed fine. "I got a call from Alhaji yesterday," John informed Yusuf about the call he had received from Yusuf's father, whom they referred to as Alhaji. He was worried about you and sensed that something was wrong.</p>
 
-        <p>"What did you tell him?" Yusuf asked, feeling concerned because his phone had been with John since the incident and he wasn't ready to talk to his parents yet. Fortunately, he often went days, and sometimes even weeks, without talking to them or raising any suspicions. But this time, he was worried.</p>
+<p>"What did you tell him?" Yusuf asked, feeling concerned because his phone had been with John since the incident and he wasn't ready to talk to his parents yet. Fortunately, he often went days, and sometimes even weeks, without talking to them or raising any suspicions. But this time, he was worried.</p>
 
-        <p>"I told him that you were busy and that you would get back to him as soon as you could. Can you do that now?"</p>
+<p>"I told him that you were busy and that you would get back to him as soon as you could. Can you do that now?"</p>
 
-        <p>"I am not ready. Please stall for me a little longer."</p>
+<p>"I am not ready. Please stall for me a little longer."</p>
 
-        <p>"Okay, but it won't be easy. He already suspects something."</p>
+<p>"Okay, but it won't be easy. He already suspects something."</p>
 
-        <p>"I am sure. Baba is very perceptive, and I know Umma will be worried too. But please buy me some more time." Yusuf pleaded.</p>
+<p>"I am sure. Baba is very perceptive, and I know Umma will be worried too. But please buy me some more time." Yusuf pleaded.</p>
 
-        <p>"No problem," John replied. They continued to talk. John showed him the assignments he had completed on his behalf and informed him about everything that happened in class and their preparations for exams. Hopefully, Yusuf would be able to return by then. John also shared the latest campus jist and everything in between before leaving for school, while Yusuf went in for a nap.</p>
+<p>"No problem," John replied. They continued to talk. John showed him the assignments he had completed on his behalf and informed him about everything that happened in class and their preparations for exams. Hopefully, Yusuf would be able to return by then. John also shared the latest campus jist and everything in between before leaving for school, while Yusuf went in for a nap.</p>
 
-        <p>About thirty minutes later, Florence walked in on Yusuf, who was experiencing a panic attack and drifting in and out of consciousness. She did her best to calm him down and then started the guided visualization again, even though she was extremely tired. It helped to calm him down. Her calm voice and kind demeanor were effective in gently guiding him to safety, and by this time, she had mastered the art of constructing that mental room. In the beginning, it was challenging to hold the image while also talking to him, but now it was a permanent structure in her mind that she could access whenever she wanted. It worked, and within an hour, Yusuf was stable again. She called her brother on her phone to come and help.</p>
+<p>About thirty minutes later, Florence walked in on Yusuf, who was experiencing a panic attack and drifting in and out of consciousness. She did her best to calm him down and then started the guided visualization again, even though she was extremely tired. It helped to calm him down. Her calm voice and kind demeanor were effective in gently guiding him to safety, and by this time, she had mastered the art of constructing that mental room. In the beginning, it was challenging to hold the image while also talking to him, but now it was a permanent structure in her mind that she could access whenever she wanted. It worked, and within an hour, Yusuf was stable again. She called her brother on her phone to come and help.</p>
 
-        <p>That evening, Yusuf had to talk to his parents and assure them that he was fine. However, his mother wasn't convinced, and she insisted on visiting. That was when he decided to reveal the truth.</p>
+<p>That evening, Yusuf had to talk to his parents and assure them that he was fine. However, his mother wasn't convinced, and she insisted on visiting. That was when he decided to reveal the truth.</p>
 
-        <p>"What? You had an accident, and you didn't let us know?" His mother exclaimed.</p>
+<p>"What? You had an accident, and you didn't let us know?" His mother exclaimed.</p>
 
-        <p>"It's complicated, Umma. A lot happened."</p>
+<p>"It's complicated, Umma. A lot happened."</p>
 
-        <p>"What is complicated about telling your parents that you were involved in a life-threatening accident?"</p>
+<p>"What is complicated about telling your parents that you were involved in a life-threatening accident?"</p>
 
-        <p>"It wasn't life-threatening."</p>
+<p>"It wasn't life-threatening."</p>
 
-        <p>"And why didn't the school call us? What kind of institution is that?" His mother was furious. "I am going to call the Vice Chancellor and express my dissatisfaction."</p>
+<p>"And why didn't the school call us? What kind of institution is that?" His mother was furious. "I am going to call the Vice Chancellor and express my dissatisfaction."</p>
 
-        <p>"No, Umma and Baba! Please don't. The accident wasn't life-threatening, and I was cleared of all injuries and concussions, except for minor bruises. However, it did trigger my abilities to an intense level, and John had to bring me to one of his father's estates to give me some privacy to adjust."</p>
+<p>"No, Umma and Baba! Please don't. The accident wasn't life-threatening, and I was cleared of all injuries and concussions, except for minor bruises. However, it did trigger my abilities to an intense level, and John had to bring me to one of his father's estates to give me some privacy to adjust."</p>
 
-        <p>"Oh no! Is she back?" His mother asked, referring to Janin.</p>
+<p>"Oh no! Is she back?" His mother asked, referring to Janin.</p>
 
-        <p>"No, Umma. She is not back. I haven't seen her in years, I swear. "Yusuf pleaded.</p>
+<p>"No, Umma. She is not back. I haven't seen her in years, I swear. "Yusuf pleaded.</p>
 
-        <p>"We have to come and take you home for treatment."</p>
+<p>"We have to come and take you home for treatment."</p>
 
-        <p>"It is not necessary." Yusuf gave John a panicked look. He didn't want his parents to come at this time. He knew when they did, they would want to take him back home, and he couldn't handle the relatives and neighbors right now. There was just too much pressure on him. So, John took the phone from him and went outside to talk to Alhaji Ali. Yusuf could hear John frantically trying to explain. "I promise, Alhaji. We know what we are doing. Please don't come and take him home now. We are on a good trajectory, and he is making progress. There is very little distraction or pressure here. If you take him home, or worse, to rehab, as I am sure you are considering, he will be completely lost."</p>
+<p>"It is not necessary." Yusuf gave John a panicked look. He didn't want his parents to come at this time. He knew when they did, they would want to take him back home, and he couldn't handle the relatives and neighbors right now. There was just too much pressure on him. So, John took the phone from him and went outside to talk to Alhaji Ali. Yusuf could hear John frantically trying to explain. "I promise, Alhaji. We know what we are doing. Please don't come and take him home now. We are on a good trajectory, and he is making progress. There is very little distraction or pressure here. If you take him home, or worse, to rehab, as I am sure you are considering, he will be completely lost."</p>
 
-        <p>"How can you expect us to do nothing, my son? What kind of parents do you think we are?"</p>
+<p>"How can you expect us to do nothing, my son? What kind of parents do you think we are?"</p>
 
-        <p>"The kind that loves him and wants him to be all right. Look, you know my parent's house, and if I ever did anything to harm Yusuf, you know how to reach me."</p>
+<p>"The kind that loves him and wants him to be all right. Look, you know my parent's house, and if I ever did anything to harm Yusuf, you know how to reach me."</p>
 
-        <p>"I am not even considering that." Alhaji Ali said:</p>
+<p>"I am not even considering that." Alhaji Ali said:</p>
 
-        <p>"Then please, Alhaji. I need you to trust me on this one. We are effectively using the science of psychology, and it is working. But he needs time."</p>
+<p>"Then please, Alhaji. I need you to trust me on this one. We are effectively using the science of psychology, and it is working. But he needs time."</p>
 
-        <p>"How much time?"</p>
+<p>"How much time?"</p>
 
-        <p>"I would say about two weeks to a month."</p>
+<p>"I would say about two weeks to a month."</p>
 
-        <p>Alhaji Ali remained silent on the other line, and John could hear Yusuf's mother talking and disagreeing. "Are you sure that you know what you are doing?"</p>
+<p>Alhaji Ali remained silent on the other line, and John could hear Yusuf's mother talking and disagreeing. "Are you sure that you know what you are doing?"</p>
 
-        <p>He could hear Yusuf's mother expressing disappointment and surprise at her husband for even considering it.</p>
+<p>He could hear Yusuf's mother expressing disappointment and surprise at her husband for even considering it.</p>
 
-        <p>"Yes, Alhaji, we have already seen a lot of progress. Two days ago, he couldn't even speak. But, like was said earlier, we need more time," John replied to Yusuf's father over the phone.</p>
+<p>"Yes, Alhaji, we have already seen a lot of progress. Two days ago, he couldn't even speak. But, like was said earlier, we need more time," John replied to Yusuf's father over the phone.</p>
 
-        <p>"Okay," Alhaji Ali said, and John could hear Yusuf's mother starting to cry on the other end of the line.</p>
+<p>"Okay," Alhaji Ali said, and John could hear Yusuf's mother starting to cry on the other end of the line.</p>
 
-        <p>You need to call your mother and reassure her," John said to Yusuf as soon as he entered the room.</p>
+<p>You need to call your mother and reassure her," John said to Yusuf as soon as he entered the room.</p>
 
-        <p>"Perhaps later. I don't think this is the best time," Florence agreed. She needed time to absorb the information and consider options.</p>
+<p>"Perhaps later. I don't think this is the best time," Florence agreed. She needed time to absorb the information and consider options.</p>
 
-        <p>You see, they had been dealing with Yusuf's condition his entire life, and Yusuf, being twenty-three years old now, meant they had been struggling with this issue for over two decades. They had been trying everything from spiritual to medical interventions to help him, but nothing had been effective. They had to move several times to protect him, especially when he caught the attention of a Jinn named Janin, who wanted to take him with her. They had to take drastic measures to get rid of her when Yusuf was around seventeen years old, and he had never seen her again. His condition improved after that, and he rarely experienced episodes until now. Throughout this time, they had been trying to eliminate his abilities, seeing them as an affiliation that needed to be cured. Perhaps they had failed to recognize that it was a gift meant to be nurtured, and they had prevented him from doing so. Now, it was driving him crazy.</p>
+<p>You see, they had been dealing with Yusuf's condition his entire life, and Yusuf, being twenty-three years old now, meant they had been struggling with this issue for over two decades. They had been trying everything from spiritual to medical interventions to help him, but nothing had been effective. They had to move several times to protect him, especially when he caught the attention of a Jinn named Janin, who wanted to take him with her. They had to take drastic measures to get rid of her when Yusuf was around seventeen years old, and he had never seen her again. His condition improved after that, and he rarely experienced episodes until now. Throughout this time, they had been trying to eliminate his abilities, seeing them as an affiliation that needed to be cured. Perhaps they had failed to recognize that it was a gift meant to be nurtured, and they had prevented him from doing so. Now, it was driving him crazy.</p>
 
-        <p>"Are we really going to let him stay there with his outbursts?" Yusuf's mother asked her husband once she had calmed down.</p>
+<p>"Are we really going to let him stay there with his outbursts?" Yusuf's mother asked her husband once she had calmed down.</p>
 
-        <p>"Yes, Nafisa," her husband answered, using her actual name. He usually called her Mami, but her real name came up when he was serious. "We have tried for a long time to get rid of it. Perhaps we should try this method now.</p>
+<p>"Yes, Nafisa," her husband answered, using her actual name. He usually called her Mami, but her real name came up when he was serious. "We have tried for a long time to get rid of it. Perhaps we should try this method now.</p>
 
-        <p>"But they are just children. Shouldn't we at least bring him home and take care of him here?"</p>
+<p>"But they are just children. Shouldn't we at least bring him home and take care of him here?"</p>
 
-        <p>"And give the neighbors something to gossip about? I don't think so," he replied, looking worried. "Don't worry, if it doesn't work, we will figure something out."</p>
+<p>"And give the neighbors something to gossip about? I don't think so," he replied, looking worried. "Don't worry, if it doesn't work, we will figure something out."</p>
 
-        <p>"Okay."</p>
+<p>"Okay."</p>
 
-        <p>For the next week, Florence made significant progress in guiding Yusuf to control his abilities, and he was starting to understand. She even encouraged him to try and permanently transfer the mental room into his mind so that he could access it even when she wasn't there. Yusuf felt a sense of sadness at the thought of her not being there. He had grown fond of her and, perhaps, even fallen in love with her. He had never felt anything like that for any other girl, at least not a human girl. The only other time he had experienced something similar was with Janin, the beautiful Janin with glass eyes that he had met in the Land of Jute. When they were sixteen, they carved their names on a rock in the Land of Jute, using the laser-like light emanating from her eyes as a symbol of their everlasting love. They had planned to marry and have four children, and Yusuf would move to the Land of Jute to be with them since Janin couldn't follow him to his world. Her family loved and welcomed him, even throwing them an engagement ceremony. He started spending more and more time in the Land of Jute, causing him to appear comatose in the real world and causing panic in his family. It had taken a monumental effort from his parents and everyone involved to separate him from his Jinn lover, and they hoped they would never have to deal with that again. They had tried to connect him with human girls and even proposed arranging a marriage with one of his beautiful cousins, but he had rejected those ideas. Given his young age, they hadn't pushed too hard, but they still worried that Janin had a hold on him. Now that he was developing feelings for this new girl, he was sure he had nothing to worry about.</p>
+<p>For the next week, Florence made significant progress in guiding Yusuf to control his abilities, and he was starting to understand. She even encouraged him to try and permanently transfer the mental room into his mind so that he could access it even when she wasn't there. Yusuf felt a sense of sadness at the thought of her not being there. He had grown fond of her and, perhaps, even fallen in love with her. He had never felt anything like that for any other girl, at least not a human girl. The only other time he had experienced something similar was with Janin, the beautiful Janin with glass eyes that he had met in the Land of Jute. When they were sixteen, they carved their names on a rock in the Land of Jute, using the laser-like light emanating from her eyes as a symbol of their everlasting love. They had planned to marry and have four children, and Yusuf would move to the Land of Jute to be with them since Janin couldn't follow him to his world. Her family loved and welcomed him, even throwing them an engagement ceremony. He started spending more and more time in the Land of Jute, causing him to appear comatose in the real world and causing panic in his family. It had taken a monumental effort from his parents and everyone involved to separate him from his Jinn lover, and they hoped they would never have to deal with that again. They had tried to connect him with human girls and even proposed arranging a marriage with one of his beautiful cousins, but he had rejected those ideas. Given his young age, they hadn't pushed too hard, but they still worried that Janin had a hold on him. Now that he was developing feelings for this new girl, he was sure he had nothing to worry about.</p>
 
-        <p>After a few more days of therapy, Yusuf successfully transferred the mental room into his mind. Florence and John were both proud of him. She then had to leave to resume her studies. He felt sad but tried not to show it. They had spent a lot of time together, even outside therapy. She shared her likes and dislikes, such as her fondness for animals like cats (her pet cat's name was Cookie), her love for art, and her curiosity about why she had chosen psychology instead of pursuing creative arts. She even showed him some of her paintings and crafts on her phone.</p>
+<p>After a few more days of therapy, Yusuf successfully transferred the mental room into his mind. Florence and John were both proud of him. She then had to leave to resume her studies. He felt sad but tried not to show it. They had spent a lot of time together, even outside therapy. She shared her likes and dislikes, such as her fondness for animals like cats (her pet cat's name was Cookie), her love for art, and her curiosity about why she had chosen psychology instead of pursuing creative arts. She even showed him some of her paintings and crafts on her phone.</p>
 
-        <p>"It's not too late. You can still change your major," he encouraged her.</p>
+<p>"It's not too late. You can still change your major," he encouraged her.</p>
 
-        <p>"No, thanks to you, psychology is interesting now," she replied, and they both laughed.</p>
+<p>"No, thanks to you, psychology is interesting now," she replied, and they both laughed.</p>
 
-        <p>"I'm glad I could help," he said, and they laughed again. He told her about his struggles growing up and how they had to move multiple times to avoid being attacked or ostracized. But there were also good times, like when he excelled in sports at school and thought he would become an athlete. However, that wasn't meant to be.</p>
+<p>"I'm glad I could help," he said, and they laughed again. He told her about his struggles growing up and how they had to move multiple times to avoid being attacked or ostracized. But there were also good times, like when he excelled in sports at school and thought he would become an athlete. However, that wasn't meant to be.</p>
 
-        <p>"I would say it's not too late for you either. Once you have mastered control over your abilities, you can join a team," he suggested.</p>
+<p>"I would say it's not too late for you either. Once you have mastered control over your abilities, you can join a team," he suggested.</p>
 
-        <p>"Okay," he said, smiling. He loved her enthusiasm and how certain she was about everything. They talked for most of the morning before she had to leave with her brother. They exchanged numbers, and he promised to call her every day.</p>
+<p>"Okay," he said, smiling. He loved her enthusiasm and how certain she was about everything. They talked for most of the morning before she had to leave with her brother. They exchanged numbers, and he promised to call her every day.</p>
 
-        <p>That night, he lay in bed, feeling happy and relieved of most of his burdens. He thought a lot about Florence, and when he was asleep, he dreamt about her. This time, the dream didn't involve teleporting or visiting other worlds. It was just a good old dream where they talked, laughed, and hung out with their family. He was extremely happy about it. Around 3 a.m., he woke up sweating, paralyzed, and with a heavy weight on his chest. It was difficult for him to breathe, and it was an immense struggle when he tried to open his eyes. However, he managed to open his eyes. There, sitting on his chest, was a dark and blurry figure, making it hard for him to move or breathe. He struggled for what felt like an eternity before the figure slowly moved away from his chest and stood there, looking at him as his strength returned and his eyes adjusted to see the figure clearly.</p>
+<p>That night, he lay in bed, feeling happy and relieved of most of his burdens. He thought a lot about Florence, and when he was asleep, he dreamt about her. This time, the dream didn't involve teleporting or visiting other worlds. It was just a good old dream where they talked, laughed, and hung out with their family. He was extremely happy about it. Around 3 a.m., he woke up sweating, paralyzed, and with a heavy weight on his chest. It was difficult for him to breathe, and it was an immense struggle when he tried to open his eyes. However, he managed to open his eyes. There, sitting on his chest, was a dark and blurry figure, making it hard for him to move or breathe. He struggled for what felt like an eternity before the figure slowly moved away from his chest and stood there, looking at him as his strength returned and his eyes adjusted to see the figure clearly.</p>
 
-        <p>"Janin!" he exclaimed, looking at an older Janin than the one he remembered, standing there as a physical presence in his room.</p>
+<p>"Janin!" he exclaimed, looking at an older Janin than the one he remembered, standing there as a physical presence in his room.</p>
 
-        <p>"Hello, dream husband. I have missed you so much!" she said, smiling.</p>
+<p>"Hello, dream husband. I have missed you so much!" she said, smiling.</p>
 
-        <p>END OF CHAPTER ONE</p>`,
+<p>END OF CHAPTER ONE</p>`,
                 likes: 298,
                 comments: [
                     { user: "VoidSeeker", text: "This description of the Void matches near-death experiences I've read about. Chilling!", time: "1 day ago" },
@@ -1084,359 +1043,359 @@
             },
             {
                 id: 2,
-                number: "Dimension II",
-                title: "Chapter Two: Old Friends",
+                number: "Chapter Two",
+                title: "Old Friends",
                 subtitle: "New Experiences",
                 preview: "A crossover that was impossible.",
-                content: `<img src="https://cdn.pixabay.com/photo/2023/01/16/03/27/fairy-7721517_1280.jpg"><hr><br><br>
-        <p>"Janin!" Yusuf said it again. "But...how? You cannot be here... It is not possible..." He tried to move, but his body was still heavy. He could only move his head and he followed her with his gaze as she moved.
+                content: `<img src="https://cdn.pixabay.com/photo/2023/01/16/03/27/fairy-7721517_1280.jpg" class="w-full mb-8 rounded-lg"><hr><br><br>
+<p>"Janin!" Yusuf said it again. "But...how? You cannot be here... It is not possible..." He tried to move, but his body was still heavy. He could only move his head and he followed her with his gaze as she moved.
 
-        <p>"Yes. It's me. I am here, my love. And I have missed you so much." She walked over to sit at the edge of the bed. "Finally. You don't know how long I have been trying to reach you. But you couldn't hear me."</p>
+<p>"Yes. It's me. I am here, my love. And I have missed you so much." She walked over to sit at the edge of the bed. "Finally. You don't know how long I have been trying to reach you. But you couldn't hear me."</p>
 
-        <p>Yusuf still couldn't believe his eyes as he stared at her. His strength was slowly coming back, so he pushed himself to sit up, with some difficulty.</p>
+<p>Yusuf still couldn't believe his eyes as he stared at her. His strength was slowly coming back, so he pushed himself to sit up, with some difficulty.</p>
 
-        <p>"I have always been with you, but you couldn't see me. I kept screaming your name, but you didn't hear me." She was sad, and Yusuf felt a tinge of pity for her. The floodgates opened, and all the feelings he once had for her rushed back in. She told him how she kept trying to reach him, but there was a force field surrounding him that she couldn't penetrate. It was frustrating, but she never gave up. She also told him how everyone back in the Land of Jute missed him, and he believed it. For a while, they were like family to him. He had become so popular in the Land of Jute because of his friendship with Janin. And over time, he even started adopting their ways and customs. They had accepted him as one of their own, and he was happy to be one. But his parents saw what he did not, and they understood the reality of the situation and the danger that Janin posed to him and everyone around him, so they did everything to sever the bond between them, a bond that traversed across realities.</p>
+<p>"I have always been with you, but you couldn't see me. I kept screaming your name, but you didn't hear me." She was sad, and Yusuf felt a tinge of pity for her. The floodgates opened, and all the feelings he once had for her rushed back in. She told him how she kept trying to reach him, but there was a force field surrounding him that she couldn't penetrate. It was frustrating, but she never gave up. She also told him how everyone back in the Land of Jute missed him, and he believed it. For a while, they were like family to him. He had become so popular in the Land of Jute because of his friendship with Janin. And over time, he even started adopting their ways and customs. They had accepted him as one of their own, and he was happy to be one. But his parents saw what he did not, and they understood the reality of the situation and the danger that Janin posed to him and everyone around him, so they did everything to sever the bond between them, a bond that traversed across realities.</p>
 
-        <p>"You cannot be here, Janin." He finally said, trying to assert himself. He could not wrap his head around how she got here. She shouldn't even exist in this reality. She was a Jin made of energy with no corporeal form. Yes, some jinn can appear to people and even harm them, but not all of them possess that ability, and Janin certainly doesn't. That is why she could never follow him back. But he could visit her in her reality any time he wanted as a teenager, and it was a huge problem as it made him catatonic in this reality while he is visiting theirs. And because he kept staying longer and longer in the Land of Jute, he was usually in a coma for several hours to even days, throwing his family into chaos. He understood where his parents were coming from, and they were right to get rid of her. She was a Jinn, and that is a relationship that should never happen. He was too young, naive, and in love to see it then. But there was something sinister about Janin and her family. It seemed they were trying to keep him in the Land of Jute and maybe use his abilities to cross over into this reality, and they almost succeeded until his parents intervened.</p>
+<p>"You cannot be here, Janin." He finally said, trying to assert himself. He could not wrap his head around how she got here. She shouldn't even exist in this reality. She was a Jin made of energy with no corporeal form. Yes, some jinn can appear to people and even harm them, but not all of them possess that ability, and Janin certainly doesn't. That is why she could never follow him back. But he could visit her in her reality any time he wanted as a teenager, and it was a huge problem as it made him catatonic in this reality while he is visiting theirs. And because he kept staying longer and longer in the Land of Jute, he was usually in a coma for several hours to even days, throwing his family into chaos. He understood where his parents were coming from, and they were right to get rid of her. She was a Jinn, and that is a relationship that should never happen. He was too young, naive, and in love to see it then. But there was something sinister about Janin and her family. It seemed they were trying to keep him in the Land of Jute and maybe use his abilities to cross over into this reality, and they almost succeeded until his parents intervened.</p>
 
-        <p>The council of Ur also arrested Janin for interacting with Humans as that was forbidden. The last time he saw her, she was being hurled away to prison in the Land of Jute. So, how did she get here?</p>
+<p>The council of Ur also arrested Janin for interacting with Humans as that was forbidden. The last time he saw her, she was being hurled away to prison in the Land of Jute. So, how did she get here?</p>
 
-        <p>"How are you here, Janin?" He was much stronger now.</p>
+<p>"How are you here, Janin?" He was much stronger now.</p>
 
-        <p>"I am not sure, myself. I have been following you around for years, trying to communicate with you, but you couldn't hear me. Yet, somehow, after your accident, you started to hear me, but not see me. Unfortunately, you were also struggling."</p>
+<p>"I am not sure, myself. I have been following you around for years, trying to communicate with you, but you couldn't hear me. Yet, somehow, after your accident, you started to hear me, but not see me. Unfortunately, you were also struggling."</p>
 
-        <p>Yusuf remembered hearing a voice calling out to him several times during his ordeal. But because there were so many things happening at the same time, he just dismissed it as one of the many ways he was losing his mind. "It was you?"</p>
+<p>Yusuf remembered hearing a voice calling out to him several times during his ordeal. But because there were so many things happening at the same time, he just dismissed it as one of the many ways he was losing his mind. "It was you?"</p>
 
-        <p>"Yes, my love. You don't know how hard it was for me that you couldn't see me."</p>
+<p>"Yes, my love. You don't know how hard it was for me that you couldn't see me."</p>
 
-        <p>"The last time I saw you, you were being taken to prison."</p>
+<p>"The last time I saw you, you were being taken to prison."</p>
 
-        <p>She bowed her head in shame. "Yes. I finished serving my term, and I was released early for good behaviors. I know I should stay away, but I missed you so much."</p>
+<p>She bowed her head in shame. "Yes. I finished serving my term, and I was released early for good behaviors. I know I should stay away, but I missed you so much."</p>
 
-        <p>"Janin, you know we are not supposed to interact with each other. I don't know how you managed to cross over, but you need to go back, now!"</p>
+<p>"Janin, you know we are not supposed to interact with each other. I don't know how you managed to cross over, but you need to go back, now!"</p>
 
-        <p>"Why? Because your parents say so?" She snapped at him.</p>
+<p>"Why? Because your parents say so?" She snapped at him.</p>
 
-        <p>"Yes, and because we cannot be with each other. It's unnatural." He was firm.</p>
+<p>"Yes, and because we cannot be with each other. It's unnatural." He was firm.</p>
 
-        <p>"Says who? Why is it unnatural? We love each other. We should be together."</p>
+<p>"Says who? Why is it unnatural? We love each other. We should be together."</p>
 
-        <p>"You lied to me about your age." She was a lot older than she told him. By at least a few centuries. You pretended to be my age just to deceive me."</p>
+<p>"You lied to me about your age." She was a lot older than she told him. By at least a few centuries. You pretended to be my age just to deceive me."</p>
 
-        <p>"I didn't want to scare you. In my place, age doesn't matter; we can be any age we want and appear however we want."</p>
+<p>"I didn't want to scare you. In my place, age doesn't matter; we can be any age we want and appear however we want."</p>
 
-        <p>"I still had a right to know." He protested.</p>
+<p>"I still had a right to know." He protested.</p>
 
-        <p>"I am sorry. I will not lie to you again."</p>
+<p>"I am sorry. I will not lie to you again."</p>
 
-        <p>"You still need to leave."</p>
+<p>"You still need to leave."</p>
 
-        <p>"I can't. I don't know how."</p>
+<p>"I can't. I don't know how."</p>
 
-        <p>"Come on, Janin"</p>
+<p>"Come on, Janin"</p>
 
-        <p>"Honestly, I didn't even know I could cross over. I just felt it got easier and easier until I did in the past week. I guess your mind had become a lot weaker. And the fact that I could cross over means you were thinking of me." Yusuf felt that one. It's true, he was thinking of her but not in that way. Although her being here now actually brought up old feelings. "We can still be together now. Your parents and my people don't have to know. You are not a child anymore." She pleaded.</p>
+<p>"Honestly, I didn't even know I could cross over. I just felt it got easier and easier until I did in the past week. I guess your mind had become a lot weaker. And the fact that I could cross over means you were thinking of me." Yusuf felt that one. It's true, he was thinking of her but not in that way. Although her being here now actually brought up old feelings. "We can still be together now. Your parents and my people don't have to know. You are not a child anymore." She pleaded.</p>
 
-        <p>Yusuf thought he heard a noise at the door and suddenly, he was worried for Florence and John. What if they saw her? Could she harm them?" "I think your friend is back." She said with a smile.</p>
+<p>Yusuf thought he heard a noise at the door and suddenly, he was worried for Florence and John. What if they saw her? Could she harm them?" "I think your friend is back." She said with a smile.</p>
 
-        <p>"You need to hide. He cannot see you."</p>
+<p>"You need to hide. He cannot see you."</p>
 
-        <p>"I don't think he can." She said.</p>
+<p>"I don't think he can." She said.</p>
 
-        <p>"Hey, Yusuf. Are you OK?" John called out from outside the door before coming in.</p>
+<p>"Hey, Yusuf. Are you OK?" John called out from outside the door before coming in.</p>
 
-        <p>"Who were you talking to?" He asked, curious.</p>
+<p>"Who were you talking to?" He asked, curious.</p>
 
-        <p>"John. You are back. I didn't hear you come in." Yusuf pretended to not hear the question. He was glad John didn't see Janin as she was standing in the room.</p>
+<p>"John. You are back. I didn't hear you come in." Yusuf pretended to not hear the question. He was glad John didn't see Janin as she was standing in the room.</p>
 
-        <p>"Yes. I brought some of my stuff. I will get the rest tomorrow." John said, still suspicious. "I could have sworn I heard you conversing with someone. I even thought you were on the phone."</p>
+<p>"Yes. I brought some of my stuff. I will get the rest tomorrow." John said, still suspicious. "I could have sworn I heard you conversing with someone. I even thought you were on the phone."</p>
 
-        <p>"Oh, don't mind me. I talk to myself sometimes. But it's OK. I will try and keep it down."</p>
+<p>"Oh, don't mind me. I talk to myself sometimes. But it's OK. I will try and keep it down."</p>
 
-        <p>"OK then," John said and then went to put his stuff in his room. Yusuf gave Janin a stern look before following John.</p>
+<p>"OK then," John said and then went to put his stuff in his room. Yusuf gave Janin a stern look before following John.</p>
 
-        <p>"What about Florence?" Yusuf asked. "She will get here a bit later. She needs to see someone." John replied while opening his box and taking out clothes to put in his wardrobe. Yusuf felt a tinge of jealousy again; Florence must be visiting her boyfriend. He doesn't even know the guy, but he already didn't like him. "How are you feeling this morning? Any headaches or episodes?" John asked. That was when Yusuf even realized that it was morning.</p>
+<p>"What about Florence?" Yusuf asked. "She will get here a bit later. She needs to see someone." John replied while opening his box and taking out clothes to put in his wardrobe. Yusuf felt a tinge of jealousy again; Florence must be visiting her boyfriend. He doesn't even know the guy, but he already didn't like him. "How are you feeling this morning? Any headaches or episodes?" John asked. That was when Yusuf even realized that it was morning.</p>
 
-        <p>"Oh, I am much better. I better go and pray Fajr. I will come and help you arrange later."</p>
+<p>"Oh, I am much better. I better go and pray Fajr. I will come and help you arrange later."</p>
 
-        <p>"It's OK. I will soon be done. Then we will go and get breakfast. OK?"</p>
+<p>"It's OK. I will soon be done. Then we will go and get breakfast. OK?"</p>
 
-        <p>"OK." Yusuf walked to the door, then turned around and said, "Thank you, John, for everything. You are a true friend."</p>
+<p>"OK." Yusuf walked to the door, then turned around and said, "Thank you, John, for everything. You are a true friend."</p>
 
-        <p>"I am sure you would have done the same for me," John replied.</p>
+<p>"I am sure you would have done the same for me," John replied.</p>
 
-        <p>"With all my heart."</p>
+<p>"With all my heart."</p>
 
-        <p>Yusuf went back to his room and thankfully, Janin was not there. He prayed, took a shower and cleaned, then went to the kitchen for breakfast. On his way, he observed the apartment for the first time and admired it. It was a four-bedroom apartment, with a large kitchen. Each bedroom was en suite with its toilet and had a balcony. Providing fantastic views. There was a small guest toilet for the living room, which was large and tastefully furnished, and had a small dining area attached to it. The kitchen was spacious and equipped with a storeroom and a pantry. Both the living room and the kitchen had balconies attached, and the living room balcony was a large wrap-around adorned with flowers, a mini garden and a sitting area. It was luxury at its finest. The design and furniture were very modern, and the apartments were designed for family living, preferably for a middle-class family with some money.</p>
+<p>Yusuf went back to his room and thankfully, Janin was not there. He prayed, took a shower and cleaned, then went to the kitchen for breakfast. On his way, he observed the apartment for the first time and admired it. It was a four-bedroom apartment, with a large kitchen. Each bedroom was en suite with its toilet and had a balcony. Providing fantastic views. There was a small guest toilet for the living room, which was large and tastefully furnished, and had a small dining area attached to it. The kitchen was spacious and equipped with a storeroom and a pantry. Both the living room and the kitchen had balconies attached, and the living room balcony was a large wrap-around adorned with flowers, a mini garden and a sitting area. It was luxury at its finest. The design and furniture were very modern, and the apartments were designed for family living, preferably for a middle-class family with some money.</p>
 
-        <p>They let Florence have the master bedroom which was the largest and the only one with a walk-in closet. Being a girl she naturally had more clothes. Additionally, since she loved to cook and all they could manage were instant noodles and tea, they hoped to bribe her into continuing to cook for them.</p>
+<p>They let Florence have the master bedroom which was the largest and the only one with a walk-in closet. Being a girl she naturally had more clothes. Additionally, since she loved to cook and all they could manage were instant noodles and tea, they hoped to bribe her into continuing to cook for them.</p>
 
-        <p>He looked around to see if he could spot Janin, but she was nowhere to be seen. So, he proceeded to the kitchen. John had bought a lot of provisions which he hadn't put away. They were strewn on the counters. He wondered where John was able to get these items so early in the morning. Most supermarkets open by 9 a.m. It was 7:25 a.m. The sun wasn't even that bright and somehow, he found a place to purchase stuff. Perhaps it's H-Medix supermarkets and pharmacies. They are usually open 24/7. He started to put things away, where they belonged.</p>
+<p>He looked around to see if he could spot Janin, but she was nowhere to be seen. So, he proceeded to the kitchen. John had bought a lot of provisions which he hadn't put away. They were strewn on the counters. He wondered where John was able to get these items so early in the morning. Most supermarkets open by 9 a.m. It was 7:25 a.m. The sun wasn't even that bright and somehow, he found a place to purchase stuff. Perhaps it's H-Medix supermarkets and pharmacies. They are usually open 24/7. He started to put things away, where they belonged.</p>
 
-        <p>Florence hadn't come moved in yet, so, he might just have to eat instant noodles. He opened the fridge to put the perishables away and he noticed some Tupperware containers containing some jollof rice and cow-tail pepper soup. He was so happy. Did John find a restaurant that was opened this early or was it Florence who cooked it the previous day and left it in the fridge for them to warm and eat? Whichever it was, he was happy. He warmed the food and served it just as John was coming into the kitchen to eat.</p>
+<p>Florence hadn't come moved in yet, so, he might just have to eat instant noodles. He opened the fridge to put the perishables away and he noticed some Tupperware containers containing some jollof rice and cow-tail pepper soup. He was so happy. Did John find a restaurant that was opened this early or was it Florence who cooked it the previous day and left it in the fridge for them to warm and eat? Whichever it was, he was happy. He warmed the food and served it just as John was coming into the kitchen to eat.</p>
 
-        <p>Later that day, he talked at length with his worried mother and once again assured her that he was alright. As if his mother could sense Janin was back, she kept asking him, but he denied it. He didn't want her to come and take him away. However, Hajiya warned him about how Janin could attach herself to him and refused to let go. The Jinn were notorious for that. He also chatted a bit with his father before hanging up.</p>
+<p>Later that day, he talked at length with his worried mother and once again assured her that he was alright. As if his mother could sense Janin was back, she kept asking him, but he denied it. He didn't want her to come and take him away. However, Hajiya warned him about how Janin could attach herself to him and refused to let go. The Jinn were notorious for that. He also chatted a bit with his father before hanging up.</p>
 
-        <p>After John left, he walked around the house, from room to room checking for and calling Janin but she was nowhere to be seen. He was nervous as he didn't know what she was up to. Perhaps she got tired and left. Perhaps he hallucinated the whole encounter. Whatever the case, he was happy that she was gone. He felt good enough to put in his sneakers and go for a walk. John had bought some of his clothes for him and he was able to change.</p>
+<p>After John left, he walked around the house, from room to room checking for and calling Janin but she was nowhere to be seen. He was nervous as he didn't know what she was up to. Perhaps she got tired and left. Perhaps he hallucinated the whole encounter. Whatever the case, he was happy that she was gone. He felt good enough to put in his sneakers and go for a walk. John had bought some of his clothes for him and he was able to change.</p>
 
-        <p>On his walk, he also admired the beautiful luxury gated community with its matching designs. From the outside, all the buildings look alike, but inside there were differences in furniture, colour, and even design. Some of the apartments had 5 or 3 bedrooms, some had BQ (boys' quarters) attached, and some were full terrasses with multiple floors. There was something for everyone, as long as you could afford it. The ambience was peaceful and beautiful, with all the lawns well-manicured. There was a football field, a basketball court, a small children's play area or park, a mini-mart, a clinic, and a small security command centre. The gate is automated, and a scanner checks all cars coming in for weapons and bombs, especially with the rising security concerns in the country.</p>
+<p>On his walk, he also admired the beautiful luxury gated community with its matching designs. From the outside, all the buildings look alike, but inside there were differences in furniture, colour, and even design. Some of the apartments had 5 or 3 bedrooms, some had BQ (boys' quarters) attached, and some were full terrasses with multiple floors. There was something for everyone, as long as you could afford it. The ambience was peaceful and beautiful, with all the lawns well-manicured. There was a football field, a basketball court, a small children's play area or park, a mini-mart, a clinic, and a small security command centre. The gate is automated, and a scanner checks all cars coming in for weapons and bombs, especially with the rising security concerns in the country.</p>
 
-        <p>The Middle Eastern vibe of her favorite restaurant combined with the delicious smells of Arabian/North African food, always put Florence at ease, and she relaxed a little bit.</p>
+<p>The Middle Eastern vibe of her favorite restaurant combined with the delicious smells of Arabian/North African food, always put Florence at ease, and she relaxed a little bit.</p>
 
-        <p>She was having lunch at Mandie's restaurant that afternoon with her boyfriend, Maclean, after classes. The restaurant is at the heart of Wuse 2 and is frequented by the rich, due to the exorbitant prices and unique dishes they serve. The walls were draped in a vibrant mixture of red, white and grey patterned curtains which complemented the deep red wall-to-wall carpet, which feels lush under her feet. They sat at one of the multiple round tables covered with clothes and the chairs were red and white. Ornate hanging fixtures added a touch of elegance to the space.</p>
+<p>She was having lunch at Mandie's restaurant that afternoon with her boyfriend, Maclean, after classes. The restaurant is at the heart of Wuse 2 and is frequented by the rich, due to the exorbitant prices and unique dishes they serve. The walls were draped in a vibrant mixture of red, white and grey patterned curtains which complemented the deep red wall-to-wall carpet, which feels lush under her feet. They sat at one of the multiple round tables covered with clothes and the chairs were red and white. Ornate hanging fixtures added a touch of elegance to the space.</p>
 
-        <p>They ate and talked for a while before he asked her why she was unreachable the previous night.</p>
+<p>They ate and talked for a while before he asked her why she was unreachable the previous night.</p>
 
-        <p>"Oh, I was with my brother at his apartment last night.′ Florence explained. "He needed my help with something, so I went, and as it was late, I decided to spend the night there." She didn't want to tell him about Yusuf yet. She had a feeling that it would make him uneasy. She didn't know why.</p>
+<p>"Oh, I was with my brother at his apartment last night.′ Florence explained. "He needed my help with something, so I went, and as it was late, I decided to spend the night there." She didn't want to tell him about Yusuf yet. She had a feeling that it would make him uneasy. She didn't know why.</p>
 
-        <p>"OK. It's just that we were supposed to hang out, and I missed you." He whined.</p>
+<p>"OK. It's just that we were supposed to hang out, and I missed you." He whined.</p>
 
-        <p>"I am sorry, sweety. I will make it up to you, I promise." She felt a pang of guilt for not telling him the whole story. They were supposed to hang out at the library and study together. They were both students of psychology, but Mclean was in his second year, so, he could help her with her studies. That was how they met, through their love for the library. He was happy to assist her with her assignment since she was new and was experiencing difficulties at that time.</p>
+<p>"I am sorry, sweety. I will make it up to you, I promise." She felt a pang of guilt for not telling him the whole story. They were supposed to hang out at the library and study together. They were both students of psychology, but Mclean was in his second year, so, he could help her with her studies. That was how they met, through their love for the library. He was happy to assist her with her assignment since she was new and was experiencing difficulties at that time.</p>
 
-        <p>"We can study after lunch." She said., but then suddenly realized she forgot the textbooks they were going to use. Also, she needed to talk with her professor to get more useful information to help Yusuf. "I am sorry, I forgot the textbooks."</p>
+<p>"We can study after lunch." She said., but then suddenly realized she forgot the textbooks they were going to use. Also, she needed to talk with her professor to get more useful information to help Yusuf. "I am sorry, I forgot the textbooks."</p>
 
-        <p>"It's OK. We can get some from the library." He replied.</p>
+<p>"It's OK. We can get some from the library." He replied.</p>
 
-        <p>"OK. But I cannot study for long. I need to see Prof. Hues for something."</p>
+<p>"OK. But I cannot study for long. I need to see Prof. Hues for something."</p>
 
-        <p>"Again? What is the subject you are trying to discuss? Can't you fill me in? I might help."</p>
+<p>"Again? What is the subject you are trying to discuss? Can't you fill me in? I might help."</p>
 
-        <p>"Oh no. It's just something silly, I have been working on. I will tell you when I am sure of it, I promise." She still didn't feel comfortable telling him about Yusuf.</p>
+<p>"Oh no. It's just something silly, I have been working on. I will tell you when I am sure of it, I promise." She still didn't feel comfortable telling him about Yusuf.</p>
 
-        <p>He looked at her without saying anything for several seconds before saying: "OK. Whenever you are ready, tell me. I am also a Psychology student, remember?"</p>
+<p>He looked at her without saying anything for several seconds before saying: "OK. Whenever you are ready, tell me. I am also a Psychology student, remember?"</p>
 
-        <p>"Yes, babe. I promise."</p>
+<p>"Yes, babe. I promise."</p>
 
-        <p>After a 30-minute library session with Mclean, Florence went to visit her professor at the Department of Psychology. At the door, she read his name:</p>
+<p>After a 30-minute library session with Mclean, Florence went to visit her professor at the Department of Psychology. At the door, she read his name:</p>
 
-        <p>'Professor Charles Hues', and as always, found it fascinating. She gave the door a light tap and heard his sharp voice yell: "Come in!" She entered. As usual, he was sitting at his desk, surrounded by books. His office is always full of books from every field of psychology.</p>
+<p>'Professor Charles Hues', and as always, found it fascinating. She gave the door a light tap and heard his sharp voice yell: "Come in!" She entered. As usual, he was sitting at his desk, surrounded by books. His office is always full of books from every field of psychology.</p>
 
-        <p>He was a white American professor who initially arrived in Nigeria for a short lecturing stint but opted to stay because he loved the country and naturally, the favourable pay. Despite his perpetual dishevelled and fatigued appearance, he exuded quick wit and pep. In his early 40s and not unattractive with reddish-blond hair and light brown eyes. "If only he took better care of himself," She thought.</p>
+<p>He was a white American professor who initially arrived in Nigeria for a short lecturing stint but opted to stay because he loved the country and naturally, the favourable pay. Despite his perpetual dishevelled and fatigued appearance, he exuded quick wit and pep. In his early 40s and not unattractive with reddish-blond hair and light brown eyes. "If only he took better care of himself," She thought.</p>
 
-        <p>"Hello, Florence," he said in his usual cheerful manner. "What supernatural mystery do you have for me today?" Florence laughed nervously.</p>
+<p>"Hello, Florence," he said in his usual cheerful manner. "What supernatural mystery do you have for me today?" Florence laughed nervously.</p>
 
-        <p>"Good evening, sir." She replied. Going over to his desk and sitting across from him. After a few pleasantries, she delved in:</p>
+<p>"Good evening, sir." She replied. Going over to his desk and sitting across from him. After a few pleasantries, she delved in:</p>
 
-        <p>"Our subject can now teleport in and out of realities anytime he wants. How could you explain that?</p>
+<p>"Our subject can now teleport in and out of realities anytime he wants. How could you explain that?</p>
 
-        <p>He thought about it for a few seconds before answering: "The ability to teleport in dreams and seemingly be present in the dream location while catatonic in reality could be indicative of a vivid form of lucid dreaming or a dissociative experience.</p>
+<p>He thought about it for a few seconds before answering: "The ability to teleport in dreams and seemingly be present in the dream location while catatonic in reality could be indicative of a vivid form of lucid dreaming or a dissociative experience.</p>
 
-        <p>"What is Lucid dreaming?" She asked.</p>
+<p>"What is Lucid dreaming?" She asked.</p>
 
-        <p>"Lucid dreaming is a state where the dreamer becomes aware that they are dreaming and may gain some control over their dream characters, narrative, or environment. It allows individuals to actively participate in and often manipulate their dreams. Imagine you find yourself flying over a beautiful field of lavender, admiring the scene and taking in the intoxicating aroma while feeling light-headed and euphoric, then you remember that you've never been to that environment before. It hits you: you just went to bed a short time earlier and oh, you cannot fly. Then you have become lucid in that dream- meaning, you are aware that you are dreaming. And even better, you can manipulate the dream to suit you. Like say, you can change the scenery, the atmosphere, or even your appearance. Anything. Dreams are meant to work out unresolved issues we had while awake, so you can manipulate a lucid dream to do anything to get the result you want. Lucid dreaming can be a skill developed through practice and various techniques."</p>
+<p>"Lucid dreaming is a state where the dreamer becomes aware that they are dreaming and may gain some control over their dream characters, narrative, or environment. It allows individuals to actively participate in and often manipulate their dreams. Imagine you find yourself flying over a beautiful field of lavender, admiring the scene and taking in the intoxicating aroma while feeling light-headed and euphoric, then you remember that you've never been to that environment before. It hits you: you just went to bed a short time earlier and oh, you cannot fly. Then you have become lucid in that dream- meaning, you are aware that you are dreaming. And even better, you can manipulate the dream to suit you. Like say, you can change the scenery, the atmosphere, or even your appearance. Anything. Dreams are meant to work out unresolved issues we had while awake, so you can manipulate a lucid dream to do anything to get the result you want. Lucid dreaming can be a skill developed through practice and various techniques."</p>
 
-        <p>"But how do you explain the teleportation?" She asked, again.</p>
+<p>"But how do you explain the teleportation?" She asked, again.</p>
 
-        <p>"Well, I am not sure what you mean by teleportation. Has he left the room at any moment?" She could hear the sarcasm in his voice.</p>
+<p>"Well, I am not sure what you mean by teleportation. Has he left the room at any moment?" She could hear the sarcasm in his voice.</p>
 
-        <p>"No, but he zones out and appears to enter a trance for varying lengths of time, from one minute to several. And when he returns, he seems different."</p>
+<p>"No, but he zones out and appears to enter a trance for varying lengths of time, from one minute to several. And when he returns, he seems different."</p>
 
-        <p>"Sounds like he has a wild imagination and the ability to act them out." He said but noticed the look of disappointment in her eyes. So, he became serious. "Lucid dreaming is exceptionally powerful, and when combined with mental health problems such as depression, anxiety and even just an overactive imagination, distinguishing the difference between what is real and what is not can be increasingly difficult. Exploring their dream patterns, overall mental health, and any recent life changes might help understand this phenomenon."</p>
+<p>"Sounds like he has a wild imagination and the ability to act them out." He said but noticed the look of disappointment in her eyes. So, he became serious. "Lucid dreaming is exceptionally powerful, and when combined with mental health problems such as depression, anxiety and even just an overactive imagination, distinguishing the difference between what is real and what is not can be increasingly difficult. Exploring their dream patterns, overall mental health, and any recent life changes might help understand this phenomenon."</p>
 
-        <p>"His heartbeat stops, no pulse." She continues, stubbornly. "Professor, how long can a person survive without a pulse?"</p>
+<p>"His heartbeat stops, no pulse." She continues, stubbornly. "Professor, how long can a person survive without a pulse?"</p>
 
-        <p>"A few minutes at most, in rare cases longer. In 1999, Anna Bågenholm, a Swedish radiologist, fell into a frozen stream on a ski vacation and was trapped under a layer of ice in freezing water for over 80 minutes, leading to hypothermia.</p>
+<p>"A few minutes at most, in rare cases longer. In 1999, Anna Bågenholm, a Swedish radiologist, fell into a frozen stream on a ski vacation and was trapped under a layer of ice in freezing water for over 80 minutes, leading to hypothermia.</p>
 
-        <p>By the time the rescue team arrived, her body temperature had dropped to 13.7°C, one of the lowest body temperatures on record and she had no pulse. The rescue team administered CPR and flew her to a medical centre, where she was hooked to a cardiopulmonary bypass machine. This slowly warmed the blood outside her body before recirculating it back, gradually increasing her temperature. Her heart started beating again after several hours."</p>
+<p>By the time the rescue team arrived, her body temperature had dropped to 13.7°C, one of the lowest body temperatures on record and she had no pulse. The rescue team administered CPR and flew her to a medical centre, where she was hooked to a cardiopulmonary bypass machine. This slowly warmed the blood outside her body before recirculating it back, gradually increasing her temperature. Her heart started beating again after several hours."</p>
 
-        <p>"He looked so proud of himself as he droned away," Florence thought.</p>
+<p>"He looked so proud of himself as he droned away," Florence thought.</p>
 
-        <p>"Anyway," he suddenly came back to reality. "Ideally, a person's pulse shouldn't be absent for more than a minute."</p>
+<p>"Anyway," he suddenly came back to reality. "Ideally, a person's pulse shouldn't be absent for more than a minute."</p>
 
-        <p>"Well, the last time, he was out for over 12 minutes, and he came back like nothing happened. Sometimes, he comes back with bruises and scars that were never there before. How can you explain that."</p>
+<p>"Well, the last time, he was out for over 12 minutes, and he came back like nothing happened. Sometimes, he comes back with bruises and scars that were never there before. How can you explain that."</p>
 
-        <p>He stared at her with seriousness for a few seconds before saying, "Are you mocking me Florence?"</p>
+<p>He stared at her with seriousness for a few seconds before saying, "Are you mocking me Florence?"</p>
 
-        <p>"No sir, I am genuinely curious." He still wasn't amused. "I wasn't mocking you; I swear. But I wasn't 100% honest with you either. This is not a hypothetical scenario. It is based on a real person. My brother's friend had an accident and since then, he has been experiencing strange out-of-body phenomena. We didn't know how to help him, but the technique you suggested did help ease his pain."</p>
+<p>"No sir, I am genuinely curious." He still wasn't amused. "I wasn't mocking you; I swear. But I wasn't 100% honest with you either. This is not a hypothetical scenario. It is based on a real person. My brother's friend had an accident and since then, he has been experiencing strange out-of-body phenomena. We didn't know how to help him, but the technique you suggested did help ease his pain."</p>
 
-        <p>"It seems like you should take him to a hospital." He said, more quietly than usual.</p>
+<p>"It seems like you should take him to a hospital." He said, more quietly than usual.</p>
 
-        <p>"Hospitals won't work. Believe me, sir. This is an unusual case, and they wouldn't know what to do with him. Worst-case scenario, they lock him up in a mental institution," She explained.</p>
+<p>"Hospitals won't work. Believe me, sir. This is an unusual case, and they wouldn't know what to do with him. Worst-case scenario, they lock him up in a mental institution," She explained.</p>
 
-        <p>"Can I talk to him?" Professor Hues asked, sounding intrigued now.</p>
+<p>"Can I talk to him?" Professor Hues asked, sounding intrigued now.</p>
 
-        <p>"He is not fond of that. He wasn't happy about me knowing either. He was almost lynched as a kid, and his family had to move several times for that same problem."</p>
+<p>"He is not fond of that. He wasn't happy about me knowing either. He was almost lynched as a kid, and his family had to move several times for that same problem."</p>
 
-        <p>"So, it's a lifelong condition?"</p>
+<p>"So, it's a lifelong condition?"</p>
 
-        <p>"Yes."</p>
+<p>"Yes."</p>
 
-        <p>"He believes he teleports huh."</p>
+<p>"He believes he teleports huh."</p>
 
-        <p>"Yes sir. I also do. I know it seems bizarre to say it aloud, but It's something you have to experience to understand. Not only does he do it in dream form, but he does it while awake, in front of us, and you can see and feel his life force exiting his body and then coming back. Sometimes, he comes back with physical evidence on his body to show for it," She argued.</p>
+<p>"Yes sir. I also do. I know it seems bizarre to say it aloud, but It's something you have to experience to understand. Not only does he do it in dream form, but he does it while awake, in front of us, and you can see and feel his life force exiting his body and then coming back. Sometimes, he comes back with physical evidence on his body to show for it," She argued.</p>
 
-        <p>"Well, teleporting while awake could be a form of altered perception or dissociation, potentially related to psychological factors or neurological processes. Further assessment and exploration would be needed to provide a more comprehensive explanation.</p>
+<p>"Well, teleporting while awake could be a form of altered perception or dissociation, potentially related to psychological factors or neurological processes. Further assessment and exploration would be needed to provide a more comprehensive explanation.</p>
 
-        <p>The resurgence of teleportation experiences, particularly after a recent accident, may suggest a psychological response triggered by trauma or heightened stress. The ability to enter and explore people's minds, if not metaphorical or symbolic, could be a manifestation of heightened empathy, sensitivity, or a coping mechanism developed in response to the accident. It's essential to consider psychological factors, such as trauma and coping mechanisms, and potentially seek professional help for a more in-depth understanding and support." He droned on again. "I would love to meet him, though and see for myself what you mean. I cannot reach any kind of conclusion from here. I am sorry."</p>
+<p>The resurgence of teleportation experiences, particularly after a recent accident, may suggest a psychological response triggered by trauma or heightened stress. The ability to enter and explore people's minds, if not metaphorical or symbolic, could be a manifestation of heightened empathy, sensitivity, or a coping mechanism developed in response to the accident. It's essential to consider psychological factors, such as trauma and coping mechanisms, and potentially seek professional help for a more in-depth understanding and support." He droned on again. "I would love to meet him, though and see for myself what you mean. I cannot reach any kind of conclusion from here. I am sorry."</p>
 
-        <p>"Actually, Sir, you have helped me enough. I have an idea what to do now. Thank you." She got up to leave.</p>
+<p>"Actually, Sir, you have helped me enough. I have an idea what to do now. Thank you." She got up to leave.</p>
 
-        <p>"I am glad I helped." The sarcasm was back in his voice again. If you have any more wonderful discoveries, be sure to let me know."</p>
+<p>"I am glad I helped." The sarcasm was back in his voice again. If you have any more wonderful discoveries, be sure to let me know."</p>
 
-        <p>"Will do, sir." With that, she left.</p>
+<p>"Will do, sir." With that, she left.</p>
 
-        <p>At around 5 pm, Florence arrived at the house, having done a lot of shopping. She bought items she thought they would need in the house, such as a vacuum cleaner, brooms, mops, buckets and other cleaning equipment, detergents, soaps, new pots and pans, dishes, cutlery, new bed sheets and several other necessities for a comfortable living. She even bought a ridiculous amount of foodstuff, including dairy, seasonings, beef, a 25 kg bag of rice, a 10-litre gallon of vegetable oil and cartons of bottled water. The security guards of the estate assisted in bringing the items into the apartment for her. Yusuf wondered if any items were remaining for others to buy at the supermarket. When her brother saw what she brought, he asked her, "Did you tell Dad you were moving into this apartment?"</p>
+<p>At around 5 pm, Florence arrived at the house, having done a lot of shopping. She bought items she thought they would need in the house, such as a vacuum cleaner, brooms, mops, buckets and other cleaning equipment, detergents, soaps, new pots and pans, dishes, cutlery, new bed sheets and several other necessities for a comfortable living. She even bought a ridiculous amount of foodstuff, including dairy, seasonings, beef, a 25 kg bag of rice, a 10-litre gallon of vegetable oil and cartons of bottled water. The security guards of the estate assisted in bringing the items into the apartment for her. Yusuf wondered if any items were remaining for others to buy at the supermarket. When her brother saw what she brought, he asked her, "Did you tell Dad you were moving into this apartment?"</p>
 
-        <p>"No," She answered after a little pause. "Did you?" She also asked him.</p>
+<p>"No," She answered after a little pause. "Did you?" She also asked him.</p>
 
-        <p>"No," He replied.</p>
+<p>"No," He replied.</p>
 
-        <p>"Well, OK then." She said, and they both burst out laughing. Then, both Obinna and Yusuf helped her arrange the things and put them away while she went to the kitchen to cook dinner. Later, they all sat in the living room to gist. She told them about her conversation with Professor Hues and some of the new exercises that she had planned for him. Even though they were all tired, she still decided to have a session with Yusuf. This time around, Yusuf had gained a lot more control of his mental abilities and at some point, he realized that he could pull Florence into the white room with him by simply visualizing her in it. She was caught off guard, and it was a rush.</p>
+<p>"Well, OK then." She said, and they both burst out laughing. Then, both Obinna and Yusuf helped her arrange the things and put them away while she went to the kitchen to cook dinner. Later, they all sat in the living room to gist. She told them about her conversation with Professor Hues and some of the new exercises that she had planned for him. Even though they were all tired, she still decided to have a session with Yusuf. This time around, Yusuf had gained a lot more control of his mental abilities and at some point, he realized that he could pull Florence into the white room with him by simply visualizing her in it. She was caught off guard, and it was a rush.</p>
 
-        <p>The whole time, Janin watched them through the wall of the empty guest room, with an amused look on her face.</p>
-        <p>END OF CHAPTER TWO</p>`,
-                likes: 298,
+<p>The whole time, Janin watched them through the wall of the empty guest room, with an amused look on her face.</p>
+<p>END OF CHAPTER TWO</p>`,
+                likes: 287,
                 comments: [
-                    { user: "VoidSeeker", text: "This description of the Void matches near-death experiences I've read about. Chilling!", time: "1 day ago" },
-                    { user: "AstralGuardian", text: "The lost souls metaphor is powerful. We must always stay connected to our source.", time: "3 days ago" }
+                    { user: "MysticSoul", text: "The silver cord description matches ancient Egyptian ka concepts. Fascinating!", time: "1 day ago" },
+                    { user: "NightOwl", text: "Those entities sound terrifying. Is this based on actual astral projection experiences?", time: "3 days ago" }
                 ]
             },
             {
                 id: 3,
-                number: "Dimension III",
-                title: "Chapter Three: Electric Whispers",
+                number: "Chapter Three",
+                title: "Electric Whispers",
                 subtitle: "The Silver Cord",
                 preview: "Janin tests her new found abilities.",
-                content: `<img src="https://cdn.pixabay.com/photo/2023/04/27/13/10/ai-generated-7954598_1280.png"><hr><br><br>
-        <p>Janin paced back and forth around the empty house, growing angrier by the minute. Time was slipping away. It had been two weeks since she revealed herself to Yusuf, watching him grow stronger and more alive with the help of that witch, Florence. Something about Florence irked her deeply. Ever since Janin found a way to attach herself to Yusuf, tethering herself to this world, she couldn't move more than a few feet away from him, like an invisible leash binding her. She had followed him everywhere, trying to call out to him before he finally saw her. But as she observed Yusuf's sessions with Florence, something both annoying and astonishing happened. Florence's exercises—the "invisible white room" they practiced—made him stronger each time.
+                content: `<img src="https://cdn.pixabay.com/photo/2023/04/27/13/10/ai-generated-7954598_1280.png" class="w-full mb-8 rounded-lg"><hr><br><br>
+<p>Janin paced back and forth around the empty house, growing angrier by the minute. Time was slipping away. It had been two weeks since she revealed herself to Yusuf, watching him grow stronger and more alive with the help of that witch, Florence. Something about Florence irked her deeply. Ever since Janin found a way to attach herself to Yusuf, tethering herself to this world, she couldn't move more than a few feet away from him, like an invisible leash binding her. She had followed him everywhere, trying to call out to him before he finally saw her. But as she observed Yusuf's sessions with Florence, something both annoying and astonishing happened. Florence's exercises—the "invisible white room" they practiced—made him stronger each time.
 
-        <p>Initially, Janin wanted to sabotage the exercises, infiltrate the room, even seduce Yusuf. Every attempt, though, failed. But as time went on, she realized that with Yusuf's strength, hers grew too. Now, she didn't need to follow him as closely. If she separated from him for too long, she'd fade, losing all memory of where she'd been, only to find him back home. Still, she was staying visible for longer periods, and this isolation gave her time to strategize her next move. Her plan was simple but ambitious: remain in this world and bring her friends over, with Yusuf as the key. But Florence had become an obstacle. Despite Florence's role in strengthening Yusuf—and, by extension, Janin herself—Florence was also helping him learn to control his powers, which could mean he'd banish, or worse, kill her.</p>
+<p>Initially, Janin wanted to sabotage the exercises, infiltrate the room, even seduce Yusuf. Every attempt, though, failed. But as time went on, she realized that with Yusuf's strength, hers grew too. Now, she didn't need to follow him as closely. If she separated from him for too long, she'd fade, losing all memory of where she'd been, only to find him back home. Still, she was staying visible for longer periods, and this isolation gave her time to strategize her next move. Her plan was simple but ambitious: remain in this world and bring her friends over, with Yusuf as the key. But Florence had become an obstacle. Despite Florence's role in strengthening Yusuf—and, by extension, Janin herself—Florence was also helping him learn to control his powers, which could mean he'd banish, or worse, kill her.</p>
 
-        <p>"Oh, I hate her!" she screamed, fury sparking the house lights into a frenzy. She recoiled at the power surge, but a smirk crept across her face. "Interesting."</p>
+<p>"Oh, I hate her!" she screamed, fury sparking the house lights into a frenzy. She recoiled at the power surge, but a smirk crept across her face. "Interesting."</p>
 
-        <p>Yusuf's hands were numb from all the notes he'd been copying. Being away from school left him far behind. Thank God for John, who covered for him, though John could only do so much.</p>
+<p>Yusuf's hands were numb from all the notes he'd been copying. Being away from school left him far behind. Thank God for John, who covered for him, though John could only do so much.</p>
 
-        <p>"When you're done with that, there are still notes from Political Economy and Strategic Studies," John said, making Yusuf sigh. John laughed. "You don't have to copy them all now. Let's go to the sculpture garden and eat."</p>
+<p>"When you're done with that, there are still notes from Political Economy and Strategic Studies," John said, making Yusuf sigh. John laughed. "You don't have to copy them all now. Let's go to the sculpture garden and eat."</p>
 
-        <p>"Yes, finally. I'm starving!" Yusuf said, too glad, and John laughed.</p>
+<p>"Yes, finally. I'm starving!" Yusuf said, too glad, and John laughed.</p>
 
-        <p>At the garden, Yusuf was reminded of how different everything felt. He noticed classmates stealing glances, whispering as he passed. A rumor was circulating that he'd had a breakdown, some even believing he was possessed. The strange behaviors he'd shown before John took him in likely fueled it. Even in class, he couldn't escape this isolation. When he tried sitting near old friends, they subtly shifted away.</p>
+<p>At the garden, Yusuf was reminded of how different everything felt. He noticed classmates stealing glances, whispering as he passed. A rumor was circulating that he'd had a breakdown, some even believing he was possessed. The strange behaviors he'd shown before John took him in likely fueled it. Even in class, he couldn't escape this isolation. When he tried sitting near old friends, they subtly shifted away.</p>
 
-        <p>"Marcus, hi," Yusuf said quietly to a classmate who hadn't yet moved.</p>
+<p>"Marcus, hi," Yusuf said quietly to a classmate who hadn't yet moved.</p>
 
-        <p>"Hey, Yusuf. You're back? How are you?" Marcus replied, his tone cautious.</p>
+<p>"Hey, Yusuf. You're back? How are you?" Marcus replied, his tone cautious.</p>
 
-        <p>"I'm fine." But Yusuf saw doubt in Marcus's eyes.</p>
+<p>"I'm fine." But Yusuf saw doubt in Marcus's eyes.</p>
 
-        <p>"I heard you were sick. Is everything okay?" Marcus pressed.</p>
+<p>"I heard you were sick. Is everything okay?" Marcus pressed.</p>
 
-        <p>"Yeah, I'm better now. It wasn't serious," Yusuf downplayed, focusing on his notebook to avoid further questions.</p>
+<p>"Yeah, I'm better now. It wasn't serious," Yusuf downplayed, focusing on his notebook to avoid further questions.</p>
 
-        <p>Marcus wasn't satisfied. "Is it true you had a breakdown and ended up in the psych ward? People are talking..."</p>
+<p>Marcus wasn't satisfied. "Is it true you had a breakdown and ended up in the psych ward? People are talking..."</p>
 
-        <p>John cut in, "He's fine, Marcus!"</p>
+<p>John cut in, "He's fine, Marcus!"</p>
 
-        <p>Marcus backed down, but just then, Yusuf saw a shadow flicker in the corner of his eye. Janin? He scanned the room, feeling unsettled.</p>
+<p>Marcus backed down, but just then, Yusuf saw a shadow flicker in the corner of his eye. Janin? He scanned the room, feeling unsettled.</p>
 
-        <p>"Are you okay?" Marcus asked, startled.</p>
+<p>"Are you okay?" Marcus asked, startled.</p>
 
-        <p>"Yes, I'm... just tired." He rubbed his eyes.</p>
+<p>"Yes, I'm... just tired." He rubbed his eyes.</p>
 
-        <p>"You sure you don't want to head back home?" John offered, concerned.</p>
+<p>"You sure you don't want to head back home?" John offered, concerned.</p>
 
-        <p>Yusuf shook his head. "I can't miss more school."</p>
+<p>Yusuf shook his head. "I can't miss more school."</p>
 
-        <p>"I am glad you are back, Yusuf. And I hope you get better, truly." Marcus said." Thank you."</p>
+<p>"I am glad you are back, Yusuf. And I hope you get better, truly." Marcus said." Thank you."</p>
 
-        <p>At that moment, the lecturer entered the hall, and the insistent low chatter stopped as the lecture began. Yusuf, still unsettled by what he'd seen earlier, kept looking around the hall for Janin. He was sure it was her, but he couldn't understand why—or even how—she would follow him. He'd always assumed she couldn't leave the house and was relieved to finally get a break from her, even if only for a few hours a day. Now, he was beginning to worry there might be no escaping her.</p>
+<p>At that moment, the lecturer entered the hall, and the insistent low chatter stopped as the lecture began. Yusuf, still unsettled by what he'd seen earlier, kept looking around the hall for Janin. He was sure it was her, but he couldn't understand why—or even how—she would follow him. He'd always assumed she couldn't leave the house and was relieved to finally get a break from her, even if only for a few hours a day. Now, he was beginning to worry there might be no escaping her.</p>
 
-        <p>He struggled to concentrate in that class and the ones that followed throughout the day. His mind kept drifting away. He wasn't exactly astral projecting, but after everything he'd experienced over the past few months, his lectures seemed boring by comparison, and his thoughts kept wandering through different scenarios. The brief vision of Janin he'd had earlier didn't help either. He wondered if she had anything to do with his distracted state.</p>
+<p>He struggled to concentrate in that class and the ones that followed throughout the day. His mind kept drifting away. He wasn't exactly astral projecting, but after everything he'd experienced over the past few months, his lectures seemed boring by comparison, and his thoughts kept wandering through different scenarios. The brief vision of Janin he'd had earlier didn't help either. He wondered if she had anything to do with his distracted state.</p>
 
-        <p>The sighting unsettled him, adding to his guilt. He hadn't told John about Janin. John and Florence accepted his astral projections, but an actual entity haunting their house? That might be too much, even for them.</p>
+<p>The sighting unsettled him, adding to his guilt. He hadn't told John about Janin. John and Florence accepted his astral projections, but an actual entity haunting their house? That might be too much, even for them.</p>
 
-        <p>Already on edge, Yusuf nervously approached his Strategic Studies lecturer, Mrs. Agnes, to ask for permission to retake a missed test. So far, he had missed about five tests; four of his lecturers were kind enough to reschedule them, allowing him to retake them in a few days. However, Mrs. Agnes was known for being strict and no-nonsense, and convincing her would be a challenge.</p>
+<p>Already on edge, Yusuf nervously approached his Strategic Studies lecturer, Mrs. Agnes, to ask for permission to retake a missed test. So far, he had missed about five tests; four of his lecturers were kind enough to reschedule them, allowing him to retake them in a few days. However, Mrs. Agnes was known for being strict and no-nonsense, and convincing her would be a challenge.</p>
 
-        <p>Her office smelled strongly of pine air freshener and was stylishly neat despite the piles of books and projects stacked in the corner. Her bookshelves were full and neatly arranged, with some books scattered on her desk, the side table, and any other available surface. Yet, there was a certain order to the clutter. She took her time writing in a file while Yusuf and his friend John waited nervously. Finally, she looked up.</p>
+<p>Her office smelled strongly of pine air freshener and was stylishly neat despite the piles of books and projects stacked in the corner. Her bookshelves were full and neatly arranged, with some books scattered on her desk, the side table, and any other available surface. Yet, there was a certain order to the clutter. She took her time writing in a file while Yusuf and his friend John waited nervously. Finally, she looked up.</p>
 
-        <p>"So, young man, how can I help you?" she asked, with thinly veiled disdain.</p>
+<p>"So, young man, how can I help you?" she asked, with thinly veiled disdain.</p>
 
-        <p>"I wanted to talk to you about retaking the test I missed," Yusuf managed to blurt out.</p>
+<p>"I wanted to talk to you about retaking the test I missed," Yusuf managed to blurt out.</p>
 
-        <p>"The midterm, you mean?"</p>
+<p>"The midterm, you mean?"</p>
 
-        <p>"Yes, ma'am. I was hoping to retake it."</p>
+<p>"Yes, ma'am. I was hoping to retake it."</p>
 
-        <p>"And why did you miss it in the first place?" she asked, her tone lacking sympathy, making Yusuf's anxiety spike.</p>
+<p>"And why did you miss it in the first place?" she asked, her tone lacking sympathy, making Yusuf's anxiety spike.</p>
 
-        <p>"I was sick and couldn't attend classes," he replied.</p>
+<p>"I was sick and couldn't attend classes," he replied.</p>
 
-        <p>"And now you want special privilege?"</p>
+<p>"And now you want special privilege?"</p>
 
-        <p>"No, ma'am!" Yusuf almost snapped. "I'm not asking for any special treatment. I didn't miss school deliberately—I was very sick and had no choice."</p>
+<p>"No, ma'am!" Yusuf almost snapped. "I'm not asking for any special treatment. I didn't miss school deliberately—I was very sick and had no choice."</p>
 
-        <p>"Where is the doctor's report?" Mrs. Agnes asked. "Submit it with your request, and then I might consider giving you a chance."</p>
+<p>"Where is the doctor's report?" Mrs. Agnes asked. "Submit it with your request, and then I might consider giving you a chance."</p>
 
-        <p>Yusuf looked to John for help, and John stepped in.</p>
+<p>Yusuf looked to John for help, and John stepped in.</p>
 
-        <p>"Ma'am, the situation is a bit complicated. He had to be treated at home, and we couldn't get a doctor's report..."</p>
+<p>"Ma'am, the situation is a bit complicated. He had to be treated at home, and we couldn't get a doctor's report..."</p>
 
-        <p>"I'm sorry, but I can't do anything for you without that doctor's report," she interrupted. "I have to protect myself, too. You understand?"</p>
+<p>"I'm sorry, but I can't do anything for you without that doctor's report," she interrupted. "I have to protect myself, too. You understand?"</p>
 
-        <p>"Yes, ma'am," they both replied.</p>
+<p>"Yes, ma'am," they both replied.</p>
 
-        <p>"Very well, then. Either bring me the report or prepare to perform exceptionally in your final exam. Good day, gentlemen."</p>
+<p>"Very well, then. Either bring me the report or prepare to perform exceptionally in your final exam. Good day, gentlemen."</p>
 
-        <p>"Good day, ma'am," they both said, slowly rising and leaving her office.</p>
+<p>"Good day, ma'am," they both said, slowly rising and leaving her office.</p>
 
-        <p>Yusuf felt a wave of panic. The midterm was worth 30% of the overall grade. If he couldn't retake it, he'd need at least 50 marks on the final to avoid failing the course. It was devastating, but John reassured him that if it came to it, he knew a doctor who could draft a report for them. Yusuf thanked him, but he felt uncomfortable with the idea.</p>
+<p>Yusuf felt a wave of panic. The midterm was worth 30% of the overall grade. If he couldn't retake it, he'd need at least 50 marks on the final to avoid failing the course. It was devastating, but John reassured him that if it came to it, he knew a doctor who could draft a report for them. Yusuf thanked him, but he felt uncomfortable with the idea.</p>
 
-        <p>Janin waited alone and spent the whole day testing her powers by manipulating the house's electricity. She enjoyed each flickering light and made the refrigerator shake from the repeated surges. Her heightened senses were sharper than ever, letting her listen through walls and doors. A knock on the door broke her focus—it was a caretaker checking the property. He peered through the door's viewing window, but seeing nothing unusual, he walked away.</p>
+<p>Janin waited alone and spent the whole day testing her powers by manipulating the house's electricity. She enjoyed each flickering light and made the refrigerator shake from the repeated surges. Her heightened senses were sharper than ever, letting her listen through walls and doors. A knock on the door broke her focus—it was a caretaker checking the property. He peered through the door's viewing window, but seeing nothing unusual, he walked away.</p>
 
-        <p>She was intoxicated by her power, though with reason. She had to be strong to survive. She feared being recaptured by the Council of Ur, an ancient and mysterious body of jinn that governs all jinn affairs and forbids interactions between jinn and humans—a rule Janin and her friends had repeatedly broken through their dealings with Yusuf. As powerful as the jinn were, they were forbidden from crossing over to the human realm. Some had tried, succeeding by interacting with humans, possessing them, and hitching a ride to the human world, where they wreaked havoc.</p>
+<p>She was intoxicated by her power, though with reason. She had to be strong to survive. She feared being recaptured by the Council of Ur, an ancient and mysterious body of jinn that governs all jinn affairs and forbids interactions between jinn and humans—a rule Janin and her friends had repeatedly broken through their dealings with Yusuf. As powerful as the jinn were, they were forbidden from crossing over to the human realm. Some had tried, succeeding by interacting with humans, possessing them, and hitching a ride to the human world, where they wreaked havoc.</p>
 
-        <p>Some jinn envied humans—their knowledge and their form. While humans possessed physical bodies and could enjoy a variety of experiences, from food to other sensations, the jinn were made from fire and were formless. Although they could shapeshift and get close to humans to take advantage of them, they wanted to live as humans did, which often caused chaos. To prevent this, the Council of Ur put a rule in place to keep the two worlds from bleeding into each other and risking collapse. For over two hundred years, Janin had heard stories about the diabolical ways some jinn reached humans, though not all had such powers. Most were ordinary and would go their entire, lengthy lives without meeting a human. However, some knew tricks, including magic, to connect with humans—especially when humans sought jinn protection or magical assistance, usually to harm others. This gave the jinn power to influence the human, as it was the human who broke the rule first. It granted such jinn total control over the human; they would initially help but then use the human to spread chaos in the human world. Such actions were considered treasonous by the Council of Ur, with perpetrators imprisoned or, depending on the severity of their actions, even executed.</p>
+<p>Some jinn envied humans—their knowledge and their form. While humans possessed physical bodies and could enjoy a variety of experiences, from food to other sensations, the jinn were made from fire and were formless. Although they could shapeshift and get close to humans to take advantage of them, they wanted to live as humans did, which often caused chaos. To prevent this, the Council of Ur put a rule in place to keep the two worlds from bleeding into each other and risking collapse. For over two hundred years, Janin had heard stories about the diabolical ways some jinn reached humans, though not all had such powers. Most were ordinary and would go their entire, lengthy lives without meeting a human. However, some knew tricks, including magic, to connect with humans—especially when humans sought jinn protection or magical assistance, usually to harm others. This gave the jinn power to influence the human, as it was the human who broke the rule first. It granted such jinn total control over the human; they would initially help but then use the human to spread chaos in the human world. Such actions were considered treasonous by the Council of Ur, with perpetrators imprisoned or, depending on the severity of their actions, even executed.</p>
 
-        <p>When Janin met Yusuf in their land, she didn't know humans could cross over. She'd heard of other jinn kidnapping humans and enslaving them but had never witnessed it. Meeting Yusuf confirmed it was possible, and she confided in her friends Zara and Rafiq. Together, they devised a plan to deceive Yusuf. It was easy, as he was just a boy, and they appeared to him as Janin's parents. They coaxed him into forming an unbreakable bond with her and nearly completed the ritual to possess him when they were apprehended by the J-force and brought to trial before the council.</p>
+<p>When Janin met Yusuf in their land, she didn't know humans could cross over. She'd heard of other jinn kidnapping humans and enslaving them but had never witnessed it. Meeting Yusuf confirmed it was possible, and she confided in her friends Zara and Rafiq. Together, they devised a plan to deceive Yusuf. It was easy, as he was just a boy, and they appeared to him as Janin's parents. They coaxed him into forming an unbreakable bond with her and nearly completed the ritual to possess him when they were apprehended by the J-force and brought to trial before the council.</p>
 
-        <p>Janin remembered standing defiantly before the elders, chained and humiliated. The council sat in a semi-circle on high chairs, looking ethereal in their green robes, radiating ancient authority and power. The vast dome surrounding them shimmered with a bright material that reflected the council members' faces. Floating above their thrones, their eyes glowed with disapproval as Janin refused to show any remorse or humility.</p>
+<p>Janin remembered standing defiantly before the elders, chained and humiliated. The council sat in a semi-circle on high chairs, looking ethereal in their green robes, radiating ancient authority and power. The vast dome surrounding them shimmered with a bright material that reflected the council members' faces. Floating above their thrones, their eyes glowed with disapproval as Janin refused to show any remorse or humility.</p>
 
-        <p>"You have broken the laws of our kind!" boomed the high councilor, his voice reverberating through the room. "You forged a bond with a human, Yusuf Ali, which is forbidden. The consequences of such a bond are dangerous."</p>
+<p>"You have broken the laws of our kind!" boomed the high councilor, his voice reverberating through the room. "You forged a bond with a human, Yusuf Ali, which is forbidden. The consequences of such a bond are dangerous."</p>
 
-        <p>Janin's lips curled into a smirk. "You speak of danger, yet I only sought love," she retorted, her voice steady despite the overwhelming power in the room. "Why should it matter that he is human? We have existed in separate realms for millennia. Perhaps it's time to break those barriers."</p>
+<p>Janin's lips curled into a smirk. "You speak of danger, yet I only sought love," she retorted, her voice steady despite the overwhelming power in the room. "Why should it matter that he is human? We have existed in separate realms for millennia. Perhaps it's time to break those barriers."</p>
 
-        <p>Murmurs rippled through the council. Elder Nara, an ancient jinn with gleaming eyes and over a thousand years of experience, leaned forward. "The rules exist for a reason, child. Bonds with humans corrupt our essence. They drag us into their reality and trap us in their world."</p>
+<p>Murmurs rippled through the council. Elder Nara, an ancient jinn with gleaming eyes and over a thousand years of experience, leaned forward. "The rules exist for a reason, child. Bonds with humans corrupt our essence. They drag us into their reality and trap us in their world."</p>
 
-        <p>"Or perhaps it is the other way around?" Janin shot back, crossing her arms. "Perhaps we are the ones too afraid to explore beyond what we know."</p>
+<p>"Or perhaps it is the other way around?" Janin shot back, crossing her arms. "Perhaps we are the ones too afraid to explore beyond what we know."</p>
 
-        <p>"You are reckless!" said High Councilor Urk, his tone icy. "And your recklessness has endangered not just yourself but others. For this, you will be imprisoned."</p>
+<p>"You are reckless!" said High Councilor Urk, his tone icy. "And your recklessness has endangered not just yourself but others. For this, you will be imprisoned."</p>
 
-        <p>Janin's jaw tightened, but she held her ground. "I don't care what you think of me. I would do it again."</p>
+<p>Janin's jaw tightened, but she held her ground. "I don't care what you think of me. I would do it again."</p>
 
-        <p>"Then may your arrogance keep you company in the 'Realm of the Forgotten'!" High Councilor Urk declared, his eyes narrowing. "Take her away."</p>
+<p>"Then may your arrogance keep you company in the 'Realm of the Forgotten'!" High Councilor Urk declared, his eyes narrowing. "Take her away."</p>
 
-        <p>Janin, her friends Zara and Rafiq, and their supporters—all 50 of them—were locked up in the maximum-security jinn prison called the Realm of the Forgotten. As the name implies, most who go there never leave. But she found a way to escape and move to this realm through Yusuf's sudden surge in abilities, and she would do everything in her power never to return to the land of Jute.</p>
+<p>Janin, her friends Zara and Rafiq, and their supporters—all 50 of them—were locked up in the maximum-security jinn prison called the Realm of the Forgotten. As the name implies, most who go there never leave. But she found a way to escape and move to this realm through Yusuf's sudden surge in abilities, and she would do everything in her power never to return to the land of Jute.</p>
 
-        <p>At 7 p.m., Florence returned, her arms full of shopping bags, accompanied by the same caretaker. She greeted him and let him take a look around, but everything appeared normal.</p>
+<p>At 7 p.m., Florence returned, her arms full of shopping bags, accompanied by the same caretaker. She greeted him and let him take a look around, but everything appeared normal.</p>
 
-        <p>"Sorry, madam. Thought I saw something odd earlier," he said, scratching his head.</p>
+<p>"Sorry, madam. Thought I saw something odd earlier," he said, scratching his head.</p>
 
-        <p>"Oh, don't worry! I'm glad someone's looking out for us. Thank you," Florence replied warmly. "I'll speak to my brother about leaving a spare key at the gate." She closed the door behind her, then headed into the kitchen to unload her groceries, her phone rang. Janin drifted closer, her enhanced hearing letting her eavesdrop with ease.</p>
+<p>"Oh, don't worry! I'm glad someone's looking out for us. Thank you," Florence replied warmly. "I'll speak to my brother about leaving a spare key at the gate." She closed the door behind her, then headed into the kitchen to unload her groceries, her phone rang. Janin drifted closer, her enhanced hearing letting her eavesdrop with ease.</p>
 
-        <p>"Hey, babe, just got home," Florence answered cheerfully. Janin's eyes narrowed as she heard McLean's voice from the phone.</p>
+<p>"Hey, babe, just got home," Florence answered cheerfully. Janin's eyes narrowed as she heard McLean's voice from the phone.</p>
 
-        <p>"I miss you already. Wish you didn't have to leave," he cooed, sickening her.</p>
+<p>"I miss you already. Wish you didn't have to leave," he cooed, sickening her.</p>
 
-        <p>"Well, I'm living with my brother now," Florence teased. "I can't stay with you every night, or he'd worry."</p>
+<p>"Well, I'm living with my brother now," Florence teased. "I can't stay with you every night, or he'd worry."</p>
 
-        <p>"I can't wait till school's done and we're married. Then no one can keep us apart," McLean replied.</p>
+<p>"I can't wait till school's done and we're married. Then no one can keep us apart," McLean replied.</p>
 
-        <p>Florence's laugh grated on Janin's nerves. How dare she play Yusuf for a fool, laughing with another man? Despite herself, Janin despised the thought of Florence with Yusuf but was furious at her supposed betrayal. Her rage sent a wave of energy through the house, making the lights flicker. Florence stopped laughing, glancing around, wary.</p>
+<p>Florence's laugh grated on Janin's nerves. How dare she play Yusuf for a fool, laughing with another man? Despite herself, Janin despised the thought of Florence with Yusuf but was furious at her supposed betrayal. Her rage sent a wave of energy through the house, making the lights flicker. Florence stopped laughing, glancing around, wary.</p>
 
-        <p>"You okay?" McLean asked.</p>
+<p>"You okay?" McLean asked.</p>
 
-        <p>"I'm fine, but these lights... they're acting weird." Florence reassured him. "I'll call you later." She hung up and tapped the light switch until the flickering stopped, sighing with relief. But a shiver ran down her spine. Goosebumps covered her arms as Janin's presence crept closer, her chilling breath brushing against Florence's neck.</p>
+<p>"I'm fine, but these lights... they're acting weird." Florence reassured him. "I'll call you later." She hung up and tapped the light switch until the flickering stopped, sighing with relief. But a shiver ran down her spine. Goosebumps covered her arms as Janin's presence crept closer, her chilling breath brushing against Florence's neck.</p>
 
-        <p>Florence hurried to plug in a room heater, standing close for warmth, her hands trembling. But as she felt the icy breath on her neck again, she jumped, accidentally knocking the heater over. She froze, realizing she wasn't imagining things—Janin was right behind her, relishing her fear.</p>
+<p>Florence hurried to plug in a room heater, standing close for warmth, her hands trembling. But as she felt the icy breath on her neck again, she jumped, accidentally knocking the heater over. She froze, realizing she wasn't imagining things—Janin was right behind her, relishing her fear.</p>
 
-        <p>With a burst of determination, Florence grabbed her phone to call Yusuf, but Janin's anger surged. She began shouting, "Get out! Get out! I hate you! I hate you!" Though Florence couldn't hear the words, she felt their hateful force reverberate through the room.</p>
+<p>With a burst of determination, Florence grabbed her phone to call Yusuf, but Janin's anger surged. She began shouting, "Get out! Get out! I hate you! I hate you!" Though Florence couldn't hear the words, she felt their hateful force reverberate through the room.</p>
 
-        <p>The lights flashed wildly, the refrigerator shook, and Florence screamed, dropping her phone. She bolted to the door, and as she reached for the handle, it swung open. She screamed once more, fainting into her brother's waiting arms.</p>
+<p>The lights flashed wildly, the refrigerator shook, and Florence screamed, dropping her phone. She bolted to the door, and as she reached for the handle, it swung open. She screamed once more, fainting into her brother's waiting arms.</p>
 
-        <p>END OF CHAPTER THREE</p>`,
-                likes: 298,
+<p>END OF CHAPTER THREE</p>`,
+                likes: 356,
                 comments: [
-                    { user: "VoidSeeker", text: "This description of the Void matches near-death experiences I've read about. Chilling!", time: "1 day ago" },
-                    { user: "AstralGuardian", text: "The lost souls metaphor is powerful. We must always stay connected to our source.", time: "3 days ago" }
+                    { user: "HigherSelf", text: "The description of 'conceptual weather' is incredibly evocative. This is how the higher realms truly feel.", time: "1 day ago" },
+                    { user: "TruthSeeker", text: "The thinning of veils mentioned here aligns with many current spiritual teachings about Earth's ascension.", time: "4 days ago" }
                 ]
             }
         ];
@@ -1653,4 +1612,3 @@
     </script>
 </body>
 </html>
-
