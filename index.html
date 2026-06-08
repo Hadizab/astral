@@ -658,18 +658,81 @@
 
 
 </div>
-        <!-- Buy Me Coffee Section -->
-        <section class="buy-coffee">
-            <img src="https://cdn.pixabay.com/photo/2022/03/09/05/05/coffee-7057030_1280.png" 
-                 alt="Coffee cup" 
-                 class="coffee-icon">
-            <h3>Enjoying the story?</h3>
-            <a href="https://www.paypal.com/donate?business=mammy546@gmail.com" 
-               target="_blank" 
-               class="coffee-btn">
-                ☕ Buy me a coffee
-            </a>
-        </section>
+        <!-- Donation Section -->
+<section class="buy-coffee">
+    <img src="https://cdn.pixabay.com/photo/2022/03/09/05/05/coffee-7057030_1280.png" 
+         alt="Support the website" 
+         class="coffee-icon">
+
+    <h3>Enjoying the content?</h3>
+
+    <a href="https://www.paypal.com/donate?business=mammy546@gmail.com" 
+       target="_blank" 
+       class="coffee-btn">
+        ❤️ Donate to Help Keep This Website Online
+    </a>
+
+<style>
+.buy-coffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #f8f4e9 0%, #f0e9db 100%);
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: fit-content;
+    margin: 20px auto;
+    border: 1px solid rgba(210, 180, 140, 0.3);
+}
+
+.coffee-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.buy-coffee h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5a3e2b;
+    white-space: nowrap;
+}
+
+.coffee-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #6f4e37;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(111, 78, 55, 0.3);
+}
+
+.coffee-btn:hover {
+    background-color: #5a3e2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(90, 62, 43, 0.3);
+}
+
+@media (max-width: 480px) {
+    .buy-coffee {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+}
+</style>
+</section>
 
         <!-- Footer -->
         <footer class="bg-void-950 border-t border-astral/20 py-16 relative overflow-hidden">
